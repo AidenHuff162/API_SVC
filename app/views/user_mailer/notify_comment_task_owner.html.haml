@@ -1,0 +1,26 @@
+- _initials = ""
+- _img_src = ""
+-if @comment.commenter.picture.present?
+  -_img_src = @comment.commenter.picture
+-else
+  -_initials =@commenter_first_name[0].try(:upcase) + @comment.commenter.last_name[0].try(:upcase)
+- _header_text = @commenter_first_name + ' ' + @comment.commenter.last_name
+
+-@description = @comment.description
+
+-string_to_replace = "USERTOKEN[" + @comment.commentable.owner.id + "]"
+-user = User.find @comment.commentable.owner.id
+-@description = @description.gsub string_to_replace, "@" + user.first_name
+
+- _email_title = I18n.t('mailer.notify_comment_task_owner.title', commenter_name: @commenter_first_name, task_receiver_name: @comment.commentable.user.preferred_full_name)
+- _email_body_title = @comment.commentable.task.name
+- _email_body_html = @description
+- _footer_plain = ""
+- _footer_linked = ""
+- _footer_link_to = ""
+
+- _body_button_text = "Respond to this task in Sapling"
+- _body_button_color = @company.email_color || "#3F1DCB"
+- _body_button_link = 'https://' + @company.app_domain + '/#/tasks/' + @comment.commentable.owner.id.to_s + '?id=' + @comment.commentable.id.to_s
+
+= render "mail_template", locals: {img_src: _img_src, header_text: _header_text, email_title: _email_title, email_body_html: _email_body_html, email_body_title: _email_body_title, body_button_text: _body_button_text, body_button_color: _body_button_color, body_button_link: _body_button_link, footer_plain: _footer_plain, footer_linked: _footer_linked, footer_link: _footer_link_to, initials: _initials}

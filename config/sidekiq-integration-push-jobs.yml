@@ -1,0 +1,26 @@
+---
+:concurrency: <%= (if ENV['SIDEKIQ_INTEGRATION_PUSH_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_INTEGRATION_PUSH_CONCURRENCY'].to_i else 8 end) %>
+:pidfile: tmp/pids/sidekiq-integration-push-jobs.pid
+:queues:
+  - [add_employee_to_adp, 3]
+  - [update_employee_to_adp, 3]
+  - [add_employee_to_hr, 2]
+  - [add_employee_to_paylocity, 2]
+  - [update_employee_to_hr, 2]
+  - manage_one_login_integration
+  - manage_deputy_integration
+  - manage_learn_and_development_integration_creation
+  - manage_team_spirit_integration
+  - manage_learn_and_development_integration
+  - webhook_activities
+  - execute_webhook
+:limits:
+  add_employee_to_adp: 1
+  add_employee_to_hr: 1
+  update_employee_to_adp: 2
+  update_employee_to_hr: 3
+  manage_learn_and_development_integration_creation: 1
+  manage_deputy_integration: 2
+  manage_learn_and_development_integration: 2
+  webhook_activities: 15
+  execute_webhook: 10

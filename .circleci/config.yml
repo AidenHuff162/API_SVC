@@ -1,0 +1,203 @@
+version: 2.1
+orbs: 
+  jira: circleci/jira@1.3.1
+jobs:
+  build:
+    parallelism: 15
+
+    environment:
+      DISABLE_SPRING: 'true'
+      RAILS_ENV: test
+
+    docker:
+      - image: circleci/ruby:2.7.4-node-browsers
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: sapling
+          RAILS_ENV: test
+          RACK_ENV: test
+      - image: circleci/postgres:9.5-alpine
+        environment:
+          POSTGRES_USER: sapling
+          POSTGRES_DB: sapling_test
+          POSTGRES_PASSWORD: ""
+      - image: circleci/node:10-browsers
+      - image: redis
+
+    steps:
+      - checkout
+
+      - run:
+          name: Clone webapp Repository
+          command: |-
+            cd ..
+            git clone https://github.com/sapling-hr/webapp.git
+
+      - run:
+          name: Checkout webapp Branch
+          command: |-
+            cd ..
+            cd webapp
+            export NAM=`git ls-remote origin $CIRCLE_BRANCH `
+            if [[ $NAM != "" ]];
+            then
+              git fetch origin $CIRCLE_BRANCH;
+              git checkout $CIRCLE_BRANCH;
+            fi
+
+      - run:
+          name: Install Karma Bower
+          command: |-
+            cd ..
+            cd webapp
+            sudo npm -g install grunt-cli bower
+
+      - run:
+          name: Install Npm
+          command: |-
+            cd ..
+            cd webapp
+            npm install
+
+      - run:
+          name: Install Bower
+          command: |-
+            cd ..
+            cd webapp
+            bower install
+
+      - run:
+          name: Install Haml
+          command: |-
+            cd ..
+            cd webapp
+            gem install haml
+
+      - run:
+          name: Install Sass
+          command: |-
+            cd ..
+            cd webapp
+            gem install sass
+      - run:
+          name: Create application.json 
+          command: |-
+            cd  ..
+            cd webapp
+            cd config
+            echo "{\"ENV\" : {}}" >> application.json
+
+      - run:
+          name: Compile Test Environment
+          command: |-
+            cd ..
+            cd webapp
+            grunt build_test
+
+      - run: echo 127.0.0.1 foo.frontend.me | sudo tee -a /etc/hosts
+
+      - run:
+          name: Run Test Environment Server
+          command: |-
+            cd ..
+            cd webapp
+            grunt http-server:test
+          background: true
+
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+
+      - run:
+          name: Code Climate before-build
+          command: |
+            ./cc-test-reporter before-build
+
+      # install bundler?
+      - run:
+          name: Configure Bundler
+          command: |
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler:$BUNDLER_VERSION
+
+      # Restore bundle cache
+      - restore_cache:
+          keys:
+            - v157-sapling-circleci-{{ checksum "Gemfile.lock" }}
+            - v157-sapling-circleci-
+      - run:
+          name: Bundle Install
+          command: RAILS_ENV=test bundle check || RAILS_ENV=test bundle install
+
+      # Store bundle cache
+      - save_cache:
+          key: v157-sapling-circleci-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+            - public/assets
+
+      - run: echo 127.0.0.1 foo.sapling.localhost | sudo tee -a /etc/hosts
+
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Database setup
+          command: bundle exec rails db:drop db:create db:migrate
+
+      #export KNAPSACK_GENERATE_REPORT='true'
+      # Run rspec in parallel
+      - run: |-
+          export RAILS_ENV="test"
+          export RACK_ENV="test"
+          export KNAPSACK_GENERATE_REPORT='false'
+          bundle config disable_exec_load true
+          KNAPSACK_TEST_FILE_PATTERN="spec/app/**{,/*/**}/*_spec.rb" bundle exec knapsack rspec
+
+      # Make directory to store aggregated/combined results
+      - run:
+          name: Stash Coverage Results
+          command: |
+            mkdir coverage_results
+      # Save test results for timing analysis
+
+      - store_artifacts:
+          path: coverage
+
+      # This is magic step, which actually will combine coverage reports of all parallel containers
+      - deploy:
+          name: Merge and copy coverage data
+          command: |-
+            SKIP_COVERAGE_CHECK=true bundle exec spec/simplecov_merger.rb
+            cp coverage_results/.resultset.json coverage/.resultset.json
+            cp coverage_results/.resultset.json.lock coverage/.resultset.json.lock
+            cp coverage_results/index.html coverage/index.html
+            ./cc-test-reporter after-build -t simplecov
+
+      # Now store the results so we can see them in artifacts(coverage report will only be in container 0 as described earlier)
+      # Merged result can be found in zero container home/circleci/project/coverage_results/index.html
+      - store_artifacts:
+          path: /home/circleci/project/coverage_results
+
+workflows:
+  build:
+    jobs:
+      - build:
+          post-steps:
+            - jira/notify
+
+nightly:
+  triggers:
+    - schedule:
+        cron: "0 9 * * *"
+        filters:
+          branches:
+            only:
+              - master

@@ -1,0 +1,48 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= (Concurrent.processor_count**2 * 2) + (if ENV['SIDEKIQ_CONCURRENCY'] then ENV['SIDEKIQ_CONCURRENCY'].to_i else 33 end) + 10 %>
+
+development:
+  <<: *default
+  database: sapling_development
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+
+test:
+  <<: *default
+  database: sapling_test
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+
+staging:
+  <<: *default
+  database: sapling_staging
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+  host: <%= ENV['PG_HOST'] %>
+
+production:
+  <<: *default
+  database: sapling_production
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+  host: <%= ENV['PG_HOST'] %>
+
+demo:
+  <<: *default
+  database: sapling_staging
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+
+release:
+  <<: *default
+  database: sapling_fuse
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+
+spades:
+  <<: *default
+  database: sapling_fuse
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>

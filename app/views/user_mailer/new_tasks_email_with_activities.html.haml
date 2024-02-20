@@ -1,0 +1,77 @@
+-_body_ = ''
+-if @email_desc.present?
+  -_body_ += '<p>' + CGI.unescapeHTML(@email_desc).html_safe + '</p>'
+-else
+  -if @activities_flag && @owner_flag
+    -_body_ += '<p style="margin-top:0;">' + I18n.t('mailer.new_tasks_email.content_self', tasks_in_words: @tasks_count.humanize.capitalize, tasks_num: @tasks_count).html_safe + '</p>'
+  -elsif @activities_flag && !@owner_flag
+    -_body_ += I18n.t('mailer.new_tasks_email.content_activities', tasks_in_words: @tasks_count.humanize.capitalize, tasks_num: @tasks_count, |
+      first_name: @first_name, full_name: @invite_user.display_name).html_safe
+  -elsif @invite_user.team
+    -_body_ += '<p style="margin-top:0;">'
+    -_body_ += I18n.t('mailer.new_tasks_email.content_department', tasks_in_words: @tasks_count.humanize.capitalize, tasks_num: @tasks_count, |
+      first_name: @first_name, full_name: @invite_user.display_name, company: @invite_user.company.name, |
+        start_date: @invite_user.start_date.strftime('%b %d, %Y'), department: @invite_user.team.name).html_safe
+    -_body_ += '</p>'
+  -else
+    -_body_ += '<p style="margin-top:0;">'
+    -_body_ += I18n.t('mailer.new_tasks_email.content', tasks_in_words: @tasks_count.humanize.capitalize, tasks_num: @tasks_count, |
+        first_name: @first_name, full_name: @invite_user.display_name, company: @invite_user.company.name, |
+        start_date: @invite_user.start_date.strftime('%b %d, %Y')).html_safe
+    -_body_ += '</p>'
+
+-if @activities[:tasks] || @activities[:outcomes]
+  -_body_ += '<p style="margin-bottom:0;">' + I18n.t('mailer.new_tasks_email.complete_activities_help').html_safe + '</p>'
+
+-_body_ += '<form action="https://' + @company.domain + '/api/v1/email_activities" accept-charset="UTF-8" method="get">'
+-if @activities[:tasks] && @activities[:tasks].count > 0
+  -_body_ += '<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnTextContentContainer" style="max-width:100%; min-width:100%;" width="100%">'
+  -_body_ += '<tbody>'
+  -@activities[:tasks].each_with_index do |task, index|
+    -if(index == 0 || (index > 0 && @activities[:tasks][index].workstream.id != @activities[:tasks][index-1].workstream.id))
+      -_body_ += '<tr><td class="mcnTextContent" style="font-weight: 700; padding-top:10px; padding-right:18px; padding-bottom:0; padding-left:0 !important;" valign="top">' + task.workstream.name + '</td></tr>'
+    -_body_ += '<tr style="margin: 4px 0; border: 1px #D0D0D0 solid; display: flex; border-radius: 5px;min-height:50px;"><td class="mcnTextContent mcnTextContentHover" style="padding-left:10px !important; padding-top:10px; padding-right:18px;">'
+    -tuc_id = @activities[:task_tuc][task.id]
+    -if task.try(:survey_id)
+      -_body_ += '<a href="https://' + @company.app_domain + '/#/survey/' + tuc_id.to_s + '">'
+      -_body_ += check_box_tag 'task[]', @activities[:tuc_tokens][tuc_id], false, {:style=>"zoom: 1.8;"}
+      -_body_ += '</a>'
+    -else
+      -_body_ += check_box_tag 'task[]', @activities[:tuc_tokens][tuc_id], true, {:style=>"zoom: 1.8;"}
+    -_body_ += '</td>'
+    -_body_ += '<td class="mcnTextContent" style="line-height: 100% !important; padding-top:8px; padding-right:18px; padding-bottom:2px; padding-left:0; padding-top: 10px; width: 100%;" valign="top">' + task.name.html_safe + '<br/>'
+    -_body_ += '<span style="font-size: 10px; color: #9b9b9b;" valign="top">'
+    -if @activities[:tdd][tuc_id]
+      -_body_ += I18n.t('mailer.new_tasks_email.due_date', due_date: @activities[:tdd][tuc_id].strftime("%b %d"))
+    -else
+      -_body_ += I18n.t('mailer.new_tasks_email.due_date', due_date: (@invite_user.start_date + task.deadline_in).strftime("%b %d"))
+    -if task.try(:survey_id)
+      -_body_ += '<span style="padding-left: 15px; padding-right: 14px; padding-top: 2px; padding-bottom: 2px; background-color: #4DC3A4; border-radius: 3px; color: #FFFFFF; font-size: 12px; line-height: 16px; margin-left: 10px;">SURVEY</span>'
+    -_body_ += '</span></td></tr>'
+-_body_ += '</tbody></table>'
+
+-if @activities[:documents] && @activities[:documents].count > 0
+  -_body_ += '<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnTextContentContainer" style="max-width:100%; min-width:100%;" width="100%"><tr><td class="mcnTextContent mcnTextContentHover" style="font-weight: 700; padding-top:10px; padding-right:18px; padding-bottom:0; padding-left:0 !important;" valign="top">'
+  -if @activities[:documents].count == 1
+    -_body_ += I18n.t('mailer.new_tasks_email.document_singular')
+  -else
+    -_body_ += I18n.t('mailer.new_tasks_email.documents_multiple')
+
+  -_body_ += '</td></tr><tbody>'
+  -@activities[:documents].each_with_index do |document_title|
+    -_body_ += '<tr style="margin: 4px 0; border: 1px #D0D0D0 solid; display: flex; border-radius: 5px;min-height:50px;"><td class="mcnTextContent" style="line-height: 100% !important; padding-top:8px; padding-right:18px; padding-bottom:2px; padding-left:0; padding-top: 10px; width: 100%;" valign="top">' + document_title + '<br/>'
+    -_body_ += '<span style="font-size: 10px; color: #9b9b9b;" valign="top">' + I18n.t('mailer.new_tasks_email.due_date', due_date: Date.today.strftime("%b %d")) + '</span></td></tr>'
+
+  -_body_ += '</tbody></table>'
+
+-if @activities[:tasks] || @activities["outcomes"] || @activities[:outcomes]
+  -_body_ += '<table border="0" cellpadding="0" cellspacing="0" class="mcnButtonBlock" style="min-width:100%;" width="100%"><tbody class="mcnButtonBlockOuter"><tr><td align="center" class="mcnButtonBlockInner" style="padding-top:10px; padding-right:18px; padding-bottom:10px; padding-left:18px;" valign="top"><table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #F2F2F2;border-radius: 40px;background-color: ' + (@company.email_color || '#3F1DCB') + ';"><tbody><tr><td align="center" class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 0;" valign="middle">'
+  -_body_ += submit_tag I18n.t('mailer.new_tasks_email.complete_activities_btn'), class: 'mcnButton', :style => "font-size:16px;font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;cursor:pointer; border: none;background: transparent; padding: 20px;"
+  -_body_ += '</td></tr></tbody></table></td></tr></tbody></table>'
+-else
+  -_body_ += '<table border="0" cellpadding="0" cellspacing="0" class="mcnButtonBlock" style="min-width:100%;" width="100%"><tbody class="mcnButtonBlockOuter"><tr><td align="center" class="mcnButtonBlockInner" style="padding-top:10px; padding-right:18px; padding-bottom:10px; padding-left:18px;" valign="top"><table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #F2F2F2;border-radius: 40px;background-color: #3F1DCB;"><tbody><tr><td align="center" class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 20px;" valign="middle"><a class="mcnButton" href="https://' + @company.app_domain + '/" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;" target="_blank" title="' + I18n.t('mailer.new_tasks_email.btn_text') + '">' + I18n.t('mailer.new_tasks_email.btn_text') + '</a></td></tr></tbody></table></td></tr></tbody></table>'
+
+-_body_ += '</form>'
+-_email_body_html = _body_
+
+= _email_body_html.html_safe

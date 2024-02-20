@@ -1,0 +1,19 @@
+# Controls where the configuration is fetched (local or remote)
+FETCH_ENVS_FROM_REMOTE_URL: 'false'
+
+# Required to authenticate with remote configuration service
+REMOTE_CONFIG_ACCESS_USERNAME: ''
+REMOTE_CONFIG_ACCESS_PASSWORD: ''
+
+# Required to encrypt existing plain text into cipher text (rake task)
+ENCRYPT_ENDPOINT_URL: 'https://config-svc.nesoi.local/encrypt'
+
+# Application config endpoints
+APP_CONFIG_URL: 'https://config-svc.nesoi.local/api-svc-app-nesoi.json'
+GOOGLE_AUTH_CONFIG_URL: 'https://config-svc.nesoi.local/api-svc-google-auth-nesoi.json'
+GOOGLE_SHEETS_CONFIG_URL: 'https://config-svc.nesoi.local/api-svc-google-sheets-nesoi.json'
+CRONJOB_HEALTH_CHECK_CONFIG_URL: 'https://config-svc.nesoi.local/cronjobs-svc-health-checks-nesoi.json'
+ADP_CERT_CONFIG_URL: 'https://config-svc.nesoi.local/api-svc-adp-nesoi.json'
+XERO_CERT_CONFIG_URL: 'https://config-svc.nesoi.local/api-svc-xero-nesoi.json'
+ENV_LOCAL_STORAGE_PATH: 'www/sapling/shared'
+FIREBASE_CONFIG_URL: ''

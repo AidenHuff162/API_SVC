@@ -1,0 +1,51 @@
+#
+# This file configures the New Relic Agent.  New Relic monitors Ruby, Java,
+# .NET, PHP, Python and Node applications with deep visibility and low
+# overhead.  For more information, visit www.newrelic.com.
+#
+# Generated December 09, 2016
+#
+# This configuration file is custom generated for Sapling Tech
+#
+# For full documentation of agent configuration options, please refer to
+# https://docs.newrelic.com/docs/agents/ruby-agent/installation-configuration/ruby-agent-configuration
+
+common: &default_settings
+  # Required license key associated with your New Relic account.
+  license_key: "3ab0579db6f5390dc4f0f1b525ee27876df39e51"
+
+  # Your application name. Renaming here affects where data displays in New
+  # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications
+  app_name: <%= ENV['NEW_RELIC_APP_NAME'] %>
+
+  agent_enabled: false
+
+  # Logging level for log/newrelic_agent.log
+  log_level: debug
+
+# Environment-specific settings are in this section.
+# RAILS_ENV or RACK_ENV (as appropriate) is used to determine the environment.
+# If your application has other named environments, configure them here.
+production:
+  <<: *default_settings
+  app_name: "SaplingApp"
+  agent_enabled: true
+
+
+staging:
+  <<: *default_settings
+  app_name: "shr-test"
+
+test:
+  <<: *default_settings
+
+fuse:
+  <<: *default_settings
+
+release:
+  <<: *default_settings
+  app_name: "ReleaseApp"
+
+demo:
+  <<: *default_settings
+  app_name: "DemoApp"

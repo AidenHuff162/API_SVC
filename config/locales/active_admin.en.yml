@@ -1,0 +1,31 @@
+en:
+  active_admin:
+    company:
+      company_details: Company Details
+      is_using_custom_table: Create 3 default ‘Job Details’ tables (Role, Compensation, Status)
+      is_using_custom_table_tooltip: Must be enabled if also enabling the Track & Approve module.
+      otp_required_for_login: Allow two-factor authentication 
+      notifications_enabled: Send platform and user-scheduled email notifications
+      notifications_enabled_tooltip: If disabled, no Sapling emails or user-scheduled emails are sent (useful during implementation).
+      customization_settings: Customization Settings
+      integration_mapping: Integration Mapping
+      department_mapping_key: Enter the exact field name or API ID for the Sapling field that should be mapped to 'Department' in custom integrations.
+      location_mapping_key: Enter the exact field name or API ID for the Sapling field that should be mapped to 'Location' in custom integrations.
+      can_push_adp_custom_fields: Push ADP custom fields
+      can_push_adp_custom_fields_tooltip: If enabled, updates to Sapling custom fields that have been added to the integration will sync to ADP.
+      pull_all_workday_workers: Pull all Workday workers
+      pull_all_workday_workers_tooltip: If enabled, Sapling will pull all existing workers into Sapling (note this may take several hours to complete).
+      error_notification_emails:  Send detail emails for errors from API logs to
+      error_notification_emails_tooltip: If populated, sends an email for every error logged for ADP, Namely, Paylocity, BambooHR, Workday, or Google integrations.
+      additional_modules: Additional Modules
+      enabled_calendar: Calendar (no additional cost)
+      enabled_time_off: PTO
+      enabled_org_chart: Org Chart
+      surveys_enabled: Surveys
+      enable_custom_table_approval_engine: Track & Approve 
+      buddy: Replace "Buddy" with
+      group_for_home: Group displayed on user’s Profile page
+      company_plans: Company Plan
+      people_operation: People Operations Plan v1
+      onboarding_plan: Onboarding Plan v1
+      trial_end_date: Trial End Date

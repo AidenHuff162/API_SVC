@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>Sapling</title>
+    <link rel="shortcut icon" href="https://sapling.saplingapp.io/assets/general/favicon-31f5ef97af2e5c15e08924b1d3e3674cf2ebc309d12f8a8b2df61b42e24643db.ico" />
+    <style media="screen">
+      body {
+        width: 100vw;
+        overflow-x: hidden;
+        position: relative;
+        height: 100%;
+        font-family: "Open Sans", sans-serif;
+        background-color: #fafafa;
+        margin: 0;
+        padding: 0;
+      }
+      .log-in__center-container {
+        padding-top: 125px !important;
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+      .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      div{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+        display: block;
+      }
+      .row{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      .text-xs-center {
+        text-align: center !important;
+      }
+      .col-xs-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .welcome-container__logo {
+        display: inline-block;
+        max-width: 120px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      a{
+        text-decoration: none;
+      }
+      .welcome-container__logo-img {
+        max-width: 50%;
+        max-height: 50%;
+      }
+      a img {
+        border: none;
+      }
+      img {
+        vertical-align: middle;
+      }
+
+      .log-in__title {
+        font-size: 26px;
+        color: rgba(0, 0, 0, 0.87);
+        text-align: center;
+        margin-bottom: 70px;
+      }
+      .log-in__to-home:hover {
+        text-decoration: underline;
+      }
+      .log-in__to-home {
+        font-size: 12px;
+        color: #424b56;
+      }
+      .subdomain {
+        background: #FAFAFA;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+        border-radius: 3px;
+        display:inline-block;
+      }
+      .subdomain-field {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        align-items: center;
+        letter-spacing: 0.75px;
+        color: rgba(0, 0, 0, 0.54);
+        padding: 10px; 
+        border: none;
+        display:inline-block;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.26);
+        border-radius: 3px;
+      }
+      .subdomain-text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        align-items: center;
+        letter-spacing: 0.75px;
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.54);
+      }
+
+      .submit-btn {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.75px;
+        color: #FFFFFF;
+        padding: 10px; 
+        background: #3F1DCB;
+        border: 1px solid #3F1DCB;
+        border-radius: 3px; 
+        padding-left: 95px;
+        padding-right: 95px;
+        width: 100%;
+      }
+
+      .submit-block {
+        text-align: center; 
+        margin-top: 25px;
+      }
+
+      .error-msg {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.25px;
+        color: #D80808;
+        margin-top: 10px;
+      }
+
+      .white-frame {
+        width: 100%;
+        max-width: 500px;
+        min-height: 400px;
+        padding: 50px;
+        background-color: white; 
+      }
+      .links {
+        margin-top: 0;
+        position: absolute;
+        bottom: 24px;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        right: 0;
+      }
+      .form-order {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .field-order {
+        text-align: center;
+        display: flex;
+        margin-bottom: 35px;
+      }
+      .field-order input {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="log-in__container log-in__center-container">
+      <div>
+        <div class="container white-frame">
+          <div class="col-xs-12 text-xs-center">
+            <a class="log-in__logo welcome-container__logo">
+              <%= image_tag "https://shr-prod-mts-core-pub-assets.s3.us-west-2.amazonaws.com/VLeb_0BKWCE/uploaded_file/quill_attachment/1f90c6e1aeb17d82.png", class: "welcome-container__logo-img" %>
+            </a>
+          </div>
+          <div class="col-xs-12">
+            <h1 class="log-in__title">
+              Welcome to sapling 🎉
+            </h1>
+            <%= form_tag('/linkedin-onboard', :class => 'form-order') do -%>
+              <div class="field-order">
+                <input type="text"  name="subdomain" class="subdomain-field" placeholder="Your company's subdomain" required="true" />
+                <div class="subdomain">
+                  <div class="subdomain-text">
+                    .saplingapp.io
+                  </div>
+                  <%= hidden_field(:object, :data, :value => data) %>
+                </div>
+              </div>
+              <% if error.present? && error == 'company_not_found'%>
+                <div class="error-msg">
+                  We don't recognize this subdomain. Try again.
+                </div>
+              <% end %>
+              <% if error.present? && error == 'integration_not_found' %>
+                <div class="error-msg">
+                  Integration is disabled inside Sapling. Please enable it from integrations page.
+                </div>
+              <% end %>
+              <div class="submit-block">
+                <%= submit_tag "Continue to sign in", :class => 'submit-btn'  %>
+              </div>
+            <% end -%>
+          </div>
+          <div class="links" >
+              <a class="log-in__to-home" href="https://www.kallidus.com/terms-of-use" target="_blank">
+                Term of Service
+              </a>
+              <span>
+                &nbsp | &nbsp
+              </span>
+              <a class="log-in__to-home" href="https://www.kallidus.com/privacy-policy" target="_blank">
+                Privacy Policy
+              </a>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

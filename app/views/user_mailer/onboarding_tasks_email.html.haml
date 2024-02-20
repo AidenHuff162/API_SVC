@@ -1,0 +1,46 @@
+- _initials = ""
+- _img_src = ""
+-if @invite_user.picture.present?
+  -_img_src = @invite_user.picture
+-else
+  -_initials = @invite_user_first_name[0].try(:upcase) + @invite_user.last_name[0].try(:upcase)
+- _header_text = @invite_user_first_name + " " + @invite_user.last_name
+- _email_title = I18n.t('mailer.onboarding_tasks_email.header_top')
+
+- _body_ = '<p style="margin-top:0;"></p>'
+-if @email_desc.present?
+  - _body_ += '<p>' + CGI.unescapeHTML(@email_desc).html_safe + '</p>'
+-else
+  -if @activities_flag && @owner_flag
+    - _body_ += '<p style="margin-top:0;">' + I18n.t('mailer.new_tasks_email.content_self', tasks_in_words: @tasks_count.humanize.capitalize, tasks_num: @tasks_count).html_safe + '</p>'
+  -elsif @activities_flag && !@owner_flag
+    - _body_ += I18n.t('mailer.new_tasks_email.content_activities', tasks_in_words: @tasks_count.humanize.capitalize, tasks_num: @tasks_count, |
+    first_name: @invite_user_first_name, full_name: @invite_user.display_name).html_safe
+  -elsif @invite_user.team
+    - _body_ += '<p style="margin-top: 0px;">'
+    - _body_ += I18n.t('mailer.new_tasks_email.content_department', tasks_in_words: @tasks_count.humanize.capitalize, tasks_num: @tasks_count, |
+      first_name: @invite_user_first_name, full_name: @invite_user.display_name, company: @invite_user.company.name, |
+      start_date: @invite_user.start_date.strftime('%b %d, %Y'), department: @invite_user.team.name).html_safe
+    - _body_ += '</p>'
+  -else
+    - _body_ += '<p style="margin-top: 0px;">'
+    - _body_ += I18n.t('mailer.new_tasks_email.content', tasks_in_words: @tasks_count.humanize.capitalize, tasks_num: @tasks_count, |
+      first_name: @invite_user_first_name, full_name: @invite_user.display_name, company: @invite_user.company.name, |
+      start_date: @invite_user.start_date.strftime('%b %d, %Y')).html_safe
+    - _body_ += '</p>'
+- _body_ += '<p style="margin-top: 0px;">' + I18n.t('mailer.new_tasks_email.link_below') + '</p>'
+
+- _email_body_html = _body_.html_safe
+- _footer_plain = ""
+- _footer_linked = ""
+- _footer_link_to = ""
+-if @task_type == "individual"
+  - _body_button_link = "https://#{@company.app_domain}/#/tasks/#{@activity_owner.try(:id).try(:to_s)}"
+-elsif @task_type == "workspace"
+  - _body_button_link = "https://#{@company.app_domain}/#/workspace/#{@workspace_id.try(:to_s)}/tasks"
+
+
+- _body_button_text = I18n.t('mailer.new_tasks_email.btn_text')
+- _body_button_color = @company.email_color || "#3F1DCB"
+
+= render "mail_template", locals: {img_src: _img_src,header_text: _header_text, email_title: _email_title, email_body_html: _email_body_html, body_button_text: _body_button_text, body_button_color: _body_button_color, body_button_link: _body_button_link, footer_plain: _footer_plain, footer_linked: _footer_linked, footer_link: _footer_link_to, initials: _initials}

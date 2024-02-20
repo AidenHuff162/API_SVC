@@ -1,0 +1,29 @@
+en:
+  hellosign:
+    bulk_send:
+      description: 'Unable to assign these paperwork request %{unassigned_paperwork_request} '
+
+    embedded_template:
+      description: 'Paperwork template is not present or is not saved'
+      action: 'Get paperwork template based off paperwork request'
+
+    embedded_template_doc:
+      description: 'Document is not present'
+      action: 'Get document based off paperwork request'
+
+    embedded_template_comb:
+      description: 'Paperwork Templates are not present'
+      action: 'Get paperwork templates'
+
+    firebase:
+      description_not_completed: 'Document is not completed on Hellosign'
+      description_already_updated: 'Already Upto Date. No need to fix it'
+
+    update_sign_cosigner:
+      description_id_blank: 'Hellosign Signature Id for Paperwork request is not found'
+      description_paperwork: 'Paperwork Request is not found'
+      action: 'Finding paperwork request for updating template request with hellosign_request_id'
+
+    update_temp_files:
+      description: 'Paperwork Template not found'
+      action: 'Finding paperwork template for updating template request with hellosign_template_id'

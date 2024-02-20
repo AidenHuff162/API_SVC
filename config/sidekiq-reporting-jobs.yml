@@ -1,0 +1,11 @@
+---
+:concurrency: <%= (if ENV['SIDEKIQ_REPORTING_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_REPORTING_CONCURRENCY'].to_i else 5 end) %>
+:pidfile: tmp/pids/sidekiq-reporting.pid
+:queues:
+  - [report_schedule, 2]
+  - generate_gsheet_reports
+  - generate_big_reports
+  - point_in_time_report_job
+  - track_user_change_report_job
+:limits:
+  generate_gsheet_reports: 3

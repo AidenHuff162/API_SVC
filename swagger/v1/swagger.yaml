@@ -1,0 +1,752 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/beta/address/countries":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: Countries address
+      tags:
+      - Addresses
+      description: Return the list of all the Countries.
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/address/states":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: States address
+      tags:
+      - Addresses
+      description: Return the list of all the States.
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/groupfields/group_fields":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: Groupfields
+      tags:
+      - Groupfields
+      description: Return the list of all the Groupfields.
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/pendinghires":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: List pendinghires
+      tags:
+      - Pending Hires
+      description: Gets all Pending hires in Sapling.
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: Create pendinghire
+      tags:
+      - Pending Hires
+      description: |-
+        Create a new pending hire in Sapling. Once created, a Sapling user can initiate onboarding for this pending hire, converting them to a User.
+
+                  Required fields in the payload are:
+
+                  - personalEmail (personal email of the pending hire)
+                  - firstName (first name of the pending hire)
+                  - lastName (last name of the pending hire)
+                  - startDate (expected start date of the pending hire)
+                  - source (caller's root web URL e.g. https://www.saplinghr.com)
+                  - prefferedName (prefferedName of the pending hire)
+                  - startDate (Starting Date of the pending hire)
+                  - jobTitle (jobTitle of the pending hire)
+                  - department (department of the pending hire)
+                  - location (location of the pending)
+                  - status (status of the pending hire)
+                  - employmentStatus (employmentStatus of the pending hire)
+                  - source (source for the pending hire)
+
+                  Note that you may want to supply preferredName equal to firstName if preferredName isn't explicitly defined in the source application to improve searchability and display of the pending hire in Sapling.
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                personalEmail:
+                  type: string
+                firstName:
+                  type: string
+                preferredName:
+                  type: string
+                lastName:
+                  type: string
+                startDate:
+                  type: string
+                jobTitle:
+                  type: string
+                department:
+                  type: string
+                location:
+                  type: string
+                status:
+                  type: string
+                employmentStatus:
+                  type: string
+                source:
+                  type: string
+              required:
+              - personalEmail
+              - firstName
+              - preferredName
+              - lastName
+              - startDate
+              - jobTitle
+              - department
+              - location
+              - status
+              - employmentStatus
+              - source
+  "/api/v1/beta/pendinghires/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: Show pendinghire
+      tags:
+      - Pending Hires
+      description: Gets a single pending hire in Sapling.
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: Update pendinghire
+      tags:
+      - Pending Hires
+      description: Update an existing pending hire in Sapling.
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                personalEmail:
+                  type: string
+                firstName:
+                  type: string
+                preferredName:
+                  type: string
+                lastName:
+                  type: string
+                startDate:
+                  type: string
+                jobTitle:
+                  type: string
+                department:
+                  type: string
+                location:
+                  type: string
+                status:
+                  type: string
+                employmentStatus:
+                  type: string
+                source:
+                  type: string
+              required:
+              - personalEmail
+              - firstName
+              - preferredName
+              - lastName
+              - startDate
+              - jobTitle
+              - department
+              - location
+              - status
+              - employmentStatus
+              - source
+    put:
+      summary: Update pendinghire
+      tags:
+      - Pending Hires
+      description: Update an existing pending hire in Sapling.
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                personalEmail:
+                  type: string
+                firstName:
+                  type: string
+                preferredName:
+                  type: string
+                lastName:
+                  type: string
+                startDate:
+                  type: string
+                jobTitle:
+                  type: string
+                department:
+                  type: string
+                location:
+                  type: string
+                status:
+                  type: string
+                employmentStatus:
+                  type: string
+                source:
+                  type: string
+              required:
+              - personalEmail
+              - firstName
+              - preferredName
+              - lastName
+              - startDate
+              - jobTitle
+              - department
+              - location
+              - status
+              - employmentStatus
+              - source
+  "/api/v1/beta/profiles/fields/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: Field profile
+      tags:
+      - Users
+      description: |-
+        Returns an individual profile field for all users at your company.
+         These will be alphanumeric for permanent fields (i.e. last_name) and Fields IDs for custom fields (i.e. PFID34357507802737).
+         Fields IDs can be retrieved from the Get all Fields request.
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/profiles/get_sapling_profile":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: Get sapling profile
+      tags:
+      - Users
+      description: |-
+        Returns the information about a user in the Sapling platform.
+         You can find the GUID by using the Get all Users request, or by running a report inside of Sapling.
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/profiles/fields":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: All fields profile
+      tags:
+      - Users
+      description: |-
+        Returns a list of API-transferable profile fields at your company.
+         The response will include the id, name, section and field-type.
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/profiles":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    - name: Content-Type
+      in: header
+      required: true
+      description: application/x-www-form-urlencoded
+      schema:
+        type: string
+    get:
+      summary: List profiles
+      tags:
+      - Users
+      description: |-
+        Returns all users in the Sapling account.
+         This will include GUIDs which can then be used to call Sapling's API for individual user information.
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: Create profile
+      tags:
+      - Users
+      description: "Creates a User in your Sapling Account.\n\n          The required
+        fields to create a new User are:\n      \n          - Company Email\n          -
+        First Name\n          - Preffered Name\n          - Last Name\n          -
+        Start Date\n          - Job Title\n          - Department\n          - Location
+        \n          - Status\n      \n          For a complete list of fields, use
+        the Get all Fields request. Include the API Field ID as the Key; if no API
+        Field ID is available, use the descriptive name as shown."
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                company_email:
+                  type: string
+                first_name:
+                  type: string
+                preferred_name:
+                  type: string
+                last_name:
+                  type: string
+                start_date:
+                  type: string
+                job_title:
+                  type: string
+                Department:
+                  type: string
+                Location:
+                  type: string
+                status:
+                  type: string
+              required:
+              - company_email
+              - first_name
+              - preferred_name
+              - last_name
+              - start_date
+              - job_title
+              - Department
+              - Location
+              - status
+  "/api/v1/beta/profiles/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    - name: Content-Type
+      in: header
+      required: true
+      description: application/x-www-form-urlencoded
+      schema:
+        type: string
+    get:
+      summary: Show profile
+      tags:
+      - Users
+      description: |-
+        Returns the information about a user in the Sapling platform.
+         You can find the GUID by using the Get all Users request, or by running a report inside of Sapling.
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: Update profile
+      tags:
+      - Users
+      description: |-
+        Updates a user in your Sapling account.
+         Use the GUID to identity which user you would like to update and the Field ID for each field you want to update.
+         The GUIDs for users can be obtained from the Users resource and the Field IDs can be obtained from the Fields resource.
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                company_email:
+                  type: string
+                first_name:
+                  type: string
+                preferred_name:
+                  type: string
+                last_name:
+                  type: string
+                start_date:
+                  type: string
+                job_title:
+                  type: string
+                Department:
+                  type: string
+                Location:
+                  type: string
+                status:
+                  type: string
+              required:
+              - company_email
+              - first_name
+              - preferred_name
+              - last_name
+              - start_date
+              - job_title
+              - Department
+              - Location
+              - status
+    put:
+      summary: Update profile
+      tags:
+      - Users
+      description: |-
+        Updates a user in your Sapling account.
+         Use the GUID to identity which user you would like to update and the Field ID for each field you want to update.
+         The GUIDs for users can be obtained from the Users resource and the Field IDs can be obtained from the Fields resource.
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                company_email:
+                  type: string
+                first_name:
+                  type: string
+                preferred_name:
+                  type: string
+                last_name:
+                  type: string
+                start_date:
+                  type: string
+                job_title:
+                  type: string
+                Department:
+                  type: string
+                Location:
+                  type: string
+                status:
+                  type: string
+              required:
+              - company_email
+              - first_name
+              - preferred_name
+              - last_name
+              - start_date
+              - job_title
+              - Department
+              - Location
+              - status
+  "/api/v1/beta/adminsignup":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    post:
+      summary: Create signup
+      tags:
+      - Signup
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/userlogin":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: Authorize signup
+      tags:
+      - Signup
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/passwordstrength":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: Password strength signup
+      tags:
+      - Signup
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/tasks":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: List tasks
+      tags:
+      - Tasks
+      description: Get a list of all tasks for a specific user based on email address
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/tasks/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    patch:
+      summary: Update task
+      tags:
+      - Tasks
+      description: Update tasks for a specific user.
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: Update task
+      tags:
+      - Tasks
+      description: Update tasks for a specific user.
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: Delete task
+      tags:
+      - Tasks
+      description: Delete tasks for a specific user.
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/webhooks":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: List webhooks
+      tags:
+      - Webhooks
+      parameters:
+      - name: Webhooks
+        in: query
+        schema:
+          properties:
+            page:
+              type: string
+            status:
+              type: string
+          required:
+          - page
+          - status
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: Create webhook
+      tags:
+      - Webhooks
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/webhooks/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: Show webhook
+      tags:
+      - Webhooks
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: Update webhook
+      tags:
+      - Webhooks
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: Update webhook
+      tags:
+      - Webhooks
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: Delete webhook
+      tags:
+      - Webhooks
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/workflows/tasks":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    post:
+      summary: Tasks workflow
+      tags:
+      - Workflows
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/workflows":
+    parameters:
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: List workflows
+      tags:
+      - Workflows
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: Create workflow
+      tags:
+      - Workflows
+      responses:
+        '200':
+          description: successful
+  "/api/v1/beta/workflows/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    - name: Authorization
+      in: header
+      required: true
+      description: Bearer{token}
+      schema:
+        type: string
+    get:
+      summary: Show workflow
+      tags:
+      - Workflows
+      responses:
+        '200':
+          description: successful
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: default.saplingapp.io

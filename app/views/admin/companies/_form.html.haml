@@ -1,0 +1,201 @@
+%fieldset.inputs
+  %legend
+    %h1
+      =t('active_admin.company.company_details')
+  %ol
+    %li.string.input.optional.stringish
+      = label_tag 'name'
+      = text_field_tag 'company[name]', @company.name
+
+    %li.string.input.optional.stringish
+      = label_tag 'subdomain'
+      = text_field_tag 'company[subdomain]', @company.subdomain, pattern: "^[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]$", "data-parsley-error-message" => "Subdomain can only contain letters, numbers and dashes"
+
+    %li.select.input.optional
+      = label_tag 'account_state'
+      = select_tag 'company[account_state]', options_for_select(Company.aasm(:state).states.map{|s| s.name.to_s}, @company.account_state), class: 'select-tag sapling-body-1', disabled: !@company.id 
+    
+    %li.select.input.optional
+      = label_tag 'account_type'
+      = select_tag 'company[account_type]', options_for_select(Company.account_types.keys.map { |w| [w.humanize, w] }, @company.account_type), class: 'select-tag sapling-body-1' 
+
+    %li.select.input.optional
+      = label_tag 'login_type'
+      = select_tag 'company[login_type]', options_for_select(Company.login_types.keys.map { |w| [w.humanize, w] }, @company.login_type), class: 'select-tag sapling-body-1' 
+    
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "is_using_custom_table", "false")
+        = radio_button("company", "is_using_custom_table", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.is_using_custom_table')
+
+      %span.tooltip
+        =image_tag("general/info_icon.svg") 
+        %span.tooltiptext 
+          =t('active_admin.company.is_using_custom_table_tooltip')
+
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "otp_required_for_login", "false")
+        = radio_button("company", "otp_required_for_login", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.otp_required_for_login')
+
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "notifications_enabled", "false")
+        = radio_button("company", "notifications_enabled", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.notifications_enabled')
+         
+      %span.tooltip
+        =image_tag("general/info_icon.svg") 
+        %span.tooltiptext.notifications-enabled
+          =t('active_admin.company.notifications_enabled_tooltip')
+
+    - if @company.billing
+      %li.input.optional.stringish
+        = label_tag 'trial_end_date'
+        = date_field('trial_end_date', 'company[trial_end_date]', value: @company.billing.trial_end_date.strftime("%Y-%m-%d"), required: true)
+      
+    %li.line-break
+    
+    .sub-title
+      =t('active_admin.company.customization_settings')
+
+    %li.string.input.optional.stringish
+      = label_tag =t('active_admin.company.buddy')
+      = text_field_tag 'company[buddy]', @company.buddy
+
+    %li.select.input.optional
+      = label_tag "Group displayed on user’s Profile page"
+      = select_tag 'company[group_for_home]', options_for_select(@company.id ? [@company.department] : @company.get_group_names(@company.id), @company.group_for_home), class: 'select-tag sapling-body-1' 
+
+    %li.line-break
+    
+    .sub-title
+      =t('active_admin.company.integration_mapping')
+
+    %li.string.input.optional.stringish
+      %div.label-with-icon
+        = label_tag 'Department mapping key'
+        %span.tooltip
+          =image_tag("general/info_icon.svg") 
+          %span.tooltiptext.mapping-key 
+            =t('active_admin.company.department_mapping_key')
+  
+      = text_field_tag 'company[department_mapping_key]', @company.department_mapping_key
+
+    %li.string.input.optional.stringish
+      %div.label-with-icon
+        = label_tag 'Location mapping key'
+        %span.tooltip
+          =image_tag("general/info_icon.svg") 
+          %span.tooltiptext.mapping-key
+            =t('active_admin.company.location_mapping_key')
+
+      = text_field_tag 'company[location_mapping_key]', @company.location_mapping_key
+
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "can_push_adp_custom_fields", "false")
+        = radio_button("company", "can_push_adp_custom_fields", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.can_push_adp_custom_fields')
+      
+      %span.tooltip
+        =image_tag("general/info_icon.svg") 
+        %span.tooltiptext.adp 
+          =t('active_admin.company.can_push_adp_custom_fields_tooltip')
+
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "pull_all_workday_workers", "false")
+        = radio_button("company", "pull_all_workday_workers", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.pull_all_workday_workers')
+
+      %span.tooltip
+        =image_tag("general/info_icon.svg") 
+        %span.tooltiptext.workday 
+          =t('active_admin.company.pull_all_workday_workers_tooltip')
+
+    %li.string.input.optional.stringish
+      %div.label-with-icon
+        = label_tag =t('active_admin.company.error_notification_emails')  
+        
+        %span.tooltip
+          =image_tag("general/info_icon.svg") 
+          %span.tooltiptext.notification-email 
+            =t('active_admin.company.error_notification_emails_tooltip')
+
+      = text_field_tag 'company[error_notification_emails]', @company.error_notification_emails
+
+    %li.line-break
+
+    .sub-title
+      =t('active_admin.company.company_plans')
+
+    %li.input.optional.radio-button.company-plan
+      %div
+        = radio_button("company", "company_plan", "people_operations")
+        %label.sapling-body-1
+          =t('active_admin.company.people_operation')
+      %div
+        = radio_button("company", "company_plan", "onboarding")
+        %label.sapling-body-1
+          =t('active_admin.company.onboarding_plan')
+    
+    .sub-title
+      =t('active_admin.company.additional_modules')
+
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "enabled_calendar", "false")
+        = radio_button("company", "enabled_calendar", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.enabled_calendar')
+
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "enabled_time_off", "false")
+        = radio_button("company", "enabled_time_off", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.enabled_time_off')
+
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "enabled_org_chart", "false")
+        = radio_button("company", "enabled_org_chart", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.enabled_org_chart')
+
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "surveys_enabled", "false")
+        = radio_button("company", "surveys_enabled", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.surveys_enabled')
+
+    %li.input.optional.radio-button
+      %div.radio
+        = radio_button("company", "enable_custom_table_approval_engine", "false")
+        = radio_button("company", "enable_custom_table_approval_engine", "true")
+        %div.toggle__pointer
+      %label.sapling-body-1
+        =t('active_admin.company.enable_custom_table_approval_engine')
+
+%fieldset.actions
+  = submit_tag @company.id ? 'UPDATE COMPANY' : 'CREATE COMPANY'
+  %span.cancel
+    = link_to 'CANCEL', '/admin/companies'

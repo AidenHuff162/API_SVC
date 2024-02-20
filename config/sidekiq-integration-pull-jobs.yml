@@ -1,0 +1,22 @@
+---
+:concurrency: <%= (if ENV['SIDEKIQ_INTEGRATION_PULL_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_INTEGRATION_PULL_CONCURRENCY'].to_i else 8 end) %>
+:pidfile: tmp/pids/sidekiq-integration-pull-jobs.pid
+:queues:
+  - receive_employee_from_hr
+  - receive_employee_from_adp
+  - receive_employee_from_paylocity
+  - update_departments_and_locations
+  - receive_employee_from_sso
+  - receive_employee_from_pm
+  - receive_employee_from_ld
+  - create_bamboo_documents
+  - [receive_tasks_from_service_now, 1]
+  - receive_employee_from_workday
+:limits:
+  receive_employee_from_hr: 4
+  receive_employee_from_workday: 5
+  receive_employee_from_adp: 7
+  receive_employee_from_paylocity: 5 
+  update_departments_and_locations: 2
+  create_bamboo_documents: 1
+  receive_tasks_from_service_now: 3

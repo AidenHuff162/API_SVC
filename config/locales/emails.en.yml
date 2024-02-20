@@ -1,0 +1,507 @@
+en:
+  mailer:
+    activities_completed:
+      marked_completed: Tasks Marked as Completed
+      close_window: OR, CLOSE THIS PAGE
+      goto_profile: Go back to Sapling
+
+    powered_by: By accessing and using Sapling, you consent to Sapling's
+    supporting_success: " and all of its terms. Contact your People Operations or HR team if you have any questions."
+    sapling: Privacy Policy
+    sapling_inc: Sapling Inc, 650 California Street, San Francisco, CA 94108
+    copyright: Copyright © 2018 Sapling Inc
+
+    upload_feedback:
+      error_description: "Your recent data upload has been processed, but we've found a few issues that need your attention."
+      success_description: "Your recent data upload has been processed and is now visible in Sapling."
+      success_upload_details: "<b>%{count}</b> %{section_name} updated"
+      error_upload_details: "<b>%{success_count}</b> %{section_name} updated <br> <b>%{defective_count}</b> issue"
+      error_subject: "[Sapling] Data upload needs your attention"
+      success_subject: "[Sapling] Data upload complete"
+      upload_error_heading: "We've found issues with your data upload"
+      upload_success_heading: "Your data upload is complete"
+      error_details: "Attached is a CSV file that lists the %{section} we were not able to %{action}. <br> You can reupload the CSV with new data, or visit the <a href='%{url}' style='color: #3F1DCB; text-decoration:none;'>%{section_label}</a> page in Sapling and %{action} %{section} directly. If you have any questions, contact our <a href='%{support_url}' style='color: #3F1DCB; text-decoration:none;'>support team</a>"
+      success_details: "Visit the <a href='%{url}' style='color: #3F1DCB; text-decoration:none;'>%{section_label}</a> page in Sapling to %{action}. <br> If you have any questions at all, please reach out to our <a href='%{support_url}' style='color: #3F1DCB; text-decoration:none;'>support team</a>"
+    power_update:
+      subject: 'Data Changes Complete!'
+      body: 'Hi %{employee_name},<br/> The bulk data changes that you recently submitted are successfully reflected in Sapling. As a reminder, you updated <b>%{table_name}</b> of <b>%{user_count} people</b> at %{company_name}.'
+    time_off:
+      sapling: Sapling
+      subject_comment:  '%{employee_name} commented on Time Off Request'
+      subject_comment_manager:  '%{employee_name} commented on your Time Off Request'
+      comment: '%{employee_first_name} commented on Time Off Request'
+      manager_comment: '%{employee_first_name} commented on your Time Off Request'
+      new_pto_request: 'New Time Off Request: %{employee_name}'
+      auto_approved: Time Off Auto-Approved
+      auto_approved_subject: 'Time Off Auto-Approved: %{employee_name}'
+      modified_auto_approved_subject: 'Time Off Modified and Auto-Approved: %{employee_name}'
+      modified_auto_approved: Time Off Modified and Auto-Approved
+      modified_pto_request: 'Modified Time Off Request: %{employee_name}'
+      pending_request: "%{employee_name}’s Time Off Request is Still Pending"
+      new_pto_request_header_top: '%{employee_preferred_full_name} requested time off'
+      updated_pto_request_header_top: '%{employee_preferred_full_name} Modified Time Off Request'
+      approved_pto_description: "%{employee_first_name}'s most recent time off request was auto-approved in Sapling. Here are the details"
+      approved_pto_update_description: "%{employee_first_name} modified the time off request and it was auto-approved in Sapling. Here are the details"
+      overdue_pto_request_header_top: 'Overdue Time Off Request For %{employee_preferred_full_name}'
+      no_additional_notes_provided: 'No additional notes have been added to this request.'
+      no_comments: 'No comments have been added to this request.'
+      date_range: 'Dates: '
+      comments: 'Comment: '
+      respond_to_request: Or, review in Sapling
+      review_in_sapling: Review in Sapling
+      view_in_sapling: VIEW IN SAPLING
+      respond_to_comment: Respond to this comment in Sapling
+      approved: Your Upcoming Time Off Has Been Approved
+      denied: Your Time Off Request Has Been Denied
+      updated_request_approved: Your Time Off Update Has Been Approved
+      timeoff_expired: Your Time Off Request Has Expired
+      timeoff_expired_approved: Your Time Off Request has been Auto-Approved
+      timeoff_expired_title: Time Off Expired
+      timeoff_expired_title_approved: Time Off Approved
+      timeoff_expired_and_approved_header: Your time off request went unanswered and was automatically approved based on the policy settings
+      timeoff_expired_and_denied_header: Unfortunately, your time off request went unanswered and was automatically denied
+      negative_balance_header: Negative PTO Balance Alert
+      update_request_denied: Your Time Off Update Has Been Denied
+      approved_heading: Time off approved!
+      denied_heading: Time off Denied
+      approved_sub_heading: 'Your recent time off request has been approved by %{manager_name}.'
+      denied_sub_heading: 'Unfortunately, %{manager_name} denied your recent time off request.'
+      details: "Here %{tense} the details:"
+      time_off_type: "Time Off Type:"
+      total_time_taken: "Total Time Taken:"
+      approved_footer: To modify or cancel this request,
+      head_to_sapling: head to Sapling.
+      denied_footer: We've removed this request from your calendar, but we encourage you to discuss this directly with %{manager_name} and request it again if appropriate.
+      policy_type: 'Time Off Type: '
+      request_length: 'Request Length: '
+      total_time_off_taken: 'Total Time Taken: '
+      all_done: All done!
+      comment_added: Your comment has been added to this time off request
+      close_window: OR, CLOSE THIS PAGE
+      goto_profile: GO BACK TO SAPLING
+      approve: APPROVE
+      deny: DENY
+      request_length_detail: This request is for %{request_length}. The balance of requested time off will be deducted on the start date.
+      cancelled_request: '%{employee_name} Cancelled %{request_time} Time Off'
+      cancelled_request_subject: "Heads up! %{employee_name}'s %{request_time} PTO has been cancelled"
+      view_request: VIEW REQUEST
+      comment_title: "Time Off Approved: %{user_full_name}"
+      comment_description: "Your Optional Note to %{user_name}"
+      clear_form: CLEAR FORM
+      add_comment: ADD COMMENT
+      comment_placeholder: 'For Example,"Have a great Holiday!"'
+    activities:
+      for: "%{activity_name} for %{full_name}"
+
+    onboarding_email:
+      header_top: Welcome!
+      hello: 'Hey %{name}!'
+      welcome_subject: Welcome to %{company_name}!
+      welcome_note: >
+        We're excited for you to be joining us on %{start_date}.
+
+
+        The link below will take you to %{company_name}'s Onboarding platform.
+
+
+        Here you'll be able to learn the company history, get to know your team and begin your onboarding journey.
+      additional_information_title: Additional Information
+      additional_information: |
+        <p>
+          We've already arranged an extensive on-boarding program for you, including online training,
+          and in-person meetings with key personnel across the NYC and global offices. All meetings have
+          already been setup for you in your Gmail Calendar.
+        </p>
+      additional_information_contact: |
+        <p>
+          We look forward to welcoming you on %{start_date}.
+        </p>
+        <p>
+          Best wishes from the %{company_name} Team!
+        </p>
+      additional_information_contact_manager: |
+        <p>
+          If you have any questions, please contact %{manager_name} who is Cc'd on this email. We look forward to welcoming you on %{start_date}.
+        </p>
+        <p>
+          Best wishes from the %{company_name} Team!
+        </p>
+
+      setup_sapling_profile: SET-UP SAPLING PROFILE
+
+    termination_email:
+      header_top: Next Step
+
+    invite_user:
+      header_top: Welcome to Sapling!
+      subject: You've been invited to Sapling!
+      join: '%{company_name} has invited you to join Sapling.'
+      onboarding: |
+        Sapling is %{company_name}'s new Employee Experience platform that will help us:
+        <ul>
+        <li>Introduce new hires to %{company_name} through a customized onboarding portal</li>
+        <li>Automate workflows to eliminate paperwork, save time, and manage communications across departments</li>
+        <li>Power an amazing employee experience with org charts, custom dashboards, reporting and more</li>
+        </ul>
+        Use the below link to log into Sapling, complete your profile and check out your Activities - we greatly appreciate your support.<br/><br/>
+        If you have any questions, please contact the People Operations team.<br/><br/>
+      get_started: Click here to get started
+
+    new_tasks_email:
+      header_top: New Activities to Complete
+      subject_onboarding: New Onboarding Activities to Complete
+      subject_activities: New Activities to Complete
+      hello: Hey %{name}!
+      btn_text: See Activities
+      btn_help: Alternatively you can see all your Activities by logging into Sapling.
+      btn_help_with_link: Alternatively you can see all your <strong>Activities</strong> by <a href='%{url}' style="color:#3F1DCB">logging into Sapling</a>.
+      link_below: The link below will take you to Sapling where you can view these activities.
+      due_date: "Due: %{due_date}"
+      content_department: |
+        <strong>%{tasks_in_words} (%{tasks_num})</strong> activities were assigned to you to help
+        <strong>%{full_name}</strong> get onboarded into <strong>%{company}</strong>.
+        <strong>%{first_name}</strong> joins <strong>%{department}</strong> on %{start_date}.
+      content: |
+        <strong>%{tasks_in_words} (%{tasks_num})</strong> activities were assigned to you to help
+        <strong>%{full_name}</strong> get onboarded into <strong>%{company}</strong>.
+        <strong>%{first_name}</strong> joins on %{start_date}.
+      content_self: <strong>%{tasks_in_words} (%{tasks_num})</strong> activities were assigned to you to complete.
+      content_activities: <strong>%{tasks_in_words} (%{tasks_num})</strong> activities were assigned to you to complete for <strong>%{full_name}</strong>.
+      complete_activities_help: You can mark these <strong>Activities</strong> as completed directly from this email by using the <strong>Submit</strong> button below.
+      complete_activities_btn: Submit as Completed
+      goto_btn: Go to Sapling
+      document_singular: Document
+      documents_multiple: Documents
+
+    onboarding_tasks_email:
+      header_top: New Onboarding Activities to Complete
+      subject_onboarding: New Onboarding Activities to Complete
+      subject_activities: New Activities to Complete
+      hello: Hey %{name}!
+      btn_text: See Activities
+      btn_help: Alternatively you can see all your Activities by logging into Sapling.
+      btn_help_with_link: Alternatively you can see all your <strong>Activities</strong> by <a href='%{url}' style="color:#3F1DCB">logging into Sapling</a>.
+      link_below: The link below will take you to Sapling where you can view these activities.
+      due_date: "Due: %{due_date}"
+      content_department: |
+        <strong>%{tasks_in_words} (%{tasks_num})</strong> activities were assigned to you to help
+        <strong>%{full_name}</strong> get onboarded into <strong>%{company}</strong>.
+        <strong>%{first_name}</strong> joins <strong>%{department}</strong> on %{start_date}.
+      content: |
+        <strong>%{tasks_in_words} (%{tasks_num})</strong> activities were assigned to you to help
+        <strong>%{full_name}</strong> get onboarded into <strong>%{company}</strong>.
+        <strong>%{first_name}</strong> joins on %{start_date}.
+      content_self: <strong>%{tasks_in_words} (%{tasks_num})</strong> activities were assigned to you to complete.
+      content_activities: <strong>%{tasks_in_words} (%{tasks_num})</strong> activities were assigned to you to complete for <strong>%{full_name}</strong>.
+      complete_activities_help: You can mark these <strong>Activities</strong> as completed directly from this email by using the <strong>Submit</strong> button below.
+      complete_activities_btn: Submit as Completed
+      goto_btn: Go to Sapling
+      document_singular: Document
+      documents_multiple: Documents
+
+    introducing_email:
+      header_top: New Team Member!
+      subject: Welcome %{employee_name} to %{company_name}
+      new_coworker: New Coworkers
+      welcome_note: We're excited to welcome <strong>%{employee_name}</strong> to <strong>%{company_name}</strong>.
+      employee_join_detail: <strong>%{employee_name}</strong> will be joining
+      employee_start_date: on <strong>%{date}</strong>.
+      learn_more: You can learn more about <strong>%{employee_name}</strong> and other team members in the Sapling platform.
+
+    overdue_activities_email:
+      header_top: Overdue Activities
+      look_like:  Looks like you have <strong>Overdue Activities</strong> in Sapling.
+      subject: Overdue Activities in Sapling
+      hello: Hey %{first_name}!
+      link_below: The link below will take you to Sapling where you can view these activities.
+      contact: If you have any questions, please contact your People Operations team.
+      btn_text: See Outstanding Activities
+
+    gsheet_report_email:
+      header_top: Google Sheet Report Email
+      subject: "#{@report_name} - Available for download"
+      hello: Hi %{first_name},
+      contact: If you have any questions, please contact your People Operations team.
+      link_below: The report you requested is available below.
+      btn_text: Google Sheet Report Link
+
+    csv_report_email:
+      header_top: CSV Report Email
+      subject: "#{@report_name} - Available for download"
+      hello: Hi %{first_name},
+      link_below: The report that you requested from Sapling has been attached to this email.
+
+    milestone_reminder_email:
+      header_top: Onboarding Progress
+      hey: Hey %{name}!
+      subject: Onboarding Road-Map Check-In
+      congrats: Congratulations on reaching <strong>%{milestone}</strong> objective on your onboarding Road-Map!
+      percentage: You're now <strong>%{progress}</strong> complete of your onboarding program at %{company}.
+      footer: The link below will take you to Sapling where you can view your progress.
+      btn_text: My Onboarding Road-Map
+
+    offboarding_tasks_email:
+      header_top: Offboarding Tasks
+      hey: Hey %{name},
+      subject: New Offboarding Tasks to Complete
+      help: |
+        <strong>%{tasks_in_words} (%{task_count})</strong> tasks were assigned to you to assist <strong>%{first_name} %{last_name}</strong>
+        offboard from <strong>%{company}</strong>. <strong>%{first_name}</strong> leaves <strong>%{company}</strong> on <strong>%{date}</strong>.
+      link_below: The link below will take you to Sapling where you can view and complete these tasks.
+      offboarding: See Offboarding Tasks
+      due_date: "Due: %{due_date}"
+      btn_help: Alternatively you can see all your <strong>Activities</strong> by logging into Sapling.
+      btn_help_with_link: Alternatively you can see all your <strong>Activities</strong> by <a href='%{url}' style="color:#3F1DCB">logging into Sapling</a>.
+      complete_activities_help: You can mark these <strong>Activities</strong> as completed directly from this email by using the <strong>Submit</strong> button below.
+      complete_activities_btn: Submit as Completed
+      goto_btn: Go to Sapling
+
+    buddy_manager_change_email:
+      header_top: Congratulations
+      hey: Hey %{name},
+      subject: You've been assigned as %{first_name}'s %{buddy_manager_name}
+      body: You've been assigned as <b>%{first_name} %{last_name}</b>'s %{buddy_manager_name}.
+      body_center: The link below will take you to Sapling where you can learn more.
+      link_below: Take me to %{first_name}'s Profile
+
+    start_date_change_email:
+      header_top: Change in Start Date
+      body_center: Go To Profile
+
+    reset_password_instructions:
+      header_top: Password Reset
+
+    unlock_instructions:
+      header_top: Unlock Account
+
+    document_completion:
+      header_top: Document Completion
+      link_below: View %{first_name}'s Profile
+
+    preboarding_complete_email:
+      header_top: Preboarding Complete
+      subject: "%{first_name} %{last_name} has completed Preboarding"
+      body: "%{first_name} %{last_name} has completed Preboarding in Sapling, and is all set to join %{team_name} on %{hire_start_date}."
+      link_to_sapling: "The link below will take you to %{first_name}'s profile in Sapling."
+      link_below: View %{first_name}'s Profile
+      awaiting_co_sign: "&nbsp;(awaiting co-sign)"
+      completed_documents: "During Preboarding, the following documents were completed:"
+
+    notify_manager_to_provide_information_email:
+      hey: Hi %{name},
+      subject: New Hire Information Required
+      body: |
+        The People Operations team requires some information about <strong>%{first_name} %{last_name}</strong> who is joining %{company} on <strong>%{hire_start_date}</strong>.
+      link_below: Complete Required Information
+
+    notify_account_creator_about_manager_form_completion_email:
+      hey: Hi %{name},
+      subject: New Hire Information Completed
+      link_below: View Profile
+      body: |
+        %{manager_first_name} %{manager_last_name} has completed the required New Hire Information for <strong>%{employee_first_name} %{employee_last_name}</strong> who is joining %{company} on <strong>%{hire_start_date}</strong>.
+
+    notify_about_pending_hire_to_subscribers:
+      header_top: New Pending Hire
+      subject: "New Pending Hire in Sapling"
+      body: "%{first_name} %{last_name} has been added to Pending Hires in Sapling.<br/> <strong>%{first_name}</strong> joins <strong>%{team_name}</strong> in <strong>%{location}</strong> on %{hire_start_date}."
+      link_below: Take me to Pending Hires
+
+    pre_start:
+      header_top: Welcome
+      button: Log Into Sapling
+
+    change_password_email:
+      header_top: Password Change Confirmed
+      subject: Your Sapling Password has been changed
+      hello: 'Hi %{name},'
+      message: Your Sapling password has been changed. If you did not request this change, please contact our team at help@trysapling.com
+      contact_us: Contact Us
+
+    notify_comment_mentioned_user:
+      header_top: Task Updates
+      subject: You’ve got new mentions in Sapling!
+      hey: Hi %{name},
+      link_below: Take me to the task
+      title: "%{commenter_name} mentioned you in a task for %{task_receiver_name}"
+
+    notify_comment_task_owner:
+      header_top: Task Updates
+      subject: You have a new comment in Sapling!
+      hey: Hi %{name},
+      link_below: Take me to the task
+      title: "%{commenter_name} comment in your task"
+
+    document_assigned:
+      header_top: New Document
+      subject: You have a document to complete in Sapling
+      hey: Hi %{name}!
+      user_body: "You've been assigned a document to complete in Sapling.<br/><br/><strong>%{document_name}</strong>"
+      cosigner_body: "You've been assigned a document to complete.<br/><br/><strong>%{document_name}</strong> for %{name}<br/><br/>Use the link below to complete the document in Sapling."
+      link_below: View My Documents
+
+    document_packet_assigned:
+      subject: You have documents to complete in Sapling
+
+    bulk_document_assigned:
+      header_top: Document Assigned
+      subject: Bulk document assignment
+      hey: Hey %{name},
+      body: "We wanted to let you know that all of the documents you assigned around %{assign_time} have now been delivered to the people you selected for review!"
+      link_below: See Open Activities
+
+    document_failed:
+      subject: 
+        individual: 'signatory document request for %{name} needs attention'
+        bulk: 'signatory document requests need attention'
+
+    integration_failure:
+      link_below: LOG IN TO SAPLING
+
+    overdue_task_email:
+      header_top: Overdue Tasks
+      subject: Overdue Tasks in Sapling
+      hey: Hi %{name}‌,
+      body: "Looks like you have Overdue Tasks to complete.<br/><br/>Use the link below to complete these in Sapling."
+      link_below: Complete Tasks
+
+    overdue_document_email:
+      header_top: Outstanding Documents
+      subject: Outstanding Documents in Sapling
+      hey: Hi %{name}‌,
+      body: "Looks like you have Outstanding Documents to complete.<br/><br/>Use the link below to complete these in Sapling."
+      link_below: Complete Documents
+
+    added_to_workspace_email:
+      header_top: "%{inviter_first_name} has invited you to a workspace!"
+      body: "You've been invited to your team's shared Sapling Workspace, <a style='color:#3F1DCB;' href=%{url}>%{workspace_name}.</a><br/><br/>A Workspace is a collaborative space for you and other team members to complete workflows together."
+      link_below: Take me to the Workspace
+
+    devise:
+      password_change_instruction: "If you didn't request this, please ignore this email. Your password won't change until you access the link below and create a new one."
+
+    terminated_custom_alert:
+      link_below: View Profile
+      body: "<div style='margin-bottom:-21.5px'><strong>Initiated by:</strong> %{action_performer_name}</div><br/><div style='margin-bottom:-21.5px'><strong>Location:</strong> %{location}</div><br/><div style='margin-bottom:-21.5px'><strong>Termination Type:</strong> %{termination_type}</div><br/><div style='margin-bottom:-21.5px'><strong>Eligible for Rehire:</strong> %{eligible_for_rehire}</div><br/><div style='margin-bottom:-21.5px'><strong>Termination Date:</strong> %{termination_date}<br/><strong>Last Day Worked:</strong> %{last_day_worked}</div><br/><br/>"
+
+    bulk_document_assignment:
+      description_heading:  <b> %{requester} bulk assigned '%{document_title}' to %{user_count} user(s)</b> <br>
+      description_sub_heading: "<b> Out of %{user_count} user(s), assignment to %{failed_user_count} user(s) was failed. </b> <br><br><h4 style=\"color: #d55258;\"> Following are the failures: </h4>"
+
+    send_request_information_notification_to_requested_to:
+      subject: Complete Your Profile
+      hey: Hey %{name},
+      body: "Hey %{name},<br/><div style='color: #333333; text-align: left; margin-top: 8.5px; margin-bottom:-10.5px'>%{requester_name} has requested you to complete some information in your profile. Please use the link below to login to Sapling and complete any missing profile fields.</div><br/>"
+      link_below: Complete Info
+
+    send_request_information_notification_to_requester:
+      subject: Request For Information Complete
+      link_below: Go To Sapling
+      body1: "<div style='text-align: left;'>Hey %{requester_name},<br/><div style='margin-top: 5px;'>%{requested_to_name} has finished completing the following:<br/></div><ul>"
+      body2: "</ul>Use the link below to review %{requested_to_name}'s profile.<br/><div style='margin-top: 5px; margin-bottom: 6px;'>Thank you!</div></div>"
+
+    custom_tables:
+      approvers_email:
+        title: 'Approval Needed For %{user_name}'
+        description: "Hi %{to_user_name}, <br><div style='text-align: left; margin-top: 15px'>%{from_user_name} has requested a <b>%{table_name}</b> change for <b>%{requested_user_name}</b> that requires your approval. <br><br> Please review and confirm the request before it expires <b>(%{expiry_time})</b> so it can take effect on <b>%{effective_date}</b>.<br><br> Thanks! </div>"
+        btn_text: 'REVIEW REQUEST'
+        subject: '[Sapling] Approval Needed For %{user_name}'
+      expired_request_email:
+        title: 'Expired Pending Changes For %{user_name}'
+        description: 'Hi %{from_user_name}, <br><div style="text-align: left; margin-top: 15px">Just a heads up, the change request you submitted on <b>%{created_at}</b> is now expired. Please re-submit, or reach out to revelant stakeholders. <br><div style="margin-top: 15px"> Thanks! </div></b></div>'
+        btn_text: 'GO TO SAPLING'
+        subject: 'Change Request Expired'
+      approved_request:
+        title: 'Change Request Approved'
+        description: 'Hi %{requester_name}, <br><div style="text-align: left; margin-top: 15px">Great news! Your request to update %{user_name} information has been approved. Request Details: <ul><li>Request sent: <b>%{ctus_date}</b></li><li>Approver(s):</li></ul> %{approvers}<div style="text-align: left; margin-top: 15px">No further action is needed from you. Thanks!<div></b></div>'
+        btn_text: Log IN TO SAPLING
+        subject: '[Sapling] Change Request Approved'
+      denied_request:
+        title: 'Change Request Denied'
+        description: 'Hi %{requester_name}, <br><div style="text-align: left; margin-top: 15px">Your request to update %{user_name} information unfortunately has been denied. Request Details: <ul><li>Request sent: <b>%{ctus_date}</b></li><li>Request denied: <b>%{denied_date}</b></li><li>Approver(s):</li></ul> %{approvers}<div style="text-align: left; margin-top: 15px">You can re-send the request or reach out to the approver who denied your request to get more details.<div></b></div>'
+        btn_text: GO TO SAPLING
+        subject: '[Sapling] Change Request Denied'
+      deleted_request:
+        title: 'Change Request Deleted'
+        btn_text: GO TO SAPLING
+        subject: '[Sapling] Change Request Deleted'
+
+
+    custom_sections:
+      approvers_email:
+        title: 'Approval Needed For %{user_name}'
+        description: "Hi %{to_user_name}, <br><div style='text-align: left; margin-top: 15px'>%{from_user_name} has requested a <b>%{table_name}</b> change for <b>%{requested_user_name}</b> that requires your approval. <br><br> Please review and confirm the request before it expires <b>(%{expiry_time})</b>.<br><br> Thanks! </div>"
+        btn_text: 'REVIEW REQUEST'
+        subject: '[Sapling] Approval Needed For %{user_name}'
+      expired_request_email:
+        title: 'Expired Pending Changes For %{user_name}'
+        btn_text: 'GO TO SAPLING'
+        subject: 'Change Request Expired'
+      approved_request:
+        title: 'Change Request Approved'
+        btn_text: Log IN TO SAPLING
+        subject: '[Sapling] Change Request Approved'
+      denied_request:
+        title: 'Change Request Denied'
+        btn_text: GO TO SAPLING
+        subject: '[Sapling] Change Request Denied'
+      delete_request:
+        title: 'Change Request Deleted'
+        btn_text: GO TO SAPLING
+        subject: '[Sapling] Change Request Deleted'
+
+    company_documents_download:
+      title: Bulk download documents for %{company}
+      subject: Downloaded documents for %{company}
+      description: You can download all documents for %{company} by following link.
+
+    company_profile_pictures_download:
+      title: Bulk profile pictures for %{company}
+      subject: Downloaded profile pictures for %{company}
+      description: You can download all profile pictures for %{company} by following link.
+
+    api_key_expiration:
+      title: API Key Expiration
+      subject1: Your Sapling API key expires in %{days_left} days
+      subject2: Your Sapling API key is expired
+      description1: Your API key, %{name}, is set to expire in %{days_left} days.
+      description2: Your API key, %{name}, has now expired.
+      button_text: CREATE API KEY
+
+    new_hires_weekly:
+      title: Week of %{start} - %{week_end}
+      subtitle: 
+        one: We have %{count} new hire!
+        other: We have %{count} new hires!
+
+    weekly_metrics:
+      title: Week of %{start} - %{end}
+
+    api_call_error_notification:
+      subject: Integration Error for %{name}
+
+    admin_user_email:
+      subject: '[Action Required] Confirm Active Admin Access'
+      cc: 'itops@trysapling.com'
+      description: 'Hi there, <br><div style="margin-top: 15px">You have been given Active Admin access until <b>%{expiry_date}</b>. Before continuing, please use the link below to setup 2-Factor Authentication.<br>Thank you!</div>'
+      confirm_access: Confirm Access
+      footer_description: 'Your access will auto-expire on <b>%{expiry_date}</b>.<br><div style="margin-top: 10px">Thank you!</div>'
+
+    contact_us:
+      revenue_opportunity: 'Revenue Opportunity: Requesting More Info'
+
+    flipped_document_email:
+      subject: 'Reassigning Some Documents for Signature'
+
+    sftp_upload_response_email:
+      success: 'Your report <b>%{report_name}</b> was successfully exported to your SFTP server.'
+      failed: 'Your report <b>%{report_name}</b> could not be exported to your SFTP server. Please confirm that your SFTP is connected correctly. We recommend viewing our SFTP guide or contacting support.'
+      title: 'SFTP upload response'
+      success_subject: 'SFTP Export Successful'
+      failed_subject: 'SFTP Export Failed'
+
+    csv_loggings_email:
+      header_top: CSV Loggings Email
+      subject: "#{@file_name} - Available for download"
+      hello: Hi %{first_name},
+      link_below: The report that you requested from Active Admin has been attached to this email

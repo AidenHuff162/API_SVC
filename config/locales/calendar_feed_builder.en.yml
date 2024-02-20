@@ -1,0 +1,56 @@
+en:
+  calendar_feed:
+    anniversary_feed:
+      calendar_name: 'Anniversary Calendar for %{company_name}'
+      year_1: 'Six month'
+      year_2: '%{total_years} Year'
+      year_prev: '%{total_years} Year'
+      no_location_summary: "%{user_name}'s %{anniversary_year} Anniversary 🎉"
+      summary_when_location:  "%{user_name}'s %{anniversary_year} Anniversary 🎉 (%{location_name})"
+      no_manager_location_description:  'Show them your appreciation!'
+      description_manager_location: '%{user_name} reports to %{manager_name} in %{location_name}. Show them your appreciation!'
+
+    birthday_feed:
+      calendar_name: 'Birthday Calendar'
+      birth_date: '%{date_today}-%{birth_date_month}-%{birth_date_day}'
+      summary_when_location:  "%{user_name}'s Birthday 🎂 (%{location_name})"
+      no_location_summary: "%{user_name}'s Birthday 🎂"
+      description_manager_location: "%{user_name} reports to %{manager_name} in %{location_name}. Wish them a Happy Birthday!"
+      no_manager_location_description: 'Wish them a Happy Birthday!'
+
+    offboarding_feed:
+      calendar_name: 'Offboarding Calendar for %{company_name}'
+      no_location_name: 'No Location Assigned'
+      no_title: 'No Title Assigned'
+      summary: '%{user_name} (%{title}, %{location_name})'
+      description_no_location_name: 'Location (No Location Assigned)'
+      description_no_manager_name: 'Manager (No Manager Assigned)'
+      termination_date_not_assigned: 'Not Assigned'
+      last_day_worked_not_assigned: 'Not Assigned'
+      no_team_assigned: 'Department (No Department Assigned)'
+      description: "Final Day for %{display_name} (%{team} in %{location_name} reporting to %{manager_name})\n\nTermination Date: %{termination_date}\nLast Day Worked: %{last_day_worked}"
+
+    out_of_office_feed:
+      calendar_name: 'Out Of Office Calendar for %{company_name}'
+      summary: '%{user_name} - %{policy_name} (%{balance_hours} %{unit})'
+      description_with_location: 'Time Off for %{user_name}, %{team} in %{location_name}'
+      no_manager_location_description: 'Time Off for %{user_name}'
+
+    holiday_feed:
+      calendar_name: 'Holiday Calendar for %{company_name}'
+      summary: '%{holiday_name} for %{company_name} company 🎉'
+      description: 'Celebrating the %{holiday_name} 🎉'
+
+    over_due_activity_feed:
+      calendar_name: 'Sapling Activities'
+      no_location_assigned: 'No Location Assigned'
+      no_title: 'No Title Assigned'
+      no_activity_name: 'Activity (No Activity Name)'
+      no_description: 'No Activity Description'
+      summary: '%{activity_name} for %{user_name} (%{title}, %{location_name}'
+
+    start_date_feed:
+      calendar_name: 'New Hire Starts for %{company_name}'
+      summary: "%{user_name}'s First Day!"
+      description_with_location_manager: '%{user_name} joins us in %{location_name}, reporting to %{manager_name}. Give them a warm welcome!'
+      no_manager_location_description: 'Give them a warm welcome!'

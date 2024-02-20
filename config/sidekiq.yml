@@ -1,0 +1,62 @@
+---
+:concurrency: <%= (if ENV['SIDEKIQ_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_CONCURRENCY'].to_i else 15 end) %>
+:pidfile: tmp/pids/sidekiq.pid
+:queues:
+  - default
+  - remove_access
+  - [pto_calculations, 4]
+  - pending_hires
+  - new_hire
+  - manage_bamboo_integration
+  - manage_integration_error_notifications
+  - manage_api_key_testing
+  - workspace_invitations
+  - slack_notification
+  - slack_integration
+  - weekly_digest
+  - manage_general_data_protection_regulation
+  - log_field_history
+  - manage_custom_alert
+  - manage_phone_format_conversion
+  - manage_custom_field_data_migration
+  - expire_carryover_balance
+  - [manage_workday_integration, 2]
+  - workday_script
+  - update_adp_integration_mappings
+  - email_fix
+  - delete_company
+  - asana_integration
+  - weekly_metrics
+  - pto_activities
+  - fix_counter
+  - reset_company_related_counters
+  - reset_user_related_counters
+  - [manage_template_assignment, 3]
+  - copy_assets
+  - [delete_user, 3]
+  - generate_org_chart
+  - [upload_user_data, 3]
+  - logout_user
+  - company_attributes_sync
+  - reset_user_counter
+  - update_smart_assignment_configuration_activities
+  - destroy_task
+  - user_current_stage
+  - post_sidekiq_job
+:limits:
+  pto_calculations: 10
+  copy_assets: 1
+  manage_integration_error_notifications: 5
+  delete_company: 1
+  log_field_history: 3
+  manage_workday_integration: 10
+  remove_access: 10
+  reset_user_related_counters: 1
+  generate_org_chart: 3
+  company_attributes_sync: 3
+  manage_phone_format_conversion: 1
+  manage_custom_field_data_migration: 1
+  destroy_task: 1
+  user_current_stage: 4
+
+

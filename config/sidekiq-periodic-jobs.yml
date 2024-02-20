@@ -1,0 +1,10 @@
+---
+:concurrency: <%= (if ENV['SIDEKIQ_PERIODIC_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_PERIODIC_CONCURRENCY'].to_i else 4 end) %>
+:pidfile: tmp/pids/sidekiq-periodic-jobs.pid
+:queues:
+  - [company_state, 4]
+  - [critical_periodic_jobs, 3]
+  - [low_priority_periodic_jobs, 2]
+:limits:
+  critical_periodic_jobs: 3
+  low_priority_periodic_jobs: 1  

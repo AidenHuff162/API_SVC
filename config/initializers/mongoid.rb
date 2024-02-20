@@ -1,0 +1,1 @@
+Mongoid.load!("#{Rails.root}/config/mongoid.yml", Rails.groups[1].to_sym)

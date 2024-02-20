@@ -1,0 +1,89 @@
+:css
+  .font-size-16{
+    font-size:16px;
+  }
+
+  .margin-top-16{
+    margin-top:16px;
+  }
+  .margin-bottom-24{
+    margin-bottom:24px;
+  }
+
+  #company_assets_copy_from{
+    font-size:18px;
+    min-width: 200px;
+    margin: 16px;
+  }
+
+= form_for :company_assets, :url=>{:action=>"create_assets"}, :html => { :multipart => true } do |f|
+  %table
+    %tr
+      %td
+        %b.font-size-16
+          Copy From :
+        = f.select :copy_from, @companies, {:class => 'font-size-16'}
+    %tr  
+      %td
+        = f.check_box :company_branding,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Company Branding
+    %tr  
+      %td
+        = f.check_box :platform_settings,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Platform Settings
+    %tr  
+      %td
+        = f.check_box :workflows,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Workflows
+
+    %tr  
+      %td
+        = f.check_box :documents,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Documents
+    %tr  
+      %td
+        = f.check_box :profile_fields,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Profile Fields and Templates
+    %tr  
+      %td
+        = f.check_box :user_profiles,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          User Profiles
+    %tr  
+      %td
+        = f.check_box :pending_hires,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Pending Hires
+    %tr  
+      %td
+        = f.check_box :emails,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Email Settings and Templates
+    %tr  
+      %td
+        = f.check_box :workspaces,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Workspaces
+    %tr  
+      %td
+        = f.check_box :time_off,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Time Off Policies
+    %tr  
+      %td
+        = f.check_box :reports,  {:checked=>true, :class => 'margin-top-16'} 
+        %label.font-size-16
+          Reports
+    %tr  
+      %td
+        = f.check_box :company_links,  {:checked=>true, :class => 'margin-top-16 margin-bottom-24'} 
+        %label.font-size-16
+          Company Links
+    %tr
+      %td
+        = submit_tag 'Copy Assets'

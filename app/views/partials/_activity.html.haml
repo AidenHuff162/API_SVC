@@ -1,0 +1,65 @@
+= form_tag "https://#{@company.domain}"+api_v1_email_activities_path, method: :get do
+  - if activities.present? && activities[:tasks].present? && activities[:tasks].count > 0
+    %table.mcnTextContentContainer{:align => "left", :border => "0", :cellpadding => "0", :cellspacing => "0", :style => "max-width:100%; min-width:100%;", :width => "100%"}
+      %tbody
+        - activities[:tasks].each_with_index do |task, index|
+          - if(index == 0 || (index > 0 && activities[:tasks][index][0] != activities[:tasks][index-1][0]))
+            %tr
+              %td.mcnTextContent{:style => "font-weight: 700; padding-top:10px; padding-right:18px; padding-bottom:0; padding-left:0 !important;", :valign => "top"}
+                = task[1]
+          %tr{:style => "margin: 4px 0; border: 1px #D0D0D0 solid; display: flex; border-radius: 5px;min-height:50px;"}
+            %td.mcnTextContent.mcnTextContentHover{:style=> "padding-left:10px !important;padding-right:0 !important; padding-top:10px;"}
+              = check_box_tag 'task[]', task[3], false, {:style=>"zoom: 1.8;"}
+
+            %td.mcnTextContent{:style => "line-height: 100% !important; padding-top:8px; padding-right:18px; padding-bottom:2px; padding-left:0; padding-top: 10px; width: 100%;", :valign => "top"}
+              = I18n.t('mailer.activities.for', activity_name: task[4], full_name: task[5]).html_safe
+              %br/
+              %span{:style => "font-size: 10px; color: #9b9b9b;", :valign => "top"}
+                = task[2].strftime("%b %d")
+
+  - if activities.present? && activities[:outcomes].present? && activities[:outcomes].count > 0
+    %table.mcnTextContentContainer{:align => "left", :border => "0", :cellpadding => "0", :cellspacing => "0", :style => "max-width:100%; min-width:100%;", :width => "100%"}
+      %tbody
+        - activities[:outcomes].each_with_index do |outcome, index|
+          - if(index == 0 || (index > 0 && activities[:outcomes][index][0] != activities[:outcomes][index-1][0]))
+            %tr
+              %td.mcnTextContent.mcnTextContentHover{:style => "font-weight: 700; padding-top:10px; padding-right:18px; padding-bottom:0; padding-left:0 !important;", :valign => "top"}
+                = outcome[1]
+          %tr{:style => "margin: 4px 0; border: 1px #D0D0D0 solid; display: flex; border-radius: 5px;min-height:50px;"}
+            %td.mcnTextContent{:style=> "padding-left:10px !important;padding-right:0 !important; padding-top:10px;"}
+              = check_box_tag 'outcome[]', outcome[3], false, {:style=>"zoom: 1.8;"}
+
+            %td.mcnTextContent{:style => "line-height: 100% !important; padding-top:8px; padding-right:18px; padding-bottom:2px; padding-left:18px; width: 100%;", :valign => "top"}
+              = I18n.t('mailer.activities.for', activity_name: outcome[4], full_name: outcome[5])
+              %br/
+              %span{:style => "font-size: 10px; color: #9b9b9b;", :valign => "top"}
+                - if outcome[2] && outcome[6]
+                  = I18n.t('mailer.new_tasks_email.due_date', due_date: (outcome[6] + outcome[2].days).strftime("%b %d"))
+                - elsif outcome[6] && !outcome[2]
+                  = I18n.t('mailer.new_tasks_email.due_date', due_date: (outcome[6]).strftime("%b %d"))
+
+  - if activities.present? && activities[:documents].present? && activities[:documents].count > 0
+    %table.mcnTextContentContainer{:align => "left", :border => "0", :cellpadding => "0", :cellspacing => "0", :style => "max-width:100%; min-width:100%;", :width => "100%"}
+      %tr
+        %td.mcnTextContent.mcnTextContentHover{:style => "font-weight: 700; padding-top:10px; padding-right:18px; padding-bottom:0; padding-left:0 !important;", :valign => "top"}
+          - if activities[:documents].count == 1
+            = I18n.t('mailer.new_tasks_email.document_singular')
+          - else
+            = I18n.t('mailer.new_tasks_email.documents_multiple')
+      %tbody
+        - activities[:documents].each_with_index do |document_title|
+          %tr{:style => "margin: 4px 0; border: 1px #D0D0D0 solid; display: flex; border-radius: 5px;min-height:50px;"}
+            %td.mcnTextContent{:style => "line-height: 100% !important; padding-top:8px; padding-right:18px; padding-bottom:2px; padding-left:0; padding-top: 10px; width: 100%;", :valign => "top"}
+              = document_title
+              %br
+              %span{:style => "font-size: 10px; color: #9b9b9b;", :valign => "top"}
+                = I18n.t('mailer.new_tasks_email.due_date', due_date: Date.today.strftime("%b %d"))
+  %table.mcnButtonBlock{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "min-width:100%;", :width => "100%"}
+    %tbody.mcnButtonBlockOuter
+      %tr
+        %td.mcnButtonBlockInner{:align => "center", :style => "padding-top:10px; padding-right:18px; padding-bottom:10px; padding-left:18px;", :valign => "top"}
+          %table.mcnButtonContentContainer{:border => "0", :cellpadding => "0", :cellspacing => "0", :style => "border-collapse: separate !important;border: 2px solid #F2F2F2;border-radius: 4px;background-color: #{@company.email_color};"}
+            %tbody
+              %tr
+                %td.mcnButtonContent{:align => "center", :style => "font-family: Arial; font-size: 16px; padding: 0;", :valign => "middle"}
+                  = submit_tag I18n.t('mailer.new_tasks_email.complete_activities_btn'), class: 'mcnButton', :style => "font-size:16px;font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;cursor:pointer; border: none;background: transparent; padding: 20px;"

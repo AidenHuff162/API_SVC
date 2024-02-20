@@ -1,0 +1,5 @@
+:concurrency: <%= (if ENV['SIDEKIQ_USER_SCHEDULE_REPORTS_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_USER_SCHEDULE_REPORTS_CONCURRENCY'].to_i else 2 end) %>
+:pidfile: tmp/pids/sidekiq-user-schedule-report.pid
+:queues:
+  - user_schedule_report
+  - export_to_sftp_report

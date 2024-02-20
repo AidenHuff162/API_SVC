@@ -1,0 +1,33 @@
+-_body_ ='<p style="margin-top:0;margin-bottom:0;">'
+-if @email_desc.present?
+  -_body_ += CGI.unescapeHTML(@email_desc).html_safe
+  -_body_ += '</p><p style="margin-bottom:0;">' + I18n.t("mailer.offboarding_tasks_email.complete_activities_help").html_safe + '</p><form action="https://' + @company.domain + '/api/v1/email_activities" accept-charset="UTF-8" method="get">'
+-else
+  -_body_ += I18n.t("mailer.offboarding_tasks_email.help", tasks_in_words: @tasks_count.humanize.capitalize, task_count: @tasks_count, first_name: @employee_first_name, last_name: @employee.last_name, company: @company.name, date: @employee.last_day_worked.strftime("%b %d, %Y")).html_safe + '</p><p style="margin-bottom:0;">' + I18n.t("mailer.offboarding_tasks_email.complete_activities_help").html_safe + '</p><form action="https://' + @company.domain + '/api/v1/email_activities" accept-charset="UTF-8" method="get">'
+
+-if @activities[:tasks].count > 0
+  - _body_ += '<table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnTextContentContainer" style="max-width:100%; min-width:100%;" width="100%"><tbody>'
+  - @activities[:tasks].each_with_index do |task, index|
+    - if @activities[:tasks][index].workstream
+      - if(index == 0 || (index > 0 && @activities[:tasks][index].workstream.id != @activities[:tasks][index-1].workstream.id))
+        - _body_ += '<tr><td class="mcnTextContent" style="font-weight: 700; padding-top:10px; padding-right:18px; padding-bottom:0; padding-left:0 !important;" valign="top">' + task.workstream&.name + '</td></tr>'
+    - _body_ += '<tr style="margin: 4px 0; border: 1px #D0D0D0 solid; display: flex; border-radius: 5px;min-height:50px;"><td class="mcnTextContent mcnTextContentHover" style="style="padding-left:10px !important; padding-top:10px; padding-right:18px;">'
+    -tuc_id = @activities[:task_tuc][task.id]
+    -if task.try(:survey_id)
+      -_body_ += '<a href="https://' + @company.app_domain + '/#/survey/' + tuc_id.to_s + '">'
+      -_body_ += check_box_tag 'task[]', @activities[:tuc_tokens][tuc_id], false, {:style=>"zoom: 1.8;"}
+      -_body_ += '</a>'
+    -else
+      -_body_ += check_box_tag 'task[]', @activities[:tuc_tokens][tuc_id], false, {:style=>"zoom: 1.8;"}
+    - _body_ += '</td><td class="mcnTextContent" style="line-height: 100% !important; padding-top:8px; padding-right:18px; padding-bottom:2px; padding-left:0; padding-top: 10px; width: 100%;" valign="top">' + task.name.html_safe + '<span style="display:block;font-size: 10px; color: #9b9b9b;" valign="top">'
+    -if @activities[:tdd][tuc_id]
+      - _body_ += I18n.t("mailer.offboarding_tasks_email.due_date", due_date: @activities[:tdd][tuc_id].strftime("%b %d"))
+    -else
+      -_body_ += I18n.t("mailer.offboarding_tasks_email.due_date", due_date: (@employee.start_date + task.deadline_in).strftime("%b %d"))
+    -if task.try(:survey_id)
+      -_body_ += '<span style="padding-left: 15px; padding-right: 14px; padding-top: 2px; padding-bottom: 2px; background-color: #4DC3A4; border-radius: 3px; color: #FFFFFF; font-size: 12px; line-height: 16px; margin-left: 10px;">SURVEY</span>'
+  -_body_ += '</span></td></tr></tbody></table>'
+  -_body_ += '<table border="0" cellpadding="0" cellspacing="0" class="mcnButtonBlock" style="min-width:100%;" width="100%"><tbody class="mcnButtonBlockOuter"><tr><td align="center" class="mcnButtonBlockInner" style="padding-top:10px; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top"><table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border: 2px solid #F2F2F2;border-radius: 40px;background-color:' + @company.email_color + '"><tbody><tr><td align="center" class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 0;" valign="middle">' + submit_tag(I18n.t("mailer.offboarding_tasks_email.complete_activities_btn"), class: "mcnButton", :style => "font-size:16px;font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;cursor:pointer; border: none;color:#fff;background: transparent; padding: 20px;") + '</td></tr></tbody></table></td></tr></tbody></table>'
+-_body_ += '</form>'
+
+= _body_.html_safe

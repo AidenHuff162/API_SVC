@@ -1,0 +1,2356 @@
+en:
+  admin:
+    platform:
+      error:
+        went_wrong: Something went wrong
+        doesnot_exist: The page you were looking for does not exist
+        oops: Oops! Wrong turn
+        no_access: Sorry, but it looks like you don’t have access to this page. Please contact your Sapling Admin if you have any questions
+      general:
+        header: Global Settings
+        intro: Team-wide settings that apply to everyone on the platform
+        time_zone_hint: This determines when emails are sent out to team members
+        session_time_out: "Set automatic time out of Sapling sessions to:"
+        time_out_hint: For your security, Sapling can automatically log you out after periods of inactivity, you can turn this settings off, or extend timeout length
+        ceo_description: Who should be listed as the CEO?
+        ceo_hint: This selection determines the highest ranking employee displayed on the Org Chart
+        invalid_user: Please select a valid team member from the list
+        default_country: Default Country
+        default_country_hint: This determines how address fields are formatted
+        default_currency: Default Currency
+      notification:
+        header: Notifications
+        intro: Email notification settings that apply to everyone
+        overdue_activities: When should overdue activity reminders be sent out?
+        activities_included: Should tasks be included in email notifications?
+        activities_hint: Not available to desktop Outlook users
+        activities_yes: Yes, include tasks in the email notifications
+        activities_no: No, tasks can only be completed in Sapling
+        disable_warning_header: Disable notifications
+        disable_warning_body: This will disable all emails from your Sapling account (including test emails). Are you sure you want to continue?
+        sender_email: Email Display Name
+        sender_email_hint: This is the "from" name used in platform emails, such as task reminders
+        cant_restore_user: Restore failed! User email or Personal Email already in use for another user. To restore this user you have to change email or personal email.
+        task_before_date?: Should task notification be send to new hires before their start date?
+        task_notification_yes: Yes, send task notifications to their personal email
+        task_notification_no: No, only once they start
+
+      brand:
+        header: Brand
+        intro:  You can change the look and feel of your Sapling account to better reflect your company's brand
+        hex_hint: Color Hex Code
+        logo: Logo
+        logo_hint: We recommend using an image with a transparent background, no larger than 160x160 pixels.
+        choose_file: Choose File
+        default_logo: Default Logo
+        default_landing_image: Default Image
+        landing_page_photo: Landing Page Photo
+        landing_page_photo_description: This photo will be shown on the new hire onboarding page. For best fit, we reccomend a photo in landscape mode.
+      gdpr:
+        header: General Data Protection Regulation (GDPR)
+        intro:  Every company may have different preferences on how they want to comply with the General Data Protection Regulation (GDPR).
+        description_1: "Sapling allows you to configure GDPR settings for:"
+        description_2: Allowing employees to export the data that they have provided.
+        description_3: Anonymizing personal data once it is no longer required.
+        visit: Visit our
+        description_4: saplinghr.com/gdpr
+        description_5: to learn more about Sapling's position on the GDPR
+        apply_your_settings: Apply your settings
+        team_member_data_after: team member data after
+        apply_to: Apply to
+        clear: CLEAR
+        apply_settings: APPLY SETTINGS
+      sso:
+        header: SSO Management
+        subhead: Confirm how team members should access the Sapling platform.
+        learn: Learn More
+        allow: Allow sign in with
+        warning: New hires will have to use their company email to log into Sapling from their first day.
+        pass_only: Password Only
+        pass_and_sso: Password and SSO
+        sso_only: SSO Only
+        notification: Authentication Settings Saved
+      company_links:
+        header: Company Resources
+        intro: A directory of helpful links put together for team members at %{company_name}.
+        name: Name
+        hyperlink: Hyperlink
+        add_button: ADD LINK
+        CTA-button: ADD LINKS
+        succss_message: Company Resources saved
+        success: Updated
+        error: Error
+        confirmation_title: Are you sure you want to delete this link?
+        confirmation_content: You’ll lose all associated content, and it will no longer appear on the Updates Page?
+    assets:
+      video:
+        header: Introductory Video
+        intro: Embed a company video to showcase to both new hires and existing team members. Please copy and paste a url from YouTube, Vimeo or Wistia. The video will be embedded at 640px.
+        url: "URL:"
+      people:
+        header: People
+        intro: Customize how existing team members are introduced to new hires in Sapling
+        show_team: Show team
+        show_onboard_class: Show onboarding class
+      about:
+        header: About
+        intro: Provide some background about your organization
+      values:
+        header: Values
+        intro: Includes your company's core values or principles
+        add_new: ADD NEW
+      gallery:
+        header: Gallery
+        intro: Add up to 18 images to display in your preboarding experience, as well as the company page.
+        no_photos_uploaded: No photos uploaded
+        description: Acceptable formats include PNG, JPG and GIF. Click on images to activate the zoom!
+        upload_new_photo: Upload New Photo
+      milestones:
+        header: Milestones
+        intro: Includes key events from your company's history
+        add_new: ADD NEW
+      welcome_message:
+        header: Welcome Message
+        intro: Give your new hires a warm welcome with a customized note
+        operation_contact: Whose profile photo should be shown on the welcome page?
+      preboarding:
+        header: Preboarding Complete Note
+        intro: New team members will see this message once they've successfully completed preboarding
+
+    company_setting_header: Platform Settings
+    company_setting_platform: Platform
+    company_setting_platform_intro: Customize the employee experience for your Company.
+    learn_more: " Learn more"
+    company_setting_company_page: Company Page
+    company_setting_new_hire_experience: New Hire Experience
+    preview_company_page: PREVIEW COMPANY PAGE
+    create_company_holiday: CREATE NEW HOLIDAY
+    preview_new_hire_experience: Preview New Hire Experience
+    switch_on_tip: Toggle the switch to hide this section
+    switch_off_tip: Turn on this section to begin customization
+    company_section_menu:
+      general: General
+      notifications: Notifications
+      brand: Brand
+      holidays: Holidays
+      calendar: Calendar
+      gdpr: GDPR
+      sso: SSO
+      video: Video
+      about: About
+      values: Values
+      gallery: Gallery
+      milestones: Milestones
+      welcome_message: Welcome Message
+      preboarding_complete: Preboarding Complete Note
+      people: People
+      company_links: Company Resources
+    save_button: SAVE
+    cancel_button: CANCEL
+    delete_note: You'll lose any stored information and this can not be undone.
+    general:
+      general: General
+      company_assets: Company Assets
+      images: Culture Gallery
+      gdpr-tab: GDPR
+      holidays: Holidays
+      description: Customize the experience for your Company.
+      company_settings: Company Settings
+      company_name: Company Name
+      brand_color: Brand Color
+      time_zone: Time Zone
+      date_format: Date Format
+      notification_settings: Notification Settings
+      overdue_activity: Send overdue activity notifications
+      include_activities: Include tasks in email notifications?
+      save: Save General
+      company_saved: General information saved.
+      click_theme: Click on images to activate the zoom and select your theme!
+      preview_experience: Preview new hire experience
+      preview: Preview
+      required:
+        name: Company Name is required.
+        brand_color: Brand Color is required
+      calendar:
+        title: Calendar
+        description: If enabled, anniversaries and birthdays are shown on Sapling's Calendar, the Updates Page and the external feed
+        show_work: Show Work Anniversaries
+        enabled: 'On'
+        disabled: 'Off'
+        show_birthdays: Show Birthdays
+        calendar_setting_saved: Calendar settings saved
+      assets:
+        preboarding_note: Preboarding Complete Note
+        preboarding_title: Title
+        company_saved: Company assets saved.
+        upload_logo: Upload your company icon
+        landing_photo: Upload your company landing photo
+        upload: Upload
+        invalid_image_file: Sapling only accepts Images at the moment
+        welcome_note: Welcome note to new hire
+        welcome_profile: Default welcome profile
+        company_video: Company video (optional)
+        company_bio: Company Bio / About us
+        milestones: Key Milestones
+        date: Date
+        title: Title
+        tell_us: Tell us what happened on this date
+        upload_image: Upload Image
+        add_milestone: Add another milestone
+        value_title: Value title
+        about_value: Tell us about this value.
+        upload_icon: Upload Icon
+        add_company_value: Add another company value
+        save_assets: Save Company Assets
+      gallery:
+        gallery_saved: Company gallery saved.
+        upload: Upload
+        photo_gallery: Add up to 18 images for your culture gallery
+        click_to_zoom: Click on images to activate the zoom!
+        save_images: Save Images
+      gdpr:
+        title: General Data Protection Regulation (GDPR)
+        adpr-summary: |
+          <p>
+           Every company may have different  preferences  on how they want to comply with the General Data Protection Regulation (GDPR)
+          </p>
+          <p>
+           Sapling allows you to configure GDPR settings for:
+          </p>
+           <li> Allowing Employees to export the data that they have provided </li>
+           <li> Anonymizing personal data once it is no longer required </li>
+          </ul>
+          <p>
+           Visit our <a href="https://www.kallidus.com/privacy-policy" target="_blank">saplinghr.com/gdpr</a> to learn more about Sapling's position on the GDPR
+          </p>
+        side_panel:
+          heading: Apply your GDPR settings
+          short_text: team member data after
+          apply_to: Apply to
+          clear_button: CLEAR
+          apply_button: APPLY SETTINGS
+          success:
+            heading: Success!
+            description: The GDPR settings are now in effect for your team members. If you need to adjust your settings in future, click the update button below to access your settings again.
+            applied_to: Applied to
+            last_edited_by: Last edited by
+            update_button : Update Settings
+            at: at
+      info:
+        time_zone: The time setting governs the scheduling of employee email notifications
+        time_out: 'Set automatic time out of Sapling sessions to:'
+        time_out_description: For your security, Sapling can automatically log you out after periods of inactivity. You can turn this setting off, or extend timeout length
+        include_activities:  Sapling can include a listing of Tasks in the email notifications to employees, and allow them to be competed from their email.
+        sapling_email: This is the email address that will send out notifications to new and existing employees
+        display_logo: Upload your company logo, we recommend that you use an image with a transparent background and 160X160 in size
+        landing_photo: Upload a welcome photo that will be shown on the new hire preboarding page. We recommend a wide, horizonal photo for best fit
+        company_video: Embed a company video for your onboarding portal
+        company_bio: Add a company description or welcome note
+        welcome_note: What welcome message should New Hires receive at the start of their preboarding?
+        welcome_profile: Whose profile photo and contact information should we provide?
+        key_milestones: Add the key events in your company's history
+        company_values: Add your company's key values
+        switch_alerts: Unchecking this option will disable all notifications from Sapling, including welcome emails, task notifications and milestone reminders.
+        gallery: These images will be displayed in the new hire preboarding experience, as well as the company tab in Sapling (PNG or JPG format only)
+        company_value_explainer: Explainer (Optional)
+        preboarding_complete_note: When a new hire completes preboarding they will be taken to the employee experience in Sapling and will see this welcome note. Use this to congratulate them and provide next steps.
+
+    emp_inf_dialog:
+      updated: Information updated
+      view_profile: VIEW FULL PROFILE
+
+    field_history:
+      error_submiting: Please enter correct values to update this record
+      dialog_title: Field History
+      field_name: Field Name
+      new_value: New Value
+      changed_by: Changed By
+      timestamp: Timestamp
+      actions: Actions
+      save_changes: Update
+      confirmation: Are you sure?
+      modaldesc: Sapling records all changes to employee record fields as a system event. Events can be created, deleted or viewed or update accordingly.
+      updated: Event Updated
+      event_deleted: Event Deleted
+      cancel_deletion: Cancel
+      confirmation_deletion: Yes, Delete
+      undo_deletion: Undo
+      class_not_found: Unable to find resource type
+    groups:
+      learn_more: Learn More
+      title: Groups
+      title_hint: Create groups to organize team members and match your company structure; default group types can’t be deleted.
+      name: Name
+      members: Members
+      remove_member: Are you sure you want to remove this member from group?
+      owner: Owner
+      edit_member: Edit Member
+      search_by_name: Member (Search by name)
+      delete: Are you sure you want to delete this Group?
+      save: Save
+      cancel: Cancel
+      locations: Locations
+      departments: Departments
+      members: Members
+      active_members: Active Members
+      inactive_members: Inactive Members
+      edit_members: Edit Members
+      edit_admin_members: Edit %{option_name} members (%{count})
+      add_member: Add members (search by name)
+      save_admin_members: Save
+      searching: Searching
+      searching_no_results: No Results Found
+      filter_by: "Filter By:"
+      new_group: "New Group"
+      blank: No Teams Found
+      blank2: Start building out this group by clicking the button in the top right
+      group_dialog:
+        temp_users: Temporary Users
+        add_title: Create %{title}
+        edit_title: Edit %{title}
+        name: Group Name
+        owner: Owner (search by name)
+        description: Description
+        save: Save
+        create_new_group: "Create New Group"
+        cancel: Cancel
+        quotes: Name cannot contain double quotes and tags.
+        group_type: Group Type
+        new_group_type: New Group Type
+        edit_group_type: Edit Group Type
+        create_group_type: Create Group Type
+        custom_table_group: Which custom table should this belong to?
+        add_new: Add New
+        edit_details: Edit Details
+        delete: Delete
+        group_desc: Group descriptions appear in new hire preboarding
+        confirm: Are you sure you want to delete this Group Type?
+        edit: Edit
+      create_department:
+        add: Add %{title}
+      create_location:
+        add: Add %{title}
+      create_custom_group:
+        add: Add %{title}
+
+    task:
+      tasks: Tasks
+      description: Workflows are groups of Tasks that are completed as part of the employee experience.
+      learn_more: Learn More
+      search_workstreams: Search Workflows
+      workstream: Workflow
+      workstreams: Workflows
+      workstream_deleted_message: Workflow deleted successfully!
+      task_deleted_message: Task deleted successfully!
+      add_workstream: Add Workflow
+      total_workstreams: 'Total Workflows: %{count}'
+      total_tasks: 'Total Tasks: %{count}'
+      edit_workstream: Edit Workflow
+      on_date: On Date
+      before: '%{key} before'
+      after: '%{key} after'
+      jira: JIRA
+      workspace: Workspace
+      select_a_workspace: Select a workspace
+      select_a_coworker: Select coworker
+      existing_employee: Existing Team Member
+      manager: Manager
+      hire: Hire
+      coworker: Coworker
+      confirmation:
+        title: You have unsaved changes.
+        message: Are you sure you want to leave without saving?
+      assign_future: Assign only to future workflows
+      assign_retroactive: Assign retroactively
+      immediately: Assign Immediately
+      later: Assign Later
+
+    main_navigation:
+      activities: Activities
+      dashboard: Dashboard
+      documents: Documents
+      outcomes: Outcomes
+      records: Records
+      employee_records: Profile Setup
+      permissions: Permissions
+      reports: Reports
+      people: People
+      onboard: Onboard
+      manage: Manage
+      offboard: Offboard
+      profiles: Profiles
+      company: Company
+      platform: Platform
+      general: General
+      departments: Departments
+      locations: Locations
+      tasks: Tasks
+      workstreams: Workflows
+      training: Training
+      road_map: Road-Maps
+      settings: Settings
+      payments: Payments
+      create: Create
+      payments: Payments
+      integrations: Integrations
+      paperwork: Paperwork
+      emails: Emails
+      groups: Groups
+      roles: Admin Roles
+      reports: Reports
+      overview: Overview
+      transitions: Transitions
+      calender: Calender
+      tools: Tools
+      time_off: Time Off
+
+    calendar_event:
+      close_dialog: 'Close'
+      titles:
+        dialog_title: 'Event'
+        birthday: Birthday
+        anniversary: Anniversary
+        start_date: First Day
+        last_day_worked: Last Day
+        start_date_event_title: Starting day of %{name}
+        last_working_day_event_title: Last working day of %{name}
+        birthday_title: Birthday for %{name}
+        six_month_anniversary_title: Six Month Anniversary for %{name}
+        anniversary_title: "%{year} Year Anniversary for %{name}"
+        time_off: "PTO"
+        holiday: "%{name}"
+      content:
+        anniversary: It's %{name}'s %{anniversary} anniversary today. Kudos to %{first_name}!
+        six_month_anniversary: six month
+        birthday: It's %{name}'s birthday!
+        start_date: It’s %{name}'s first day. Say hello!
+        time_off: It’s %{name}.
+        last_day_worked: Last working day for %{name}.
+    report:
+      visualizations:
+        turnover_count: Turnover Count
+        termination_type: Termination Type
+        length_of_service: Length Of Service
+        rehire_eligibility: Rehire Eligibility
+        total_headcount: Total Headcount
+        date_filter_overview: Show until
+        filter_menu_label: Filter By
+        filter_menu_search_placeholder: Search for a field
+        account_filter: Account
+        division_filter: Division
+        gender_filter: Gender
+        location_filter: Location
+        clear_filter: Clear
+        twelve_months: Over the last 12 months
+        location: Location
+        total: Total
+        department: Department
+        no_data_available: No Data available
+        employment_status: Employment Status
+      date_range_values:
+        last_30_days: Last 30 days
+        last_7_days: Last 7 days
+        last_month: Last month
+        this_month: This month
+        this_year: This year
+        last_week: Last week
+        custom: Custom
+        all_data: All Available Start Dates
+        all_timeoff_data: All Available Dates
+      create_track_user_report:
+        new_report: Create New Change Report
+        report_info: What should we name this Report?
+        edit_report: Edit Change Report
+        report_name_placeholder: For Example, "Pay Rate Changes"
+        name_report: Name Report
+        select_fields: Select & Track
+        select_and_track_your_field: Select and track your fields
+        included_fields_description: Search for any field to track it with this report. By default, all reports include User ID, First Name, Last Name and Company Email
+        browse_field: Select Fields To Track
+        count_available: (%{count} available)
+        selected: Included Fields
+        count_selected: (%{count} selected)
+        cant_be_removed: This field can't be removed
+        error:
+          name: Report name is required.
+      create_report:
+        document_status: Document Status
+        report_name_placeholder: For Example, "Marketing Team T-Shirt Size"
+        new_report: Create New Report
+        enable_history: Enable full history
+        edit_report: Edit Report
+        report_info: What should we name this Report?
+        name_report: Name Report
+        report_setup: Report Setup
+        sort_results_by: "Sort By:"
+        filter_date_range: "Filter By:"
+        filter_user_reports_by: "Filter employees by start date:"
+        filter_data_by_employee: "Filter data by employee:"
+        filter_data_by_task_owner: "Filter Data By Task Owner:"
+        select_fields: Choose Fields
+        select_workflows: Choose Workflows
+        filter_and_sort: Filter & Sort
+        report_name: Report Name
+        search: Search Field
+        browse: Browse Field
+        selected: Fields Selected
+        tasks: Tasks
+        no_tasks_selected: No Tasks Selected
+        select_tasks: Select some tasks from the left hand side to finish up your report
+        filter_by: Filter By
+        sort_by: Sort By
+        timeoff_policy: Time Off Policy
+        begin_date: Begin
+        end_date: End
+        location: Select Locations
+        department: Select Departments
+        all_locations: All Locations
+        all_groups: All %{group}
+        employee_status: Select Employment Status
+        save_and_continue: Save and Continue
+        search_fields: Search for a profile field
+        browse_field: Select Fields to Include
+        search_workflows: Search for a task or workflow
+        browse_workflow: Select Tasks to Include
+        count_available: (%{count} available)
+        count_selected: (%{count} selected)
+        only_managers: Only include People Managers
+        saved: Report saved
+        updated: Report updated
+        field_added_to_selected: Field Added to Report
+        fields_added_to_selected: Fields Added to Report
+        field_removed_from_selected: Field removed from Report
+        fields_removed_from_selected: Fields removed from Report
+        task_added_to_selected: Task Added to Report
+        tasks_added_to_selected: Tasks Added to Report
+        tasks_removed_from_selected: Tasks Removed from Report
+        task_removed_from_selected: Task Removed from Report
+        include_active_only: Only include active employees
+        task_status: Task Status
+        due_date: Due Date
+        error:
+          name: Report name is required.
+        filters:
+          onboarding_employees: Onboarding
+          offboarding_employees: Offboarding
+          all_members: All team members
+          all_employees: Active and Inactive
+          only_active: Active only
+          only_inactive: Inactive only
+          pendinng_hires: Pending hires
+          overdue: Overdue
+          in_progress: In Progress
+          completed: Completed
+          all_documents: All Documents
+        sort:
+          first_asc: First Name A-Z
+          first_desc: First Name Z-A
+          last_asc: Last Name A-Z
+          last_desc: Last Name Z-A
+        create_timeoff_report:
+          include_unapproved: include unapproved time off
+      main:
+        learn_more: Learn More
+        timeoff_report_tab: Time Off
+        workflow_report_tab: Workflows
+        field_changes_report_tab: Field Changes
+        document_report_tab: Documents
+        page_title: Reports
+        profile_info: Profile Info
+        overview: Overview
+        turnover: Turnover
+        page_description: Build, download, or schedule reports to further explore your data; Super Admins are able to see all reports.
+        name: Name
+        created_dy: Created By
+        last_viewed: Last Viewed
+        export_as: Export As
+        csv: CSV
+        xlsx: XLSX
+        google_sheet: Google Sheet
+        export: Export
+        delete: Delete
+        edit: Edit Report
+        create_new_report: Create Report
+        no_reports: No saved Reports. Get started below.
+        action: Action
+        delete_confirm: Are you sure you want to delete %{name}
+        gsheet:
+            export: Export To Google Sheet
+        visibility: Visibility
+        modify: Modify
+        permission:
+          title: Edit Report Permissions
+          add_permission_level: Add a permission level (for example, Recruiting)
+          searching: Searching
+          searching_no_results: No Results Found
+
+    settings:
+      pto_policies:
+        title: Time Off
+        edit: Edit
+        delete: Delete
+        upload_balance: Upload Balances
+        upload_template: Upload Template
+        upload_file: Upload File
+        done: Done
+        cancel: Cancel
+        upload_template_description: After populating your time off balances into the template above, upload it here.
+        upload-alert-message: Date formats must be MM/DD/YYYY to be uploaded correctly.
+        upload-hours-alert-message: Opening Balances must be uploaded in hours—they will display in days once uploaded into the system
+        balance_template_description: To import your time off balances into Sapling, download the policy template.
+        download_template: Download Template
+        title_hint: Create and manage all company time off policies.
+        everyone: Everyone
+        some_employees: Some Employees
+        manual_assign: Manual Assignment
+        unlimited: Unlimited
+        limited: Limited
+        add_new_policy: Add New Policy
+        all_locations: All Locations
+        all_policies: All Policies
+        blank_state_heading: You haven't created a policy yet
+        blank_state2_heading: No policies found
+        blank_state_body_text: Build highly customized policies based on accrual rates, team locations and more. For additional help,
+        confirm_title: 'Are you sure you want to disable this policy?'
+        delete_confirm_title: 'Are you sure you want to delete this policy?'
+        delete_confirm_desc: "Note: Existing time off requests with this policy will be deleted and employees won't be able to create new time off requests"
+        confirm_desc: 'This policy is currently assigned to <b>%{people_count}</b> people. Disabling this policy will:'
+        confirm_p_1: 'Remove all time off balances for this policy'
+        confirm_p_2: 'Keep the existing <b> %{requests} </b> requests in place'
+        confirm_p_3: 'Disable the ability for new requests to be submitted'
+        confirm_disable: Yes, Continue
+        cancel_disable: Cancel
+        delete_canecl: No, Keep it
+        delete_confirm: Yes, Delete
+        deleted_success_message: Policy successfuly deleted
+        request_caledar_events_warning: Existing requests will be hidden from the calendar
+        type: Type
+        pto_policy_wizard:
+          step_1_number: '1'
+          step_2_number: '2'
+          step_3_number: '3'
+          default_policy_name: New Vacation Policy
+          step_1_title: General Information
+          step_2_title: Accruals
+          step_3_title: Policy Cap
+          accrual_rate_heading: Accrual Rate
+          accrual_rate_statement: Set a custom rate based on your preferences.
+          unlimited_policy_heading: New Time Off Policy
+          edit_policy_heading: Edit Policy Details
+          unlimited_policy_form_title: I am creating an Unlimited Time Off Policy
+          time_off_be_tracked: How should Time Off be tracked?
+          what_is_accrual_rate: What is the accrual rate?
+          what_is_accrual_frequency: What is the accrual frequency?
+          maximum_accrual_amount_title: This policy has a maximum accrual amount
+          maximum_amount: What is the maximum amount?
+          unlimited_policy_section_heading: Unlimited Policy
+          unlimited_policy_section_description1: "For an unlimited policy, you'll be able to skip the next page"
+          unlimited_policy_section_description2: "What would you like to call your policy type?"
+          timelines_heading: Timelines
+          timelines_statement: Define your accrual period, and organize how you'd like this policy to renew
+          accrual_happen_title: When do accruals happen?
+          at_the_start: at the start of the period
+          at_the_end: at the end of the period
+          accrual_period_beign: When should the accrual period begin?
+          hire_date: hire date
+          custom_date: custom date
+          accrual_renew_title: When should this policy renew?
+          handle_first_accrual_title: How should Sapling handle the first accrual?
+          accrual_should_start: 'Accrual should start:'
+          accrual_should_renew_on: 'Policy should renew on:'
+          days_after_start_date: days after start date
+          prorated_amount: prorated amount
+          carryover_balances_heading: Carryover Balances
+          carryover_balances_statement: The amount of time a team member has remaining from the beginning of the accrual period to the current date
+          carry_cap_to_next_period: Should unused time off carry over to the following period?
+          can_carryover: 'Yes'
+          cannot_carryover: 'No'
+          balance_expire_enable: Should unused carryover balance expire if not used by a certain time?
+          expires_on: Carryover balances expire on
+          no_expire: No, they shouldn't expire
+          has_expire: Yes, accrued carryover balance expire
+          maximum_carry_over_amount: Is there a maximum amount of time off the employees can carry over in the following period?
+          no_max_carry_over_amount: 'No'
+          has_max_carry_over_amount: Yes, limit carry over balances
+          maximum_amount_to_carry_over: What is the maximum amount?
+          can_obtain_negative_balance: Can employees obtain a negative balance for this policy?
+          negative_balance_heading: Negative Balance
+          negative_balance_statement: If enabled, employees can request more time off then they have accrued
+          carry_over_negative_accrual: Negative accrual should be carried over to the following period
+          full_amount: full amount
+          time_off_type: Time off type
+          who_is_this_policy_for: "Who is this policy for?"
+          auto_approve: Should unanswered requests be automatically approved after 7 days?
+          manager_approval: Require manager approval for all time off requests
+          policy_name: Policy Name
+          policy_type: Policy Type
+          time_off_type: Time Off Type
+          icon: Icon
+          all_employees: All employees
+          some_employees: Only some employees
+          approve: Approve
+          deny: Deny
+          calendar_days: calendar days
+          request_after: request after
+          automatically: Automatically
+          filter: "Filter Policy By:"
+          location: Location
+          department: Department
+          every: every
+          max: ' max'
+          employee_classification: Employee Classification
+          created_policy: New Time Off Policy created
+          edited_policy: Time Off Policy updated
+          next: Next
+          finish: Finish
+          back: Back
+          tooltip_for_amount: Value up to 2 decimal points
+          work_hours: Work Hours
+          work_hours_description: Customize working hours for this policy.
+          policy_hour: The length of the workday is
+          hours: hours
+          on_these: On these days
+          filtering: Filtering
+          filtering_description: Tailor this policy for a specific group of employees
+          policy_basics: Policy Basics
+          policy_basics_description: Set a custom rate based on your preferences. If this policy is unlimited, you'll be able to skip next two pages
+          half_day_enabled: Allow half days
+          tenureship_title: Tenureship
+          tenureship_details: You can add multiple levels of increased accrual amounts based on employment length. By default, all employees receive the same time off amount regardless of start date
+          tenureship_year_line: When an employee reaches their
+          tenureship_amount_line: anniversary, they'll earn an extra
+          tenureship_add: Add
+          tenureship_and: AND
+          days: days
+          help_text:
+            policy_for: Policies will apply to everyone by default unless specified otherwise.
+            accrual_rate: Policies may be set up to accrue in either hours or days. One day equals eight hours.
+            accrual_frequency: Employees accrue time off based on a combination of the accrual frequency settings and the plan renewal settings.
+            max_accrual_amount: Employees will stop accruing time off when the cap (accrual + carryover) is reached. Accrual will then re-continue once employees schedule time off.
+            when_accruals_happen: Should the accrual amount be allocated at the start or at the conclusion of the accrual period.
+            handle_first_accrual: New hires can accrue time off from their first day, or be allocated the full balance for the current accrual period.
+            max_carry_over_amount: Is there a maximum amount that an employee can carry over to the following period?
+            can_have_negative_balance: This allow employees to request more time off then will be accrued on the requested dates.
+            carryover_negative_balance: If negative balances are not carried over, the accrued amount will be reset to zero at the start of the accrual period.
+        title_hint: Create, Modify or Delete your Company's time off policies
+        everyone: Everyone
+        some_employees: Some Employees
+        unlimited: Unlimited
+        limited: Limited
+        policy:
+          policy_type: "Policy Type: "
+          accrual_type: "Accrual Type: "
+          applies_to: "Applies To: "
+      roles:
+        new_role: Create New Role
+        edit_role: Edit Role
+        title: Permissions
+        title_hint: Admin levels can be configured to allow Admin level employees unique permissions in Sapling.
+        learn_more: Learn More
+        name: Title
+        members: Members
+        action: Action
+        add_new_role: Add New Permission
+        role_information: Role information
+        role_name: Role name
+        select_all: Select All
+        role_description: Description of Role
+        create_role: Create Role
+        finish: Finish
+        cancel: Cancel
+        edit: Edit Role
+        save: Save
+        access: Admin Access
+        visibility: Visibility Access
+        create: Admin Access Level Name
+        create_heading: Create a New Admin Role
+        create_description:  Admin Roles can be configured by Account Owners to provide unique permissions to certain employees in Sapling.
+        access_heading: Set Admin Permissions for this Role
+        access_description: Let’s set what these employees will have access to in the Admin section
+        access_admin: Admin
+        access_dashboard: Dashboard
+        access_activities: Activities
+        access_documents: Documents
+        access_workflows: Workflows
+        access_outcomes: Outcomes
+        access_company: Company
+        access_general: General
+        access_record: Employee Records
+        access_time_off: Time Off
+        access_permission: Permissions
+        access_group: Groups
+        access_settings: Settings
+        access_emails: Emails
+        access_reports: Reports
+        access_overview: Overview
+        access_transition: Transition
+        access_calender: Calender
+        access_integration: Integrations
+        access_tools: Tools
+        visibility_heading: Set Visibility Access for this Role
+        visibility_description: Finally, let’s set what these employees will be able to see for different employees.
+        visibility_no_access: No Access
+        visibility_view: View Only
+        visibility_both: View & Edit
+        visibility_updates: Updates Page
+        visibility_profile: Profile Information
+        visibility_personal: Personal Information
+        visibility_additional: Additional Information
+        visibility_private: Private Information
+        notification:
+            role_name: Role file is requires
+        edit_members: Edit Members
+        view_members: View Members
+        edit_admin_members: Edit %{option_name} members (%{count})
+        add_member: Add members (search by name)
+        save_admin_members: Save
+        confirms:
+          role: Are you sure you want to delete this Role?
+        admin_level: Permission Levels
+        total_permissions: Total Permissions
+        employees: Employees
+        managers: Managers
+        admins: Admins
+        super_admins: Super Admins
+        default: ' (default)'
+        step1_title: Create Role
+        step2_title: Platform Visibility
+        step3_title: Employee Record Visibility
+        step4_title: Admin Visibility
+        employee_platform_visibility: Which parts of Sapling should they have access to?
+        admin_platform_visibility: What parts of Sapling are visible to them when viewing someone else’s profile?
+        employee_record_visibility: What data should they see on their own profile?
+        manager_employee_record_visibility: What data should managers see on their own profile?
+        other_role_visibility: What data should they see under the Job Details tab on someone else’s profile?
+        manager_platform_visibility: When managers go to their direct reports’ profile, which tabs should they see?
+        manager_other_role_visibility: When managers go to their direct reports’ Job Details tab, which data should they see?
+        manager_record_visibility: When managers go to their direct reports’ profile, what data should they see?
+        own_role_visibility: What data should they see under the Job Details tab on their own profile?
+        visibility_task: Tasks
+        visibility_document: Documents
+        visibility_calendar: Calendar
+        visibility_time_off: Time Off
+        manager_permissions: Manager Permission level
+        manager_own_platform_visitbility: What should they see in the employee platform on their own Profile?
+        admin_permissions: Permission Level
+        admin_record_visibility: When viewing someone else’s profile, what data should they see?
+        admin_section_visibility: What sections of the admin toolbar should they be able to access?
+        super_admin_default: Super Admins have access to all information and all features in Sapling. The permission cannot be edited.
+        ghost_admin_default: Ghost Admins have access to all information and all features in Sapling. The permission cannot be edited.
+
+      integrations:
+        integration_settings: Integration Settings
+        apply_to: Apply to
+        types:
+          ats: Applicant Tracking System
+          ats_desc: Pull hired candidate information automatically from your ATS into Sapling to populate a new employee profile.
+          payroll: Payroll Integrations
+          payroll_desc: Sapling will provision new accounts for employees onboarded through Sapling and provide a two-way sync between the platforms.
+          productivity: Productivity
+          productivity_desc: Supercharge your Sapling experience.
+          auth: Authentication
+          auth_desc: Allows Sapling to verify your existing team and set-up new employees.
+          performance: Performance Management
+          performance_desc: Sync employee data from Sapling with a single click and keep managers and reports up to date.
+        error:
+          adp_wfn:
+            no_payroll: There is no payroll group code attached to the credentials provided. Please contact ADP.
+            not_found: Could not find the payroll group code against the credentials provided. Please retry or contact ADP.
+            invalid: The client id or secret you've provided above is not valid.
+        toolbar:
+          integrations: Integrations
+          api_keys: API Keys
+        heading:
+          integrations: Integrations
+          api: API Keys
+        description:
+          integrations: Sapling's partner integrations allow you to connect Sapling with your existing tools.
+          api: Sapling API keys are powerful, granting access to every piece of employee data in your account. Keep them confidential.
+        api_tab:
+          name: Name
+          api_key: API Key
+          created_by: Created By
+          expires_in: Expires in
+          buttons:
+            create_new_key: Create New Key
+            create_key_tooltip: Only Super Admins can create new API Keys
+          dialog:
+            title: New API Key
+            expires_in: API Key expires in 90 days
+            description: Your API Key will only be shown once. Store it somewhere safe!
+            cancel_form: Cancel
+            you_api_key: Your API Key
+            name: Name
+            save: Save
+            cancel: Cancel
+        api:
+          delete_tooltip: Delete key
+          added: API Key created successfully
+          deleted: API Key deleted successfully
+          copied: Copied key to clipboard
+          sure_delete_title: "Are you sure?"
+          sure_delete_desc: "Once deleted API keys can't be restored."
+        save: Save
+        add: Add
+        edit: Edit
+        sync: Sync
+        pull_adp_changes: Sync ADP Changes
+        fetch_code: Fetch
+        verify: Verify
+        verified: Verified
+        cancel: Cancel
+        title: Integrations
+        title_hint: Sapling's partner integrations allow you to connect Sapling with your existing tools.
+        faq_btn: FAQ
+        subscribe: Subscribe
+        unsubscribe: Unsubscribe
+        learn_more: Learn More
+        greenhouse:
+          api_name: green_house
+          title: 'Greenhouse: Data Connector'
+          description: Recruiting optimization platform to help companies build and scale their recruiting processes.
+          url: www.greenhouse.io
+          secret_token: Secret Token
+          secret_token_required: Secret Token is required
+        lever:
+          api_name: lever
+          title: 'Lever: Applicant Tracking System'
+          description: Modern, collaborative recruiting platform that powers a more human approach to hiring.
+          url: www.lever.co
+          api_key: API Key
+          signature_token: Signature Token
+          api_key_required: API key is required
+          signature_token_required: Signature Token is required
+        hellosign:
+          title: 'HelloSign eSignature'
+          description: Helps you easily and securely sign, send, and manage documents in the cloud.
+          url: www.hellosign.com
+        slack:
+          api_name: slack_communication
+          title: 'Slack: Team Communications'
+          description: Platform for team communication. Send Sapling notification events to a Slack channel.
+          url: www.slack.com
+          webhook_url: Slack Webhook URL
+          channel: Channel
+          webhook_url_required: URL is required
+          switch_title: Slack Webhook
+        saml_auth:
+          api_name: saml
+          title: 'SAML Authentication (SSO)'
+          description: Allows Sapling to verify your team through their the provided SAML identity provider to access to Sapling.
+          create_profile: Provision New Hires directly from Sapling
+          send_employee_to_one_login: When Employee data is changed in Sapling, send these updates to OneLogin
+          secret: Client secret
+          id: Client ID
+          region: Region
+          api_token: API Token
+        gsuite:
+          api_name: 'gsuite'
+          title: 'G-Suite Account Provisioning'
+          description: Enable Sapling to automatically create G-Suite accounts for new hires during the onboarding process, saving duplicate data entry and reducing risk.
+          learn_more: Learn More
+          url: 'www.google.com'
+          account_url: 'Organization URL'
+          admin_email: "Admin's Email"
+          service_account_file: 'Client Secrets File'
+          invalid_file: 'Unable to save file, make sure to upload the correct file.'
+          email_taken: 'Email has been taken.'
+          account_url_required: Account URL is required
+          authorize: Authorize
+          un_authorize: Unauthorize
+        google_auth:
+          api_name: google_auth
+          title: 'Google: Single-Sign-On (SSO)'
+          description: Allows Sapling to verify your team through their gmail account to access to Sapling.
+          url: www.gmail.com
+          enable: Google Enabled
+          disable: Google Disabled
+        bamboo_hr:
+          api_name: bamboo_hr
+          title: 'BambooHR: Human Resources'
+          description: Sync your employee data between Sapling and BambooHR.
+          url: www.bamboohr.com
+          api_key: API Key
+          subdomain: Subdomain
+          bamboo_company_url: '.bamboohr.com'
+          create_profile: Create New Hires in BambooHR
+        namely:
+          api_name: namely
+          title: 'Namely: Human Resources'
+          description: Create New Employee Records with the employee data you collect in Sapling.
+          url: www.namely.com
+          permanent_access_token: Permanent Access Token
+          company_url: Company URL
+          namely_company_url: '.namely.com'
+          create_profile: Create New Hires in Namely
+        paylocity:
+          api_name: paylocity
+          title: 'Paylocity: Online Payroll & HCM Software'
+          description: Sync your employee data between Sapling and Paylocity.
+          create_profile: Create New Hires data between Sapling and Paylocity.
+          url: www.paylocity.com
+          signature: Public Key
+          client_id: Client Id
+          client_secret: Client Secret
+          company_id: Company ID
+          required_fields: Fields required  onboarding request
+          warning: "Note: Contact our support if you have not enabled access to this company for sapling on paylocity."
+          api_key_required: API key is required
+          type: Paylocity Integration Type
+          sui_state: Paylocity SUI State
+          types:
+            onboard_only: Onboarding Only
+            onboard_webpay: Onboarding + Web-Pay
+            webpay_only: Web-Pay Only
+            one_way_only: Onboarding + Web-Pay (one-way only)
+        asana:
+          api_name: asana
+          title: Asana
+          oid: Organization ID
+          project_name: Project name
+          default_team: Asana team name
+          personal_token: Personal Token
+          synced: Will be synced with Asana
+          invalid: Invalid Asana credentials.  Please validate and try again.
+        adp_workforce_now:
+          api_name: ADP-WFN
+          title: 'ADP Workforce Now'
+          description: Sapling will provision new accounts in ADP for employees onboarded through Sapling and provide a two-way sync between the platforms.
+          url: www.workforcenow.adp.com
+          client_id: Client ID
+          client_secret: Client Secret
+          payroll_code: Payroll Group Code
+          two_way_sync: Sync changes from ADP to Sapling
+        jira:
+          description: Sapling can automatically create JIRA tickets for Tasks when Workflows are assigned.
+          title: JIRA
+          url: www.atlassian.com
+          api_name: jira
+          domain: JIRA domain
+          project: Project Key
+          generate_keys: Generate Keys
+          initialize: Initialize Integration
+          consumer_key: Consumer Key
+          consumer_name: Consumer Name
+          consumer_name_value: Sapling
+          public_key: Public Key File
+          launch_integration: Launch Integration
+          issue_type: JIRA Issue type to represent tasks in Sapling
+          completed_status: JIRA Issue Status to trigger completion in Sapling
+          update: Update
+          channel_url_required: Channel URL is required
+          company_code_required: Company Code is required
+        smart_recruiters:
+          description: Recruiting software and applicant tracking system together in a complete talent acquisition suite.
+          title: 'SmartRecruiters: Hiring Success'
+          url: www.smartrecruiters.com
+          api_name: smart_recruiters
+          client_id: Client ID
+          client_secret: Client Secret
+          authenticate: Authenticate
+          import_data: Import Data
+        workable:
+          description: Simple Recruiting Software for SMBs Powerful online tools to source and manage candidates.
+          title: 'Workable: Simple Recruiting Software'
+          url: www.workable.com
+          api_name: workable
+          access_token: Access Token
+          subdomain: Subdomain
+          workable_company_url: '.workable.com'
+          company_url: Company URL
+        hris_integration_names:
+          no_integration: no_integration
+          namely: namely
+          bamboo: bamboo
+          paylocity: paylocity
+          adp_wfn: adp_wfn
+          adp_wfn_creation_and_bamboo_two_way_sync: adp_wfn_profile_creation_and_bamboo_two_way_sync
+          workday: workday
+        ats_integration_names:
+          no_ats_integration: no_ats_integration
+          lever: lever
+          greenhouse: greenhouse
+          smart_recruiters: smart_recruiters
+          workable: workable
+        saml_authentication_names:
+          okta: okta
+          one_login: one_login
+        authentication_names:
+          google_sso: google_sso
+          okta: okta
+          one_login: one_login
+          active_directory_federation_services: active_directory_federation_services
+          password_only: password_only
+        workday:
+          api_name: workday
+          title: Workday
+          description: Add your Workday user name and password to sync the integration.
+          user_name: User Name
+          password: Password
+          sync: Sync
+          cancel: Cancel
+          save: Save
+          human_resource_wsdl: Human Resource WSDL
+        slack_integration:
+          api_name: 'slack_notification'
+          title: 'Slack: User Notification'
+          remove: 'REMOVE'
+          description: Platform for push notification. Send Sapling notification events to a Slack channel.
+          url: www.slack.com
+          api_url: 'https://slack.com/api/'
+          admin_slack_welcome_message: Exciting news, the Sapling for Slack bot has been synced to your workspace and is now available to your team members. Sapling helps your team manage any new tasks from Sapling by sending notifications directly through Slack, and allowing them to be marked as completed. Check out the <https://kallidus.zendesk.com/hc/en-us/articles/360018812798-Sapling-Slack-Integration-Guide|knowledge base article> for more.
+          admin_check_send_notification: Which public channel should we notify your team in to let them know about the Sapling integration?
+          welcome_message_to_everyone: Exciting news, the new Sapling for Slack has been synced to your workspace. You'll be able to receive and complete Sapling tasks directly from Slack. To enable task notifications for Sapling, click the link and adjust
+        okta:
+          title: Okta
+        one_login:
+          title: OneLogin
+        adfs:
+          title: Active Directory Federation Services
+        shibboleth:
+          title: Shibboleth
+        ping_id:
+          title: Ping ID
+      emails:
+        custom:
+          tab_title: Custom
+          create_alert: Create Alert
+          title: Title
+          subject: Subject
+          applies_to: Applies to
+          last_edited: Last Edited
+          create_new_alert: Create New Alert
+          edit_alert: Edit Alert
+          select_type_of_alert: Select the type of alert
+          applied_to: Who should this alert be applied to?
+          notified_to: Who should be notified?
+          title: Title
+          subject: Subject
+          subject_hint: What should the subject of the email be?
+        cc_duplicate: Duplicate email found
+        bcc_duplicate: Duplicate email found
+        title_req: Title is required
+        learn_more: Learn More
+        subject_req: Subject is required
+        title_form: Title
+        type: Type
+        onboard_type: Onboarding
+        welcome_type: Welcome
+        offboard_type: Offboarding
+        tasks_type: Tasks
+        events_type: Events
+        people_type: People
+        create_new: CREATE NEW EMAIL
+        new_email: New Email
+        company: Company
+        platform: Platform
+        cancel_form: Cancel form
+        status: Status
+        enabled: Enabled
+        onboarding: Onboarding Invitations
+        offboarding: Offboarding Notifications
+        general: General Notifications
+        activity_notification: Activity Notifications
+        welcome: Welcome Emails
+        add_invitation: Add New Invitation Template
+        title: Emails
+        title_hint: Sapling can inform team members, Admins and Super Admins when action needs to be taken.
+        name: Name
+        sent_to: Sent to
+        alerts_sent_to: Reciever of the following emails
+        active: Active
+        subject: Subject
+        actions: Actions
+        name: Name
+        email_to: 'To:'
+        cc: 'Cc:'
+        bcc: 'Bcc:'
+        choose_file: ADD ATTACHMENTS
+        save_template: SAVE AS TEMPLATE
+        preview_email: Preview email
+        enter_date: Enter date
+        email_text: Email Text
+        change_template: Change Template
+        include_documents: Include Completed Documents
+        attachments: Attachments
+        add_attachment: Add Attachment
+        cancel: Cancel
+        save: Save
+        delete: Delete Template
+        insert_token: Insert Token
+        email_description: Email Description
+        last_edit: Last Edited
+        update: Update
+        test_email: SEND TEST EMAIL
+        test_alert: TEST EMAIL
+        save_alert: SAVE ALERT
+        update_alert: UPDATE ALERT
+        file_size: (%{size} KB)
+        are_you_sure: Are you sure you want to delete %{name}?
+        invalid_file_type: Unable to attach file, make sure to upload correct file type
+        invalid_file_size: Unable to attach file, make sure that file size should not exceed 20MB
+        attachment_upload_failed: Attachment upload failed
+        malicious_file: Unable to attach file. File contains malicious content
+        welcome_email:
+          name: Welcome Email
+          date: Default Schedule
+          sent_to: Optional email that can be scheduled to sent to the new team member prior to their first day.
+        onboarding_invitation:
+          name: Onboarding Invitation
+          sent_to: New team members invited to be Onboarded with Sapling
+        new_tasks:
+          name: New Tasks Assigned
+          sent_to: Team members who are assigned Tasks to complete as part of an internal transition process
+        milestone_checkin:
+          name: Objective Check-In
+          sent_to: New team members and Assigned Manager
+        outstanding_tasks:
+          name: Overdue Tasks
+          sent_to: Team members with overdue Tasks based on the cadence set in the General settings (daily, weekly etc.)
+        onboarding_activity_notification:
+          sent_to: Existing team members when tasks assigned for a new onboarding
+        activity_transition_notification:
+          sent_to: Existing team members when tasks assigned for a new internal transition
+        offboarding_activity_notification:
+          sent_to: Existing team members when tasks assigned for a new offboarding
+        reset_password:
+          name: Password Reset
+          sent_to: Team members requesting to reset their Sapling password
+        coworker:
+          name: New Coworker
+          sent_to: All team members loaded in Sapling
+        preboarding_complete:
+          name: Preboarding Complete
+          sent_to: Specific individuals subscribed to the email once a New Hire has completed their preboarding with Sapling
+          confirmation: Preboarding Complete Confirmation
+        manager_buddy:
+          name: New Buddy or Manager
+          sent_to: Existing team members that are assigned as a new Buddy or Manager in Sapling
+        new_manager:
+          name: New Manager Assigned
+          sent_to: Existing team members that are assigned as a new Manager in Sapling
+        new_buddy:
+          name: New Buddy Assigned
+          sent_to: Existing team members that are assigned as a new Buddy in Sapling
+        start_date_change:
+          name: Start Date Changed
+          sent_to: Existing team members when there is a change to the Start Date
+        manager_form:
+          name: Manager Form Complete
+          sent_to: Specific individuals subscribed to the email following completion of the Manager Form by a New Hire's manager
+          confirmation: Manager Form Confirmation
+        new_manager_form:
+          name: Manager Form Assigned
+          sent_to: Managers of New Hires requesting them to complete a New Hire's information on the Team Page of their profile
+          confirmation: New Manager Form
+        new_pending_hire_notification:
+          name: New Pending Hire
+          sent_to: Specific individuals subscribed to the email once a New Hire's details have been received from an integrated recruitment system
+          confirmation: New Pending Hire Alert
+        new_activites_assigned:
+          confirmation: New Tasks Assigned
+        doucment_completion:
+          name: Document Complete
+          sent_to: Creator of the new hire's account
+        template:
+          header: Save Email Template
+          radio_label: "I want to:"
+          overwrite: Overwrite this template
+          new: Save as a new template
+          name: Template Name
+        invite_user:
+          name: Introduction to Sapling
+          sent_to: Employees when they are invited to Sapling
+
+    offboard:
+      offboarding_sent_to: Optional email sent at the end of the offboarding process to the team member being terminated
+      email_template_label: Email Template
+      offboard_mail_preview: Preview Email
+      offboard_mail_header: Next Step
+      name: Offboard team member
+      step1_heading: Confirm Offboard
+      next_step: Next
+      skip_step_three: SKIP EXIT EMAIL AND FINISH OFFBOARD
+      proceed_to_exit_email: PROCEED TO EXIT EMAIL
+      add_attachment: Add Attachments
+      previous_step: Back
+      terminate_button_text: INITIATE OFFBOARDING
+      step2_heading: Re-Assign Roles
+      reassign_manager: Team Members
+      managed_users_loading: Loading Managed Users
+      reassign_manager_description: "%{name} has %{count} direct reports. You can reassign them to new managers, or continue if you would like them to no longer have any manager listed in Sapling."
+      reassign_manager_blank_description: "%{name} doesn’t have any direct reports"
+      reassign_individual_manager: Re-assign
+      reassign_bulk_manager: Re-assign All
+      notify_new_managers: Send email to newly assigned managers
+      notify_new_managers_tooltip: New managers will be notified of their new team members
+      manager_reassign: Re-assign manager
+      search_new_manager: Search for team member
+      individual_manager_reassign_description: 'Re-assign this individual to new manager:'
+      manager_bulk_reassign: Re-assign all team members
+      manager_bulk_reassign_description: "Re-assign everyone on %{name}'s team to one new manager:"
+      reassign_active_tasks: Active Tasks
+      active_tasks_loading: Loading Active Tasks
+      reassign_bulk_active_tasks: Re-assign all
+      reassign_active_tasks_description: There are %{tasks_count} active tasks from %{workstreams_count} workflows assigned to %{name}
+      reassign_active_tasks_blank_description: There are no active tasks assigned to %{name}
+      reassign_template_tasks: Template Tasks
+      template_tasks_loading: Loading Template Tasks
+      reassign_bulk_template_tasks: Re-assign all
+      reassign_template_tasks_description: There are %{tasks_count} template tasks from %{workstreams_count} workflows assigned to %{name}
+      reassign_template_tasks_blank_description: There are no template tasks assigned to %{name}
+      task_for: For %{name}
+      notify_new_owners: Send email to new task owners
+      notify_new_owners_tooltip: Task owners will only receive an email once, informing them of new tasks
+      reassign_next_step: Save & Continue
+      reassign_back: Back
+      custom_workstream_title: Custom Tasks
+      reassign_all_active_tasks: Re-assign all active tasks
+      reassign_all_template_tasks: Re-assign all template tasks
+      reassign_active_tasks_modal_description: There are %{tasks_count} active tasks assigned for %{name} to complete
+      reassign_template_tasks_modal_description: There are %{tasks_count} template tasks assigned to %{name}
+
+      step3_heading: Assign Activities
+      search_manager: Manager
+      search_users: Select Team Member
+      termination_type: Termination Type
+      eligibile_for_rehire: Eligible For Rehire
+      termination_date: Date of termination
+      last_day_worked: Last day worked
+      termination_surety: I am sure I want to terminate this team member.
+      send_email_later: Send Later
+      email_dispatch_time: Send on date
+      step4_heading: Send offboarding email
+      step4_desc: Lets finalize the email that they will recieve during their offboarding
+      select_stream_to_assign: Select Workflow to Assign
+      reassign_individual_task: Re-Assign
+      reassign_stream_tasks: RE-ASSIGN TASKS
+      assign_workstream: Assign Workflow
+      assign_workstream_description: Workflows are groups of Tasks to be completed. Team members who are assigned tasks only see those that they are required to complete.
+      confirm_offboarding_description: Offboarded team members will be removed from all teams and locations, and any direct reports to the offboarded team member will no longer have a manager assigned to them.
+      date_placeholder: Enter date
+      confirm_team_member: Confirm Team Member
+      cancel: cancel
+      save: save
+
+    documents:
+      paperwork:
+       processing: Processing...
+       rename: Rename
+       view_cosigner: View Cosigner
+       drop_files: <span id="line1"> Drag and drop your files </span><br> <span id="line2"> OR CLICK TO UPLOAD </span>
+       upload_message: Drag and drop a document here or click to upload
+       replace_message: Drag and drop or click to replace document
+       change_message: Click to change document
+       remove_message: Remove Document
+       error_message: Ooops, something wrong happend.
+       assigned_documents: Assigned Documents (%{count})
+       co_signed: Select Cosigner
+       eidt_cosign_help_text: Signatories cannot be updated once a document has been created
+       signle_sign: Single Sign Only
+       manager_co_sign: Manager Co-Signs
+       co_sign: Another Team Member Co-Signs
+       co_sign_representative: Cosign Representatives
+       no_doc_assigned: No documents assigned...
+       prepare: Prepare
+       update: Update
+       add_document: Assign
+       assign_request: Assign Request
+       assign_document: Assign Document
+       assign_upload_request: Assign Upload Request
+       download_all: Download All
+       no_documents_found: No Documents Found
+       drag_and_drop: Drag and Drop your files Here
+       create_template: Create New Template
+       new_document: Create New Signatory Doc
+       edit_existing_document: Edit Existing Document
+       select_existing_document: Select Existing Document
+       next_notification: "Next: Notification and Due Date"
+       select_existing_packet: Select Existing Packet
+       add_document_to_sign: Add Document to Sign
+       add_document_to_upload: CREATE NEW UPLOAD REQUEST
+       add_document_to_packet: CREATE NEW PACKET
+       add_existing_document_or_packet: Add Existing Document or Packet
+       create_new_document_to_sign: Create New Document to Sign
+       create_new_document_to_upload: Create New Document to Upload
+       edit_document: Edit Document
+       packets: Packets
+       create_packet: Create New Packet
+       edit_packet: Edit Packet
+       add_packet: Create Packet
+       add_edit_packet: Add Packet
+       include_packet: Documents to include in Packet
+       allocate_packet_type: How should Sapling allocate this packet?
+       documents: Signatory Documents
+       upload_requests: Upload Requests
+       document_packets: Document Packets
+       no_documents: No Documents
+       edit_template: Edit Template
+       assign: Assign Paperwork
+       upload: Upload
+       sign: Sign
+       assign_packet: Assign Packet
+       assign_new_document: Assign New Document
+       add_document_upload_request: Add Document Upload Request
+       confirm_document: Confirm details
+       update_details: Update details
+       view_details: View Details
+       assign_heading: Assign Paperwork
+       heading_info: Documents for New Hire
+       below_paperwork: Below is the paperwork allocated for the New Hire to complete in their preboarding.
+       select_doc_packets: Select documents and packets...
+       title: Title
+       description: Description
+       drag_drop_upload: Drag and drop a PDF to upload
+       awaiting_co_sign: AWAITING CO-SIGNATURE
+       or: or
+       browse: Browse
+       cancel: Cancel
+       save: Save
+       document_name: Name
+       description: Description
+       date_create: Date Created
+       document_info_sign: Used for assigning individual signatory documents for team members to complete.
+       document_info_upload: Request team members to upload documents to Sapling (eg. Passport, Driver License)
+       file_info: Templates are multi-use documents you can allocate to different team members
+       packet_info: Document packets make it easy for you to assign multiple documents to a new hire
+       co_signed_disabled: Documents with co-signers should be added separately to New Hire paperwork
+       manage_visibility_settings: Manage Visibility Settings
+       access_rights_help_test: This governs the visibility of documents on activity page. Only Account Owners can manage Admin visibility.
+       created_by: Created by
+       actions: Actions
+       edit: Edit
+       download: Download
+       delete: Delete
+       packet_allocation: How should the packet be allocated?
+       search_document: Search document
+       search: Search
+       delete_document: Delete Document
+       delete_upload: Delete Upload Request
+       delete_packets: Delete Documents Packet
+       no_documents: No documents to assign
+       no_packets: No packets to assign
+       no_workflows: No workflows to assign
+       signature_request: Request Signature
+       upload_request: Request File Upload
+       packet_request: Assign Packet
+       new: New
+       view: View
+       existing: Existing
+       cancel: CANCEL
+       table:
+        name: Name
+        created_by: Created By
+        actions: Actions
+        menu: Perform
+       confirms:
+         document: Are you sure you want to delete this document?
+         upload_request: Are you sure you want to delete this Upload Request?
+         document_packets: Are you sure you want to delete this Documents Packet?
+
+    people:
+      state:
+        all_states: All States
+        all_arrival: All Arrivals
+        invited: Invited
+        preboarding: Preboarding
+        pre_start: Pre-Start
+        first_week: 1st Week
+        first_month: 1st Month
+        ramping_up: Ramping Up
+        offboarding: Offboarding
+        offboarded: Offboarded
+        incomplete: Incomplete
+        not_onboarded: Not Onboarded
+        onboarding: Onboarding
+        registered: Registered
+        no_activity: No Activity
+        employee_active: Employees Active
+        open_activities: Open Activities
+        overdue_activities: Overdue Activities
+
+      onboard:
+        create_profile_tooltip: First Create a Profile for the new hire.
+      onboarding_employee: Sending Notifications...
+      onboarding_pending_employee: Collecting New Hire data...
+      offboarding_employee: Offboarding Employee
+      syncing_employee: Syncing Employee Records...
+      access_right:
+        title: Manage Category Access Settings
+        helper_text: Manage home page visiblity
+        save: Save
+        rights:
+          no_access: No Access
+          view: View Only
+          view_and_edit: View & Edit
+          status_only: Status Only
+          edit_and_assign: Edit & Assign
+        roles:
+          heading: Role
+          admin: Admin
+          account_owner: Account Owner
+          employee: Employee
+          employee_manager: Employee's Manager
+          other_employees: Other Employees
+      continue: Save and Continue
+      no_paperwork: Continue without Assigning Paperwork
+      finish: Finish
+      steps:
+        create_profile: Create Profile
+        employee_record: Confirm Info
+        assign_tasks: Assign Tasks
+        assign_workstreams: Assign Workflows
+        assign_training: Assign Training
+        assign_roadmap: Assign Road-Map
+        complete: Complete
+        send_invite: Send Invitation
+        pre_start: Schedule Welcome
+      create_profile:
+        mandatory_symbol: '*'
+        heading: Create New Hire Profile
+        lets_start: Let's start by getting some basic information about the New Hire.
+        first_name: First Name
+        first_name_req: First Name Required
+        last_name: Last Name
+        last_name_req: Last Name Required
+        title: Title
+        title_req: Title Required
+        tier: Job Tier
+        tier_req: Job Tier Required
+        personal_email: Personal Email
+        personal_email_req: Personal Email Required
+        company_email: Company Email
+        company_email_req: Company Email Required
+        email_avail: Email available
+        onboard_email_title: Where should we send the new hire emails?
+        job_tier_hint: Next, let's confirm the information about their role at %{company}.
+        invitation_email: If sending the invitation to their company email, make sure their email account has been set-up
+        start_date: Start Date
+        start_date_req: Start Date Required
+        location: Location
+        location_req: Location Required
+        select_location: Select Location...
+        department: Department
+        search_department: Select %{department}...
+        search_buddy: Search %{buddy}...
+        team_req: Team Required
+        manager: Manager
+        buddy: Buddy
+        manager_req: Manager Required
+        status: Status
+        status_req: Status Required
+        packet: Paperwork Packet
+        tax: Tax
+        confident: Confidentiality
+        policies: Policies
+        other: Other
+        edit_packets: Edit Packets
+        edit_docs: Edit Documents
+        additional: Additional Information
+        edu: Education
+        allergies: Food Allergies
+        emerge_contact: Emergency Contact
+        emerge_contact_number: Emergency Contact Number
+        add_new: Add New Field
+        continue: Save and Continue
+        tax: Tax
+        confidentiality: Confidentiality
+        policies: Policies
+        other: Other
+        email_bad: Email has wrong format
+        access_permission: Access Permission
+        employee_type: Employment Status
+        road_map: Road-Map
+        email_uniq:  Already Taken
+        duplicate_email_message: Email has already been taken %{email}, Email addresses must be unique, please try again.
+        pending_hire_exists: User Already exists with same information.
+        user_already_exists: New hire with email %{email} has already been onboarded.
+        create_new_title: Create New Title
+        fetching_job_title: Fetching Job Titles..
+        create_new_tier: Create New Job Tier
+        fetching_job_tier: Fetching Job Tiers..
+        onboard_email:
+          personal: Personal Email Only
+          company: Company Email Only
+          both: Both Personal and Company Email
+      record:
+        employee_record: Confirm their Employee Record
+        heading: New Hire Form to be completed during Preboarding
+        new_heading: New Hire Record to be completed
+        description: You can populate this with any information you have on hand, or leave for the New Hire to complete.
+        new_description: Only information required from the New Hire will be shown during their Preboarding.
+        invisible: This category will not be visible
+        visible: This category will be locked
+        additional_info: additional_info
+        private_info: private_info
+        personal_profile: Personal and Profile Information
+        addition_fields: Additional Fields
+        private_information: Private Information
+        collected_from_manager: Collect From Manager
+        collected_from_hire: Collect From Hire
+        collected_from_admin: Collect From Admin
+      tasks:
+        assign_tasks: Assign Tasks
+        assign_workstream: Assign Workflows
+        update_workstream: Update Workflows
+        no_workstreams: Continue without Assigning Workflows
+        loading_workstreams: Loading Workflows...
+        select_workstream: 'Add Workflow:'
+        description: Workflows are groups of Tasks to be completed. Employees who are assigned tasks only see those that they are required to complete.
+        workstreams: Let's select which Tasks should be completed.
+        workstream_add: Add Workflow
+        workstreams_total: Total Workflows
+        tasks_total: Total Tasks
+        workstreams: Workflows
+        workstream_assignes: Task Assignee (%{count})
+        tasks: Tasks
+        reorder: Reorder
+        show_all: Show All
+        expand_all: Expand All
+        close_all: Close All
+        check_all: Check All
+        uncheck_all: Uncheck all
+        add_task: Add Task
+        del_list: Delete List
+        tasks: Tasks
+        assignees: Assignees
+        add_attachment: Add Attachment
+      roadmap:
+        assign_roadmap: Assign Road-Map
+        no_roadmap: Continue without Assigning Road-Map
+        loading_roadmap: Loading Road-Map...
+        select_roadmap: 'Add Road-Map:'
+        description: Road-Maps are structured learning and development goals for the new hire and peers to complete during their onboarding.
+        objectives: 'Objectives:'
+        outcomes: 'Outcomes:'
+        assignees: 'Assignees:'
+        outcomes_assignees: Outcome Assignee
+      pre_start:
+        title: Schedule Welcome Email
+        description: The Welcome email can provide the New Hire with important information either just before or on their first day.
+        attachment: 'Attachments: '
+        at: at
+        preview: Preview
+        confirm_info: I have read and can confirm that the above information is correct.
+        schedule_text: 'This email will be sent to the New Hire on:'
+      complete:
+        schedule: Schedule New Hire Invitation to be sent later
+        schedule_helper: You can schedule Sapling to send the New Hire Invitation at a later date, but Activity
+                       Assignees and any New Hire Information requests will be still sent immediately. Leaving the
+                       field blank will send all notifications immediately.
+        at: at
+        attachment: 'Attachments: '
+        title: Send Onboarding Invitation
+        description: Lets finalize the email that the New Hire will receive to complete their Preboarding. You can send this immediately or schedule it for later.
+        head_sections:
+          name: Name
+          title: Title
+          company_email: Company Email
+          personal_email: Personal email
+          start_date: Start Date
+          location: Location
+          department: Department
+          manager: Manager
+          not_assigned: None
+        training_sections:
+          title: Title
+          estimated: Estimated Duration
+          due_date: Due Date
+        pre_start_training: Pre-Start Training
+        onboarding_training: Onboarding Training
+        notification_email: Notification Email
+        days_before: days before Start Date
+        preview: PREVIEW EMAIL
+        test: SEND TEST EMAIL
+        finish_and_invite: SKIP WELCOME AND SEND INVITE ONLY
+        save_and_schedule: PROCEED TO WELCOME EMAIL
+        initiate_onboarding: INITIATE ONBOARDING
+        confirm_info: I have read and can confirm that the above information is correct.
+        finish: Finish
+        finish_tooltip: Please confirm that the above information is correct.
+        or: OR
+      manage:
+        heading: Manage
+        title: Manage
+        page_title: Reports
+        filter_users: Filter for Specific People
+        search_by_name: Search by name…
+        search_by_location: Select location...
+        search_by_department: Select %{department}...
+        search_by_role: Select role...
+        search_by_state: Select state...
+        state: State
+        all_roles: All roles
+        all_departments: All %{department}
+        all_locations: All locations
+        name: Name
+        title: Title
+        last_activity: Last Activity
+        role: Role
+        permission: Permission
+        permission_info: Only Account Owners can change permissions
+        state: State
+        users_not_found: Sorry, no members were found
+        export_csv: Export as a CSV
+      report:
+        filters:
+          all_employees: All Employees
+          only_active: Only Active Employees
+        sort:
+          start_date_desc: Start Date (Most recent first)
+          start_date_asc: Start Date (Oldest first)
+          due_date_desc: Due date (most recent)
+          due_date_asc: Due date (oldest)
+          first_asc: First Name A-Z
+          first_desc: First Name Z-A
+          last_asc: Last Name A-Z
+          last_desc: Last Name Z-A
+          doc_name_asc: document name A-Z
+          doc_name_desc: document name Z-A
+        new_report:
+          page_title: Reports
+          report_name: Report Name
+          search: Search Field
+          browse: Browse Field
+          selected: Selected
+          filter_by: Filter By
+          sort_by: Sort By
+          save_and_export: Save and Export
+        main:
+          page_title: Reports
+          page_description: Build, save and export custom reports from your employee data.
+          name: Name
+          created_dy: Created By
+          last_viewed: Last Viewed
+          export: Export
+          delete: Delete
+          create_new_report: Create New Report
+          no_reports: No saved Reports. Get started below.
+          visibility: Visibility
+          modify: Modify
+
+      history:
+        title: Sapling History
+        today: Today
+        yesterday: Yesterday
+        search: Search Events in Sapling...
+      offboard:
+        title: Offboard
+        title_hint: Offboarded employees will be removed from all teams and locations, and any direct reports to the offboarded employee will no longer have a manager assigned to them.
+        user_search_title: Employee
+        user_search: Search by name...
+        termination_date_title: Date of Termination
+        termination_date_helper: The last day the employee will be at the company
+        terminate: Terminate
+        status: Status
+        add_workstream: Assign Workflow
+        workstream_search: Search...
+        termination_date_req: Termination Date Required
+        employee_req: Employee Required
+        termination_surety: I am sure that I want to terminate this employee.
+        last_day_worked_title: Last Day Worked
+        last_day_worked_helper: The date used for assigned offboarding tasks
+        last_day_worked_req: Last Day Worked Required
+        termination_type_title: Termination Type
+        eligible_for_rehire_title: Eligible for Rehire
+      profile_setup:
+          locked_field: Locked fields are required and can't be disabled
+          hello: <h1>Hello</h1>
+          page_title: Profile Setup
+          button:
+            new_field: New Field
+            new_table: New Table
+          tabs:
+            profile_fields: Profile Fields
+            custom_tables: Custom Tables
+          roles:
+            custom_table_user_snapshot_activities:
+              request_activity: ' requested a change to %{table_name}'
+              approved_activity: ' approved a change to %{table_name}'
+              denied_activity: ' denied a change to %{table_name}'
+              expired_request_activity: 'This approval period has lapsed and your requested change to %{table_name} has expired'
+              common_activity: ' has made a change to %{table_name}'
+              common_bulk_activity: ' has made a change to %{table_name} via power update'
+            updated_by: Updated By
+            migration_plan: Data Migration
+            applied: In Effect
+            queue: Changes will be applied on effective date
+            approval_type_tooltip_text:
+              manager: Pending Approval from Manager
+              permission_group: Pending Approval from Permission Group
+              specific_person: 'Pending Approval from %{person_name}'
+            delete_row: Are you sure you want to delete this row?
+            manager_change:
+              title: Manager tasks should be updated
+              content: "%{previous_manager_name} has tasks assigned to them as a manager. Please make sure to complete, remove or reassign these tasks from %{previous_manager_name}'s task page."
+              okay: okay
+              cancel: cancel
+
+          custom_table_field_edit:
+            request_header: 'Request a change: %{table_name}'
+            update_header: 'Change %{table_name}'
+            edit_header: 'Edit %{table_name}'
+            step_count: 'Step %{current_step} of %{total_steps}'
+            button:
+              request: Request Change
+              update: Update
+              tooltip:
+                pending: You already have a pending request for approval
+                no_manager: 'This table requires manager approval—no manager assigned.'
+          profile_fields:
+            updated: Profile Field updated
+            created: Profile Field created
+            delete_confirm: Are you sure you want to delete this field?
+            page_title: Profile Fields
+            page_description: Profile fields are used to collect, store and report on employee information.
+            learn_more: Learn More
+            deleted: Profile Field deleted
+          departed_user:
+            last_day_worked: '<b>Last Day Worked</b>  %{last_day_worked}'
+            termination_type: '<b>Termination Type</b>  %{termination_type}'
+            eligibile_for_rehire: '<b>Eligible For Rehire</b>  %{eligibile_for_rehire}'
+          custom_column:
+            created: Column created
+            updated: Column updated
+          custom_tables:
+            approval_type_tooltip_text:
+              manager: Requires approval from manager
+              permission_group: Requires approval from permission group
+              specific_person: 'Required approval from %{person_name}'
+            delete_table: Are you sure you want to delete this table?
+            delete_confirm: Are you sure you want to delete this column?
+            custom_column_deleted: Custom Column Deleted
+            page_title: Custom Profile Tables
+            page_description: Use Profiles Fields and Custom Tables to collect, store and report on employee information.
+            learn_more: Learn More
+            change_history: Change History
+            no_updates: No updates yet! All changes to your data tables will live in this feed
+            column: Column
+            field_type: Field Type
+            action: Actions
+            notification: 'Showing %{start} to %{end} of %{total}'
+            no_information: No information found
+            no_information_description: This table is empty! Start completing it, or request a change by clicking the button in the right
+            first_entry: The first entry must have an effective date starting today or earlier
+            button:
+              edit_table: Modify Table Details
+              delete_table: Delete Table
+              add_column: Add New Column
+              move_up: Move Up
+              move_down: Move Down
+              next: Next
+              previous: Previous
+              load_more: Load More
+          field_types:
+            mcq: multiple_choice
+            phone: international_phone
+            simple_phone: phone_number
+          chip_color:
+            orange: orange-brand-color-300
+            purple: purple-brand-color-300
+            pink: pink-brand-color-300
+          name: Name
+          field_type: Field Type
+          required: Required
+          collect_from: Collect From
+          request-submitted:
+            heading: "Request Submitted!"
+            expiry_info: 'Change is now pending and expires in <b>%{expiry_days} days</b> if not confirmed'
+            approvers_info: "Approver(s) have been notified:"
+            notification_info: "We'll let you know when this is updated"
+          pending_changes:
+            heading: Pending Changes
+            description: 'The request needs to be approved by the <b>%{approved_by}</b> before the expiration date of <b>%{expiry_date}</b>'
+            old_values: Old Values
+            new_values: New Values
+            whats_changed: "What's Changed?"
+            recent_activities: Recent Activities
+            buttons:
+              approve: Approve
+              deny: Deny
+          dialog:
+            header:
+              create: Create New Field
+              edit: Edit Field
+              create_table: Create New Table
+              edit_table: Modify Table
+              create_column: Create New Column
+              edit_column: Edit Column
+              review_request: Review Request
+            step_2:
+              sub_heading: "You're requesting changes to the following:"
+            button:
+              cancel: Cancel
+              save: Submit
+              previous: Previous
+              next: Next
+              save_changes: Save Changes
+            body:
+              table_name: Table Name
+              kind_of_table: What kind of table is this?
+              table_name_validation: Table name has already been taken
+              table_type:
+                timeline: Timeline
+                standard: Standard
+                timeline_description: Timeline tables are driven by dates and store information in chronological order, such as compensation.
+                standard_description: Standard tables show a snapshot of information in time.
+              approval_sub_heading: Do changes in table require approval?
+              expiry_sub_heading: When should pending changes expire?
+              approval_not_required: No approval needed
+              approval_required: Approval Required
+              approval_type_field: Approve By
+              approval_type_heading: Who should approve?
+              expires_after: Expire after
+              days: days
+              approval_type:
+                manager_approval: Manager Approval
+                specific_person_approval: Specific person
+                permission_group_approval: Specific permission group
+              fields:
+                associated_section: Associated Section
+                parent_table: Parent Table
+                field_name: Field Name
+                column_name: Column Name
+                field_type: Field Type
+                column_type: Column Type
+                collect_from: Who should fill this out?
+                ssn_help_text: Only Super Admins can see Social Security Numbers.
+                help_text: Help Text
+                api_field_id: API Field ID
+                remove_custom_field_option: Remove Custom Field Option
+                dropdown_option: Dropdown Option
+                options: Options
+                add_option: Add Option
+                sensitive_field: This is a confidential field and should be masked
+
+      custom_field:
+        confirms:
+          field: Are you sure you want to delete this field?
+          delete_info: Historical date will still be available in your reports, but the field will not be collected from employees in the future.
+        tooltip:
+          collected_from_manager: Collected from the New Hire's Manager
+          collected_from_hire: Collected from the New Hire
+          collected_from_admin: Collected from the Admin
+          access_rights_help_test: This governs the visibility of fields on employee records. Only Account Owners can manage Admin visibility.
+          visible_eyes: To be collected
+          invisible_eyes: Not to be collected for this hire
+        tag:
+          hide: Hide
+          show: Show
+        title: Profile Fields
+        page_title: Profile Fields
+        page_description: Profile fields are used to collect, store and report on employee information.
+        learn_more: Learn More
+        manage_visibility_settings: Manage Visibility Settings
+        description: Profile Fields contain the information for Employee Records inside Sapling.
+        title_hint: Sapling can collect all your new hire information during the pre-boarding process.
+        add_field: Add Field
+        name: Name
+        field_type: Field Type
+        required: Required
+        date_range: 'Date range is invalid.(Min Date: 01/01/1990 Max Date: 12/31/2010)'
+        edit_delete: Edit/Delete
+        collect_from_manager: Collect this from the Manager
+        collected_from_option: Sapling will notify and collect the information directly from the seleted option
+        collect_from: Collect From
+        editor:
+          title: Create New Field
+          title_edit_filed: Edit Field
+          name: Name
+          help_text: Help Text
+          field_type: Field Type
+          api_field_id: API Field ID
+          field_type_pl: Select field type...
+          required: Required for new employees
+          delete: Delete
+          save: Add Field
+          update: Update Field
+          cancel: Cancel
+          add_mcq_option: Add Option
+          options: Options
+          collected_from: Collected From
+          ssn_help_text: Only Super Admins can see Social Security Numbers.
+          permission_help_text: Only Super Admins can edit permissions
+          none_selected: None Selected
+          heads_up: Heads up! The Access Permission field can only be modified by Super Admins.
+        access_right:
+          title: Manage Category Access Settings
+          helper_text: Manage home page visiblity
+          rights:
+            no_access: No Access
+            view: View Only
+            view_and_edit: View & Edit
+          roles:
+            heading: Role
+            admin: Admin
+            account_owner: Account Owner
+            employee: Employee
+            employee_manager: Employee's Manager
+            other_employees: Other Employees
+        defaults:
+          personal_info:
+            name: Personal Information
+            help: Personal fields about employees are managed by Sapling Admins or Account Owners
+            fields:
+              - Profile Photo
+              - First Name
+              - Last Name
+              - Company Email
+              - Personal Email
+          profile:
+            name: Profile Information
+            help: Profile fields are visible on each Employee Profile, and can be seen by all employees
+            fields:
+              - About you
+              - Linkedin
+              - Twitter
+              - GitHub
+          additional_fields:
+            name: Additional Information
+            help: Additional fields can be anything collected or maintained as part of your employee records
+            fields:
+              - Education
+              - Food Allergies
+              - Computer Preference
+          private_info:
+            name: Private Information
+            help: Private fields normally contains confidential information that can be restricted to certain permission groups
+    onboard:
+      onboard_mail_header: WELCOME
+      onboard_employee: Onboard new team member
+      start_onboarding: Start Onboarding
+      login_to_sapling: LOG INTO SAPLING
+      done: Done
+      tabs:
+        create_profile: Create profile
+        rehire_profile: Rehire profile
+        employee_record: Confirm Info
+        assign_activities: Assign activities
+        send_invite: Send invite
+        schedule_welcome: Schedule welcome
+        optional: Optional
+
+      success:
+        dismiss: Done
+        continue: Onboard another hire
+        title: New Hire Successfully Added!
+
+      errors:
+        field_required: '%{name} field is required.'
+        invalid_date: 'Start Date should be greater than previous Termination Date'
+      create_profile:
+        profile_information: Profile information
+        rehire_profile: Rehire Profile
+        sub_heading: Let's start by getting some basic Profile and Role information about the New Hire.
+        sub_heading_for_rehire: Let's start by confirming some information about your former team member.
+        first_name: First name
+        last_name: Last name
+        personal_email: Personal email
+        company_email: Company email
+        role_information: Role information
+        title: 'Job Title *'
+        title_help_text: Search an existing job title or create a new one
+        tier: Job Tier
+        create_new_title: Create new title
+        create_new_tier: Create new job tier
+        start_date: Start Date
+        location: Location
+        department: Department
+        employment_status: Employment status
+        manager: Manager
+        save_and_continue: Save and continue
+        enter_date: Enter date
+        confirm_title: Are you that sure you'd like to exit this onboarding?
+        confirm_description: We will save your progress and you'll be prompted to continue when you return.
+        exit: EXIT
+        continue: CONTINUE ONBOARDING
+        pending_description: We will add this hire back to your Pending Hires and you will be able to re-continue from where you left of later.
+        gmail_provision_header: Gmail Email Provisioning
+        gmail_provision_subhead: Gmail email provisioning has been enabled for your account allowing Sapling to create new accounts for you. Add in the new hire’s name and click create to provision a new email.
+        provision: Provision G-Suite Account
+        send_credentials: Send credentials
+        immediately: Immediately
+        before: Before
+        dont_send: Don't send
+        send_on: "On"
+        start_date_at: start date at
+      employee_record:
+        profile_fields: Profile Fields
+        profile_information: Information to be collected
+        profile_information_subheading:  Anything required from you can be found at top. You can also create up to 10 templates that can be used and modified later
+        additional_fields: Additional fields
+        private_information: Private information
+        expansion_panel_subheading: 'Total Fields: %{total} | Required: %{required} | Hidden: %{hidden}'
+        expansion_panel_blank_state: "<P>No assigned %{type} fields. You can modify this in the <a target='_blank' href='#/admin/company/employee_records'>Profile Field</a> section of your admin tools.</p>"
+        back: Back
+        save_template: Save as template
+        save_and_continue: Save and continue
+        template_applied: Template successfully applied
+        action_starter: 'I want to:'
+        overwrite_template: Overwrite this template
+        create_template: Save as a new template
+        template_name: Template Name
+        cancel: Cancel
+        save: Save
+        template_saved: Success! Template saved
+        template_updated: Success! Template updated
+        template_error: Something went wrong.
+        invalid_name_error: Invalid template name
+        duplicate_name_error: Duplicate template name
+        max_templates_error: You have already created maximum allowed templates
+        admin_panel_heading: Completed by you
+        hire_panel_heading: Completed by new hire
+        manager_panel_heading: Completed by manager
+
+      custom_field:
+        required: '%{name} is required.'
+        date_range: 'Date range is invalid.(Min Date: 01/01/1990 Max Date: 12/31/2010)'
+
+      assign_activities:
+        paperwork:
+          assign_heading: Assign Paperwork
+          assign_heading_tooltip: Please create the new hire's profile before assigning paperwork
+          sub_heading: Below is the paperwork allocated for the New Hire to complete in their preboarding.
+          select_existing_document: Select Existing Documents
+          select_existing_upload_request: Select Existing Upload Requests
+          select_existing_packet: Select Existing Packet
+          create_new_document: Create New Document
+          create_new_upload: Create New Upload Request
+          documents_count: Documents
+          assignes_count: Assignees
+          signature_requested: Signature Request
+          upload_requested: Upload Request
+          signle_sign: Single Sign Only
+          continue: CONTINUE
+          save: Save
+
+          new_document_dialog:
+            add_document_upload_request: Upload new document
+            title: Title
+            description: Description
+            attach_document: Attach Document
+          new_upload_request_dialog:
+            add_document_upload_request: Upload new upload request
+            title: Title
+            description: Description
+            prepare: Prepare
+            select_co_signed: Select Cosigner
+            browse: Browse
+
+
+        roadmap:
+          assign_heading: Assign Roadmap
+          sub_heading: Road-Maps are structured learning and development goals for the new hire and peers to complete during their onboarding.
+          select_existing: Select roadmap to assign
+          objectives_count: Objectives
+          outcomes_count: Outcomes
+          assignees_count: Assignees
+          roadmap_assignes: Assignees (%{count})
+          outcomes:
+            count: '%{count} outcomes'
+
+        workstream:
+          assign_heading: Assign Workflow
+          assign_heading_tooltip: Please create the new hire's profile before assigning workflows
+          sub_heading: Workflows are groups of Tasks to be completed. Team members who are assigned tasks only see those that they are required to complete.
+          select_existing: Select Workflow to assign
+          workstreams_count: Workflows
+          tasks_count: Tasks
+          assignees_count: Assignees
+          workstream_assignes: Assignees (%{count})
+          user_re_assign: Re-assign
+          assigness_re_assign: RE-ASSIGN TASKS
+          hire: Hire
+          manager: Manager
+          buddy: Buddy
+          jira: JIRA
+          unassigned: Unassigned
+          dialog:
+            role: Role
+            re_assign_task: Re-assign Tasks
+            new_owner: New owner
+            assigned_to: Assigned to
+          duplicated: Workflow has been duplicated.
+
+    dashboard:
+      clear_filter: Clear
+      datatables:
+        name_heading: Name
+        start_date_heading: Start Date
+        key_date_heading: Key Date
+        department_heading: Department
+        location_heading: Location
+        status_heading: Stage
+        activities_heading: Activities completed
+        document_activities_heading: Documents
+        task_activities_heading: Tasks
+        outcome_activities_heading: Outcomes
+        progress_heading: Progress
+        action_heading: Action
+        last_date_heading: Final Day
+        complete_activity_button: Complete All Tasks
+        send_email: Send Email
+        cancel_offboarding_button: Cancel Offboarding
+        view_activities_button: Go to Profile
+        resend_invitation_button: Resend Invite
+        view_profile_button: Go to Profile
+        view_tasks_button: Go to Tasks
+        view_documents_button: Go to Documents
+        export_user_button: Export Data
+        delete_employee: Delete Hire
+        are_you_sure: Are you sure you want to delete this user?
+        no_access_documents: You don't have permission to access these documents
+        no_access_tasks: You don't have permission to access these tasks
+      toolbar:
+        onboarding: Onboarding
+        offboarding: Offboarding
+        transition: Transitions
+      overview:
+        popup:
+          learn_more: Learn More
+          task: Go To Task
+        activity:
+          main_legend_text: Use the legend on the right to toggle between tasks, documents and upload requests. Hover over each activity to learn more.
+          open_task_description: The following people have open tasks. You can bulk complete the tasks by checking the box.
+          related_workflow: Related Workflow
+          outstanding_tasks: Outstanding Tasks
+          task_owners: Task Owners
+          open_task_heading: Open Tasks to complete
+          overdue_task_heading: Overdue Tasks to complete
+          document_heading: Outstanding Documents
+          document_subheading: Checkbox disabled for documents
+          document_tooltip: Navigate to each profile to manage documents
+          activity_sidebar_tooltip: Complete tasks by using the boxes below, or see all on their individual tasks page
+          open_activities: All Open Activities
+          overdue_task: All Overdue Tasks
+        name: Dashboard
+        onboard_employee_button_txt: ONBOARD HIRE
+        offboard_employee_button_txt: OFFBOARD
+        all_departments: All Departments
+        all_locations: All Locations
+        all_divisions: All Divisions
+        all_stages: All Stages
+        apply_filter: APPLY
+        no_team_members_found: No Team Members Found
+        no_activities_found: No Activities Found
+        edit_user:
+          about: About
+          start_date: Start Date
+          last_day_worked: Last Day Worked
+          termination_date: Termination Date
+          transition_date: Transition Date
+          stage: Stage
+          job_title: Job Title
+          division: Division
+          department: Department
+          location: Location
+          go_to_employee_record: VIEW ALL INFO
+        placeholder:
+          select:
+            all_stages: All Stages
+            all_departments: All Departments
+            all_locations: All Locations
+        people:
+          state:
+            all: Everyone
+            year_1: First Year
+            year_2: Second Year
+            year_2+: Beyond two years
+            all_states: All States
+            all_stages: All Stages
+            all_arrival: All Arrivals
+            invited: Invited
+            preboarding: Preboarding
+            pre_start: Pre-Start
+            first_week: 1st Week
+            first_month: 1st Month
+            ramping_up: Ramping Up
+            offboarding: Offboarding
+            offboarded: Offboarded
+            incomplete: Incomplete
+            not_onboarded: Not Onboarded
+            onboarding: Onboarding
+            registered: Registered
+            no_activity: No Activity
+            employee_active: Employees Active
+            open_activities: Open Activities
+            overdue_activities: Overdue Activities
+            offboard:
+              all_departures: All Departures
+              last_month: Last Month
+              last_week: Last Week
+              departed: Departed
+    onboarding:
+      open_tasks: Open Tasks
+      overdue_tasks: Overdue Tasks
+      active_employees: Team Members
+      open_activities: Open Activities
+      overdue_activities: Overdue Activities
+      filter_by_stage: 'Filter by Stage:'
+
+    notifications:
+      admin:
+        tasks:
+          owner_null: Please choose owner
+          assigned: Task Assigned
+          empty_task_name: "Task name can't be blank"
+          empty_due_date: "Please Select a due date"
+          moved: "This task has been moved to %{workstream_name}"
+        users:
+          no_invite: Please complete Send Invite step first.
+
+    schedule_email_form:
+      heading: "Reschedule Email"
+      button:
+        save: Save
+        delete: Delete Email
+      confirmation:
+        delete:
+          title: Are you sure?
+          content: If you delete this email, it won't be sent to the new hire.
+          aria_label: Delete Scheduled Email
+      notifications:
+        rescheduled: Email rescheduled
+        deleted: Email deleted
+
+    holidays:
+      create_new: Create New Holiday
+      name: Holiday Name
+      created_by: Created By
+      dates: Date(s)
+      aplies: Applies to
+      action: Action
+      delete_holiday: Delete
+      deleted: Holiday Deleted
+      new_holiday: New Company Holiday
+      edit_holiday: Edit Holiday
+      modify_holiday: Modify
+      title: Holiday Name
+      date: Date
+      multiple: Include multiple dates
+      create_applies: "Applies to:"
+      created: Holiday Created
+      not_created: Holiday Not Created
+      updated: Holiday Updated
+      not_updated: Holiday Not Updated
+      delete_confirm: Are you sure you want to delete this holiday?
+      date_filter: "Showing Dates for:"
+      save_btn: "%{option}"
+      everyone: Everyone
+      all_employment_statuses: All Employment Statuses
+      all_departments: All Departments
+      all_locations: All Locations
+      some_employees: Some Employees
+      empty_table: No company holidays yet
+      full_time: Full Time
+      part_time: Part Time
+
+    view_as_user:
+      login_as: View as
+      description: You'll be able to view Sapling with their permissions, but you won't be able to make changes in the platform. You can end the session at anytime.
+      cancel: Cancel
+      continue: Continue
+      view_as_mode: View-As Mode
+      logged_in_as: "Viewing As:"
+      permission_group: "Permission Group:"
+      end_session: END SESSION

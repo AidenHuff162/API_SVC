@@ -1,0 +1,23 @@
+---
+:concurrency: <%= (if ENV['SIDEKIQ_CUSTOM_TABLE_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_CUSTOM_TABLE_CONCURRENCY'].to_i else 2 end) %>
+:pidfile: tmp/pids/sidekiq-webhook-custom-table-jobs.pid
+:queues:
+  - [manage_csv_custom_snapshots, 2]
+  - [manage_custom_snapshots, 3]
+  - [manage_custom_table_user_snapshots, 3]
+  - manage_expired_custom_snapshot
+  - [hellosign_call, 4]
+  - [bulk_hellosign_call, 4]
+  - [bulk_assign_packets, 4]
+  - [bulk_assign_documents, 4]
+  - unsigned_document
+  - [smart_assignment_documents, 3]
+  - [bulk_paperwork_request_assignment, 4]
+  - destroy_bulk_paperwork_requests
+  - hellosign_webhooks_manager
+  - document_validator
+:limits:
+  manage_csv_custom_snapshots: 1
+  hellosign_webhooks_manager: 1
+  document_validator: 1
+

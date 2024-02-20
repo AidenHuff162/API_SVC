@@ -1,0 +1,610 @@
+en:
+  onboard:
+    search_placeholder: 'Search by name or title...'
+    inactive_state: '(inactive)'
+    people:
+      bulk_edit_dialog:
+        title: Power Editing
+        info_text: "You are making changes to %{count} people's Job Details data."
+        tab_1_heading: 'Which data would you like to bulk edit?'
+        container_label: Select data to edit
+        learn_more: Learn More
+        update_options: 'Editing Options:'
+        individual_change: "<b>Individually:</b> change each team member's data individually"
+        group_change: "<b>As a group:</b> make the same change for all selected team members"
+        continue: CONTINUE
+        save: SAVE CHANGES
+        cancel: CANCEL
+        back: BACK
+        editing_info_text: "You are editing %{table_name} for %{count} people"
+        team_member: Team Member
+        effect_date_none: Effective date should be present for timeline table
+      confirm_dialog:
+        heading: Are you sure you want to cancel this process?
+        message: "Warning: this can't be undone. Bulk editing progress won't be saved, and you'll need to start over"
+        confirm: 'YES, CANCEL'
+        not_confirm: 'NO, GO BACK'
+      success_dialog:
+        confirmed: 'Changes Confirmed!'
+        description: "We'll send you an email when the changes are live in Sapling"
+      total_people: 'Total: %{count} People'
+      clear_filter: Clear Filter
+      locations: Locations (%{count})
+      location: Location
+      name: Name
+      title: Title
+      department: Department
+      email: Email
+      manager: Manager
+      invite: Add Team Member
+      zoom: Zoom
+      share: Share
+      change_manager: Change Manager
+      no_people: No Team Members Found
+      clear: Clear
+      locations: Locations
+      departments: Departments
+      employment_status: Employment Status
+      managers: Managers
+      clear2: your search, or try a different filter
+      dialog:
+        dialog_title: Add team member to Sapling
+        first_name: First Name
+        last_name: Last Name
+        title: Title
+        email: Company Email
+        personal_email: Personal Email
+        location: Location
+        department: Department
+        start_date: Start Date
+        save: Save
+        close_dialog: Close Dialog
+        required: Field is required.
+        cancel: Cancel
+        send_invitation: Send this person an invitation to Sapling
+      delete_dialog:
+        header_one: Delete Profile
+        header_multiple: Delete Profiles
+        body_one: Are you sure you want to delete this profile? Continuing removes all data from Sapling.
+        body_multiple: Are you sure you want to delete these profiles? Continuing removes all data from Sapling.
+      change_manager_dialog:
+        header: Change Manager
+        body_title: You are about to re-assign the selected team members to a new manager
+        new_manager: New Manager
+        success: Manager change successful
+      org_chart_share_dialog:
+        enabled_title: Org Chart Sharing Enabled
+        disabled_title: Org Chart Sharing Disabled
+        disabled_sub_title: Team members within Sapling can still access
+        enabled_sub_title: Anyone with the following link can view the Org Chart
+        url: Copy this URL
+        copied: Link successfully copied!
+        shareable_url: Copy to clipboard
+        refresh: Refresh Link
+        refresh_toast: Link regenerated!
+        switch_title: Share org chart
+        content: Super admins can create unique links to the Org Chart. Anyone with this link will be able to view it, but they won't be able to see other data. If you regenerate a link, it will disable any previous ones.
+
+      users_deleted: Users Deleted
+      send_invite: Send Invite
+      invitations_sent: Invitations Sent
+      delete: Delete
+      assign_workflow: Assign Workflow
+      bulk_edit: Power Edit
+      assign_document: Assign Document
+      team_members: Team Members
+      filters: Filters
+    home:
+      documents:
+        status: Status
+        name: Name
+        created_by: Created By
+        action: Action
+        awaiting_cosign: Awaiting cosignature
+        complete: Complete
+        incomplete: Incomplete
+        awaiting_sign: Awaiting signature
+        personal_document: Personal document
+        upload_request:
+          file_upload: File Upload
+          upload_file: Upload File
+          modal_description: 'You are about to upload the following files:'
+          files_selected: '%{count} file(s) selected:'
+          files_uploaded: '%{count} File(s) Attached:'
+          continue: Continue
+          save: Save
+          cancel: Cancel
+          info: Only Super admins and selected people can see these files
+          uploading_progress: 'Uploading....%{progress}%'
+          attachments_count: '%{count} attachments'
+      personal_documents:
+        completed: Completed
+      employee_record:
+        access_permission: Access Permission
+      date_join: '%{join} %{company} on %{date}'
+      offboarded_from: Offboarded from %{company}
+      offboarded_from_with_date: Offboarded from %{company} on %{date}
+      offboarding_from: Offboarding from %{company} on %{date}
+      toolbar:
+        actions: ACTIONS
+        profile: Profile
+        updates: Updates
+        role: Tables
+        tasks: Tasks
+        team: Team
+        employee_record: Info
+        team: Team
+        documents: Documents
+        calendar: Calendar
+        more: More
+        time_off: Time Off
+        start_offboarding: Start Offboarding
+        reset_password: Reset Password
+        start_rehire: Start rehire process
+        more_actions: More actions
+        resend_invite: Resend invite
+        email: Email
+        request_info: Request Info
+        delete_information: Delete Profile
+        invitation_sent: Invite to Sapling sent
+        reset_email_sent: Password reset email sent
+        deleted_employee: Success! We have deleted this employee
+
+      updates:
+        CTA_button_text: VIEW
+        load_more_btn: LOAD MORE
+        information_updates_panel:
+          pre-number-text: 'You have '
+          post-number-text: ' pending profile updates'
+          review: REVIEW
+          sub_heading: '<b>%{table}</b> table changes requested by <b>%{requester}</b>'
+
+        pending_hires_panel:
+          heading: Pending Hires
+          pre-number-text: You have
+          post-number-text: pending hires
+          no-pending-hires: No upcoming hires
+          onboard-hire-button: ONBOARD
+          view-pending-hires-button: VIEW ALL
+        program_management_panel:
+          heading:
+            pre-number-text: There are
+            mid-number-text: active transitions and
+            post-number-text: activities to complete
+          percentage-text: of organization
+          sub-tabs:
+            onboarding-text: people onboarding
+            offboarding-text: people offboarding
+            outstanding-activities-text: outstanding activities from
+            people-text: people
+            overdue-activities-text: overdue activities from
+        my_activities_panel:
+          heading:
+            no-activities: No activities to complete
+            pre-number-text: You have
+            post-number-text: activities to complete
+          sub-tabs:
+            documents-text: documents to complete
+            incomplete-tasks-text: tasks to complete
+            overdue-tasks-text: tasks are overdue
+            leave-request-text: leave requests to approve
+        my_team_panel:
+          heading: My Team
+          pre-number-text: Your team has
+          post-number-text: activities to complete
+          sub-heading: Your team is up to date with their activities
+          CTA-button: VIEW ALL
+        platform_experience_panel:
+          heading: Platform Experience
+          pre-number-text: There are
+          post-number-text: people at
+          CTA-button: LEARN MORE
+        recent_arrivals_panel:
+          heading: Recent Arrivals
+          blank_state: You'll be able to view new team members here
+        milestones_panel:
+          blank_state: Upcoming team member anniversaries and birthdays will appear here
+          heading: Milestones
+          anniversary: Anniversary
+          birthday: Happy Birthday!
+          today: Today
+          six_month: Six month
+          year: year
+        out_of_office_panel:
+          blank_state: Team members on leave will appear here
+          heading: Out of Office
+          tomorrow: tomorrow
+          pm: pm
+          am: am
+          returns: Returns
+        time_off_panel:
+          blank_state: Once enabled, you’ll be able to review your balance and request time off
+          heading: Time Off
+          available: available
+          hours_available: hours available
+          days_available: days available
+          hour_available: hour
+          day_available: day
+          unlimited_available: Unlimited Time Off
+          no_balance: No balance
+          button_request: REQUEST
+
+      dialog:
+        remove: Are you sure you want to delete this person?
+        description_head: 'Deleting them will:'
+        description_1: '- Permanently erase their profile information'
+        description_2: '- Permanently delete any tasks, documents and time off history'
+        description_3: '- Remove any record of this user in Sapling'
+        delete_canecl: No, Keep
+        delete_confirm: Yes, Delete
+        request_info: Request Information
+        request_info_field_description: Select one or more profile fields
+        search_for_a_field: Search for a field
+        selected_users: Selected team members
+        search_for_a_user: Search for a user
+        complete_request: Complete Request
+        cancel: Cancel
+        profile_field_error: Profile fields should be present
+        requested_information_change: Success! %{requested_to_name} will be prompted to complete this information.
+
+      profile:
+        profile: Profile
+        about: About
+        linkedin: Linkedin
+        github: Github
+        twitter: Twitter
+        see_more: See %{count} more
+        tasks: TASKS
+        completed: Completed
+        manager: Manager
+        no_manager: No Manager yet...
+        today: Today
+        this_week: This Week
+        this_month: This Month
+        edit: Edit
+        save: Save
+        profile_blank: Your peers are excited to learn about you!
+        profile_blank_other: "%{name}'s profile isn’t complete."
+        complete_profile: Complete Profile
+        get_inspired: Get Inspired
+        or: (OR)
+        permissions:
+          admin: Admin
+          account_owner: Account Owner
+          employee: Team Member
+
+      team:
+        name: Name
+        title: Title
+        location: Location
+        status: Status
+        tasks: Open Tasks
+        view_profile: View Profile
+        view_roles: View Role Info
+        view_tasks: View Tasks
+        invited: Invited
+        preboarding: Preboarding
+        pre_start: Pre-Start
+        first_week: 1st Week
+        first_month: 1st Month
+        ramping_up: Ramping Up
+        active: Active
+        departed: Departed
+        last_month: Last Month
+        last_week: Last Week
+        onboarding: Onboarding
+        offboarding: Offboarding
+        first_year: 1st Year
+        second_year: 2nd Year
+        third_year: 3rd Year
+        number_year: "%{num}th Year"
+        retention_years: 20+ Years
+        registered: Active
+        no_activity: No Activity
+        assigned_tasks: Assigned
+        action: Action
+        view_all: View All
+        complete_info: COMPLETE INFO
+        time_off_request: TIME OFF REQUEST
+        complete_preboarding: Complete Preboarding
+        previous: Previous
+        next: Next
+        collect_from_manager:
+          dialog_title: New Hire Information for %{name}
+          complete: Complete
+          restart: Clear Form
+          info_completed: New Hire Information Completed
+        pending_time_off_request:
+          dialog_title: New Time Off Request
+          approve: APPROVE
+          deny: DENY
+          previous: Previous
+          next: Next
+          approve_toast: You've approved the request
+          comment_toast: Comment added
+          deny_toast: Request Denied
+      pto:
+        comment: Your note to your manager
+        comment_manager: Your note to %{name}
+        write_comment: Add a comment or question about the request
+      tasks:
+        all_owners: All owners
+        owned_by_me: Owned by me
+        owner_filter: Owner filter
+        add_workstream: Assign Workflow
+        filters: Filters
+        incomplete: Incomplete (%{count})
+        complete: Complete (%{count})
+        all: All (%{count})
+        workstreams: Workflows
+        in_progress: In progress
+        completed: Completed
+        yesterday: "Due: Yesterday"
+        today: "Due: Today"
+        tomorrow: "Due: Tomorrow"
+        days_ago: "Due: %{days} days ago"
+        due_with_date: "Due: %{date}"
+        overdue: Overdue
+        overdue_with_count: Overdue (%{count})
+        active_tasks_only: Active tasks only
+        include_a_historical_tasks: Include historical tasks
+        this_week: This Week
+        this_month: This Month
+        all_tasks: All Tasks
+        delete_task: Delete task
+        today: Today
+        due_date: Due Date
+        employee: Team Member
+        title: Title
+        order: Order
+        sort_direction: Sort Direction
+        search_placeholder: Search for a task or task owner
+        actions: Actions
+        mark_completed: Mark as Completed
+        mark_completed_caps: MARK AS COMPLETED
+        this_task_is_inactive: this task is inactive
+        reassign: Re-assign
+        change_date: Change Due Date
+        go_to_profile: Go to Profile
+        go_to_tasks: Go To Tasks
+        re_assign_task: Re-assign task
+        assigned_to: Assigned to
+        new_owner: New owner
+        save: Save
+        new_date: New due date
+        view_task: View Task
+        workstream: Workflow
+        description: Description
+        close: Close
+        assign_workstream: Assign a Workflow
+        find_workstream: Find a Workflow
+        next_task: "Next: View Tasks"
+        next: Next
+        previous: Previous
+        finish: Finish
+        task_count: "Onboarding: %{selected_count}/%{total} tasks"
+        no_tasks: No Tasks Found
+        loading_tasks: Loading tasks...
+        loading_members: Loading members...
+        review_document: Review Document
+        review_packet: Review Packet
+        assign_packet: Assign Packet
+        due_date_text: Schedule Date
+        date_footer_hint: Tasks are distributed  based on timelines set for each task
+        notify_text: Should task owners be notified of these new tasks?
+        notify_user: "Yes"
+        do_not_notify: "No"
+        next_due_date: "Next: Confirm Notifications and Date"
+        go_back_to_task_list: Go back to task list
+        go_back_to_calendar: Go back to calendar
+        related_workstream: Workflow
+        created_by: 'Created By:'
+        completed_by: 'Completed By:'
+        for: 'For:'
+        task_comment:
+          comments: Comments
+          write_comment: Write a comment or @mention a team member
+          total_characters: "%{count} / 280"
+          add: ADD
+        task_activity:
+          recent_activity: Recent Activity
+        assignees: Assignees
+        go_to_tasks: Go to Tasks
+        send_email: Send email
+        go_to_docs: Go to Documents
+        pending: Pending (%{count})
+        assigning_on: Assigning on %{date}
+        no_description: No additional details available for this task
+        create_custom_task: ADD TASK
+        custom_workstream_title: Custom Tasks
+        clear_filter: Clear Filter
+        task_subtasks: This task contains subtasks that should be completed.
+
+      calendar:
+        calendar_events_title: 'Show on calendar:'
+
+      time_off:
+        return_date:
+          today_date: today
+          tomorrow_date: tomorrow
+          on_date: "on"
+        upcoming_requests: "Upcoming Time Off"
+        availible_pto: Availability
+        assign_new: ASSIGN NEW
+        history: History
+        request_history: Request History
+        request_time_off_button_text: REQUEST TIME OFF
+        predict_time_off_button_text: ESTIMATE FUTURE BALANCE
+        edit_time_off_request_butto_text: MODIFY
+        unlimited_policy: Unlimited Time Off
+        canceled: Canceled
+        denied: Denied
+        request_declined: Request declined
+        request_canceled: Request canceled
+        blank_pto_heading: No available Time off policies
+        blank_pto_text: Your Sapling admin has yet to set up your team's PTO policy.
+        blank_timeoff_heading: Your upcoming requests
+        blank_timeoff_text: When you request time off, you'll see the details here.
+        blank_history_heading: Your past requests
+        blank_history_text: All approved and denied requests of the past can be found here.
+        blank_state_no_pto_header: No Time Off Available
+        blank_state_no_pto_text: If enabled, time off policies will appear here
+        clear_filters: Clear
+        pto_type_filter: PTO Type Filter
+        pto_date_filter: PTO Date Filter
+        all_pto_types: All Time Off Types
+        unassign_policy_tooltip_text: Unassign Policy
+        adjust_balance_tooltip_text: Adjust Balance
+        unassign_confirmation_text: "Are you sure you want to unassign this policy?"
+        unassign_confirmation_description_html: "<span class='sapling-body-1'>Current balance is <strong>%{balance} hours</strong>. If you continue, the balance will be reset to 0<span>"
+        confirm_unassign: "YES, CONTINUE"
+        cancel_unassign: CANCEL
+        unassigned_done: Policy Unassigned
+        assignment_done: Policy Successfully Assgined
+        assign_new_policy:
+          dialog_title: Assign New Policy
+          dialog_description: Manually assign a time off policy to team members. Policies must be created and enabled before assigning.
+          policy_assigned: 'Policy Assigned:'
+          starting_balance: 'Starting Balance:'
+          assigned_successfully_immediately: Assigned successfully
+          assigned_successfully_later: Policy will be assigned on effective date
+          cancel: CANCEL
+          submit: SUBMIT
+        activities:
+          cancelled_request: canceled the request
+          modified_request: modified the request
+          approve_or_deny_request: "%{status} the request"
+          auto_approve: "Your request was automatically approved after 7 days by %{manager_name}"
+          auto_deny: "Your request expired and was automatically denied by %{manager_name}"
+          submited_request: submitted the request
+          auto_approved_on_create: request was auto-approved
+          auto_approved_on_deny: request was auto-denied
+          comment_request: commented on the request
+          auto_cancelled: request was cancelled due to a change in the policy settings
+          cancelled_request_on_offboarding: request cancelled by offboarding user
+        request_detail:
+          dialog_title: Time Off Request
+          name: Name
+          amount_requested: Amount Requested
+          visable_admins: Only visible to Super Admins and the Manager
+          date_requested: Dates requested
+          additional_notes: Additional Notes
+          no_additional_notes: No additional notes have been added to this request.
+          policy: Policy
+        request_time_off:
+          time_off_type: Time off type
+          policy_select_label: Policy
+          full_day_or_partial: Are you taking off a portion of the day or a whole day(s)?
+          partial_hours_included: This request includes partial hours
+          whole_day: Whole Day
+          partial_day: Partial Day
+          start_date: Begin
+          end_date: End
+          start_time: Start time
+          end_time: End time
+          additional_notes: Additional Notes (optional)
+          dialog_title: New Time Off Request
+          submit: SUBMIT
+          update_request: UPDATE REQUEST
+          cancel: CANCEL REQUEST
+          request_cancelled: PTO request cancelled
+          undo_cancellation: UNDO
+          created_succesfully: Time Off Request Submitted
+          updated_succesfully: Successfully updated time off request
+          deleted_succesfully: Time Off request deleted successfully
+          time_requested_title: 'Total Time Requested:'
+          hours: hours
+          holiday: Holiday
+          half_day_enabled: This request is for half-day only
+          invalid_amount: "The maximum hours for this Policy are %{amount}"
+        adjustment_time_off_balance:
+          deleted: Adjustment deleted
+          delete_adjustment: Are you sure you want to delete this adjustment?
+          delete_pto: Are you sure you want to delete this request?
+          unlimited: Unlimited
+          no_hour_balance: No Available Hours
+          no_day_balance: No Available Days
+          hours_used: hours used
+          days_used: days used
+          hours_available: hours available
+          days_available: days available
+          hours_scheduled: hours scheduled
+          days_scheduled: days scheduled
+          no_balance: No Available Hours
+          dialog_title: Adjust Balance
+          amount_adjusted_label: Amount Adjusted*
+          amount_adjusted: Amount Adjusted
+          adjustment_added_operation: Added
+          adjustment_subtracted_operation: Subtracted
+          hours_label: hours
+          hours: " hours "
+          days: " days "
+          effective_date: Effective Date*
+          effective_date_label: Effective Date
+          adjustment_reason_label: Note*
+          adjustment_reason: Adjustment Description
+          adjustment_description_note: Adjustment Reason
+          adjustment_created_success: Adjustment Confirmed.
+          undo_adjustment: Undo
+          table_adjustment: Adjustment
+          cancel: Cancel
+          updated_balance: "Updated Balance:"
+          just_now: Just now
+          plus_operation: "+ "
+          minus_operation: "- "
+        estimate_balance:
+          dialog_title: Estimate Future Time Off Balance
+          select_policy: Select Policy
+          estimate_date: Show me balance as of
+          close: CLOSE
+          future_balance: "Your balance as of "
+          is: "is "
+          hours: " hours"
+          days: " days"
+          date_heading: Date
+          summary_heading: Summary
+          used_heading: Used(-)
+          accrued_heading: Accrued(+)
+          balance_heading: Balance
+          created_heading: created
+          calculation: Accrual History
+
+
+    pending_hires:
+      pending_hires: Pending hires
+      total: 'Total: %{count}'
+      name: Name
+      department: Department
+      location: Location
+      manager: Manager
+      start_date: Start Date
+      action: Action
+      onboard: ONBOARD
+      start: START
+      remove: REMOVE
+      message: Are you sure you want to delete this pending hire?
+      deleted: Pending hire deleted.
+      number: '#'
+      continue: CONTINUE
+      manage_pending: Manage Pending Hires
+      finish: Finish
+      title: Job Title
+
+    events:
+      logo: Logo
+      search: Search your Sapling history...
+
+    more:
+      header: Welcome to Sapling!
+      message: To get the most out our platform, including Workflows and Organizational Charts, we recommend logging in from a desktop browser, such as Chrome.
+      go_to_profile: Go To Profile
+      message: To get the most out our platform, including Workflows and Organizational Charts, we recommend logging in from a desktop browser, such as Chrome.
+
+    manager_form:
+      all_done: All Done!
+      thank_you: Thank you for completing the manager form. %{first_name}'s first day is %{start_date}
+      submit: SUBMIT
+      clear_form: CLEAR FORM
+      complete_info_for: Complete Info For %{full_name}
+      sign_in_sapling: SIGN IN TO SAPLING
+      close_tab: OR, CLOSE THE TAB

@@ -1,0 +1,27 @@
+= form_for :dump, :url=>{:action=>"import_workday_csv"}, :html => { :multipart => true } do |f|
+  %span
+    %b File should follow structure given below:
+  %ul
+    %li 
+      %b Sapling Field: 
+      This column should contain Sapling field name.
+    %li
+      %b Instance: 
+      This column should contain Workday custom field option. 
+    %li
+      %b Workday ID: 
+      This column should contain Workday custom field option's respective ID. 
+  
+  %br
+  %br
+  
+  %table
+    %tr
+      %td
+        %label{:for => "dump_file"}
+          %b Select a CSV File:
+      %td
+        = f.file_field :file
+    %tr
+      %td
+        = submit_tag 'Submit'

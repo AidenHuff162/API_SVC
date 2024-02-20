@@ -1,0 +1,105 @@
+engines:
+  brakeman:
+    enabled: true
+  rubocop:
+    enabled: true
+    channel: rubocop-1-23-0
+    checks:
+      FrozenStringLiteralComment:
+        enabled: false
+      Documentation:
+        enabled: false
+      IndentationStyle:
+        EnforcedStyle: tabs
+      LineLength:
+        Max: 130
+      AbcSize:
+        enabled: false
+      StringConcatenation:
+        enabled: false
+      MethodLength:
+        enabled: true
+        max: 18
+      SingleLineMethods:
+        enabled: false
+      ClassAndModuleChildren:
+        enabled: false
+      RescueModifier:
+        enabled: false
+  duplication:
+    enabled: true
+    config:
+      languages:
+        ruby:
+          mass_threshold: 40
+        javascript:
+          mass_threshold: 40
+  apexmetrics:
+    enabled: true
+  bundler-audit:
+    enabled: true
+  coffeelint:
+    enabled: true
+  credo:
+    enabled: true
+    channel: "beta"
+  csslint:
+    enabled: true
+  rubymotion:
+    enabled: false
+  govet:
+    enabled: true
+  golint:
+    enabled: true
+  flog:
+    enabled: true
+    config:
+      score_threshold: 20.0
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  reek:
+    enabled: true
+    checks:
+      DuplicateMethodCall:
+        enabled: true
+        max: 2
+      IrresponsibleModule:
+        enabled: false
+      UtilityFunction:
+        enabled: false
+      InstanceVariableAssumption:
+        enabled: false
+      FeatureEnvy:
+        enabled: false
+      IrresponsibleModule:
+        enabled: false
+      TooManyStatements:
+        enabled: true
+        exclude:
+          - initialize
+        max_statements: 15
+      stylelint:
+        enabled: true
+
+ratings:
+  paths:
+    - "app/**/*"
+    - "lib/**/*"
+    - "config/**/*"
+    - "spec/**/*"
+    - "**.rb"
+    - "**.go"
+    - "**.cls"
+    - "**.trigger"
+    - Gemfile.lock
+    - "**.ex"
+    - "**.exs"
+    - "**.css"
+    - "**.go"
+    - "**.coffee"
+    - "**.js"
+    - "**.less"
+    - "**.scss"
+    - "**.sss"

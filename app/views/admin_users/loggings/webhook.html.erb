@@ -1,0 +1,130 @@
+<%= render partial: 'layout' %>
+<div class="datatable-margin">
+  <div class="row">
+    <div class="col-md-10">
+      <h2 class="logging-title"> Webhook Loggings </h2>
+      <%= content_tag :table, role: :datatable, class: 'table table-bordered table-hover table-striped dataTable', data: {url: admin_webhook_logs_path(format: :json)} do %>
+        <thead>
+          <tr>
+            <th> Company Name </th>
+            <th> Integration </th>
+            <th> Action </th>
+            <th> Status </th>
+            <th> Created At </th>
+            <th> View</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      <% end %>
+    </div>
+    <div class="col-md-2 filters">
+      
+      <div class="form-group find-by-id">
+        <label for="search">Find By ID:</label>
+        <input id="webhook_search" type="text" onkeyup="webhook_button()" class="form-control">
+      </div>
+      <input type="hidden"  id="hidden_button" data-toggle="modal" data-target='#webhook_modal'></button>
+      <button type="button" onClick='show_webhook_logs(0)' id="webhook_button" class="btn btn-primary" disabled>Search</button>
+      <hr/>
+      <h1 class="bold">Filters:</h1>
+      <form autocomplete="off" onsubmit="return submit_filters()">
+        <%= render partial: 'filters' %>
+
+        <div class="form-group">
+          <label for="integration">Integration:</label>
+          <%= select_tag :integration, options_for_select(@webhook_names, params[:integration]), class: "form-control"  %>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <%= select_tag :status, options_for_select(@webhook_statuses, params[:status]), class: "form-control"  %>
+        </div>
+
+        <div class="form-group">
+          <label for="data_received">Data Received:</label>
+          <%= text_field_tag :data_received, params[:data_received], class: "form-control"  %>
+        </div>
+
+        <div class="form-group">
+          <label for="error_message">Error Message</label>
+          <%= text_field_tag :error_message, params[:error_message], class: "form-control"  %>
+        </div>
+
+        <div class="form-group">
+          <label for="action">Action</label>
+          <%= text_field_tag :actions, params[:actions], class: "form-control"  %>
+        </div>
+
+        <%= render partial: 'date_filters' %>
+        <button type="submit" class="btn btn-default">Submit</button>
+        <hr>
+      </form>
+      <%= csrf_meta_tag %>
+      <button class="btn btn-default" data-toggle="modal" data-target='#export_loggings_modal' onClick="export_loggings('WebhookLogging')">Export Results</button>
+      
+     
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="webhook_modal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content modals-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Webhook Log<a href="" id="webhook_href" style="margin-left: 5px;" target="_blank"> View</a></h4>
+      </div>
+      <div class="modal-body" id="webhook_modal_body">
+
+        <form class="madals">
+          <div class="form-group">
+            <label for="company_name">Company Name:</label>
+            <p id="webhook_company_name" type="text" class="form-control" disabled >
+          </div>
+          <div class="form-group">
+            <label for="company_domain">Company Domain:</label>
+            <p id="webhook_company_domain" type="text" class="form-control" disabled >
+          </div>
+          <div class="form-group">
+            <label for="integration">Integration:</label>
+            <p id="webhook_integration" type="text" class="form-control" disabled >
+          </div>
+          <div class="form-group">
+            <label for="data_received">Data Received:</label>
+            <p id="webhook_data_received" type="text" class="form-control" disabled >
+          </div>
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <p id="webhook_location" type="text" class="form-control" disabled>
+          </div>
+          <div class="form-group">
+            <label for="error_message">Error Message:</label>
+            <p id="webhook_error_message" type="text" class="form-control" disabled>
+          </div>
+          <div class="form-group">
+            <label for="action">Action:</label>
+            <p id="webhook_action" type="text" class="form-control" disabled>
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status:</label>
+            <p id="webhook_status" type="text" class="form-control" disabled>
+          </div>
+
+          <div class="form-group">
+            <label for="created_at">Created At:</label>
+            <p id="webhook_created_at" type="text" class="form-control" disabled>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%= render partial: 'export_loggings_modal' %>

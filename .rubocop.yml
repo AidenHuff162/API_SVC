@@ -1,0 +1,19 @@
+require: 
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+Style/Documentation:
+  Enabled: false
+Metrics/MethodLength:
+    Max: 20
+Layout/LineLength:
+  Max: 140
+Style/FrozenStringLiteralComment:
+  Enabled: false
+RSpec/MultipleMemoizedHelpers:
+  Max: 15
+RSpec/ExampleWording:
+  Enabled: false
+Style/MultilineTernaryOperator:
+  Enabled: false

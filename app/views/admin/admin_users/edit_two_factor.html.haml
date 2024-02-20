@@ -1,0 +1,37 @@
+
+= form_for @admin_user, url: update_two_factor_admin_admin_user_path, html: { method: :patch } do |f|
+  .fieldset.inputs
+    .legend
+      %span
+        %h3
+          Complete security without compromise
+      %br
+        Two-factor (2FA) or multi-factor authentication (MFA) is an additional security layer for your business – helping to address the vulnerabilities of a standard password-only approach.
+      %input{name: "admin_user[otp_required_for_login]", type: "hidden", value: !@admin_user.otp_required_for_login ? 1 : 0 }
+
+  .fieldset.actions
+    %ul
+      %li.action.input_action
+        = f.submit !@admin_user.otp_required_for_login ? "Enable" : "Disable"
+
+- if @admin_user.otp_required_for_login
+  %panel
+    %h3
+      Setup Google Authenticator (or any other 2-step verification app)
+    .panel-contents
+      %div.qr-code
+        %b
+          Scan the QR Code
+      %div.qr-scanner
+        - issuer = "MyApp #{Rails.env}"
+        - label = [issuer, @admin_user.email].join(": ")
+        - code = @admin_user.otp_provisioning_uri(label, issuer: issuer)
+        = RQRCode::QRCode.new(code).as_svg(module_size: 4).html_safe
+      %div.otp-refresh
+        = form_for @admin_user, url: update_two_factor_admin_admin_user_path, html: { method: :patch } do |r|
+          %fieldset
+            %input.otp-content{name: "otp_key", type: "text", readonly: true, value: @admin_user.otp_secret }
+            %input{name: "admin_user[otp_required_for_login]", type: "hidden", value: 1 }
+            %button{type: "Submit"}
+              %img(src= "#{asset_path('general/refresh_icon.svg')}")
+

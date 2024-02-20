@@ -1,0 +1,446 @@
+---
+-
+  id: 1001
+  first_name: Aaron
+  last_name: Dillard
+  personal_email: dillard.aa@test.com
+  email: adillard@rocketship.com
+  title: Talent Acquisition Manager
+  manager_email: dlewis@rocketship.com
+  start_date: 12/14/2014
+  team: Operations
+  location: San Francisco
+-
+  id: 1002
+  first_name: Alexandre
+  last_name: Manduca
+  personal_email: a.michetti@test.com
+  email: amanduca@rocketship.com
+  title: Software Engineer
+  manager_email: cbowman@rocketship.com
+  start_date: 11/1/2014
+  team: Engineering
+  location: New York
+-
+  id: 1003
+  first_name: Alice
+  last_name: Hui
+  personal_email: alicehuidesigns@test.com
+  email: ahui@rocketship.com
+  title: Graphic Designer
+  manager_email: achallis@rocketship.com
+  start_date: 4/28/2016
+  team: Marketing
+  location: Hong Kong
+-
+  id: 1004
+  first_name: Allison
+  last_name: Yee
+  personal_email: allisonyee185@test.com
+  email: ayee@rocketship.com
+  title: Operations Analyst
+  manager_email: dlewis@rocketship.com
+  start_date: 11/16/2014
+  team: Operations
+  location: San Francisco
+-
+  id: 1005
+  first_name: Ann
+  last_name: Challis
+  personal_email: ann.c.challis@icloud.com
+  email: achallis@rocketship.com
+  title: VP of Marketing
+  manager_email: sdash@rocketship.com
+  start_date: 4/28/2016
+  team: Marketing
+  location: London
+-
+  id: 1006
+  first_name: Ariha
+  last_name: Setalvad
+  personal_email: ariha.02@test.com
+  email: asetalvad@rocketship.com
+  title: Staff Writer
+  manager_email: achallis@rocketship.com
+  start_date: 11/11/2014
+  team: Marketing
+  location: Chicago
+-
+  id: 1007
+  first_name: Bena
+  last_name: Li
+  personal_email: li.bena@test.com
+  email: bli@rocketship.com
+  title: UI/UX Designer
+  manager_email: cbowman@rocketship.com
+  start_date: 1/4/2016
+  team: Product
+  location: London
+-
+  id: 1008
+  first_name: Benjamin
+  last_name: Edwards
+  personal_email: benny1@bennyedwards.net
+  email: bedwards@rocketship.com
+  title: IT and Facilities Manager
+  manager_email: cbowman@rocketship.com
+  start_date: 9/21/2014
+  team: Engineering
+  location: New York
+-
+  id: 1009
+  first_name: Brian
+  last_name: Zhu
+  personal_email: brian.zhu@outlook.com
+  email: bzhu@rocketship.com
+  title: Software Engineer
+  manager_email: cbowman@rocketship.com
+  start_date: 9/21/2014
+  team: Engineering
+  location: New York
+-
+  id: 1010
+  first_name: Bryanna
+  last_name: Moore
+  personal_email: bmoore14@cmc.edu
+  email: bmoore@rocketship.com
+  title: Client Success Specialist
+  manager_email: dlewis@rocketship.com
+  start_date: 10/26/2014
+  team: Operations
+  location: London
+-
+  id: 1011
+  first_name: Bryce
+  last_name: Steinhoff
+  personal_email: bryce@brycesteinhoff.com
+  email: bsteinhoff@rocketship.com
+  title: Software Engineer
+  manager_email: cbowman@rocketship.com
+  start_date: 5/9/2016
+  team: Engineering
+  location: New York
+-
+  id: 1012
+  first_name: Colin
+  last_name: Bowman
+  personal_email: colinbowman@test.com
+  email: cbowman@rocketship.com
+  title: Product Director
+  manager_email: sdash@rocketship.com
+  start_date: 6/9/2014
+  team: Product
+  location: San Francisco
+-
+  id: 1013
+  first_name: Daniel
+  last_name: Junqueira
+  Photo: Use template
+  email: djunqueira@rocketship.com
+  title: Software Engineer
+  manager_email: cbowman@rocketship.com
+  start_date: 11/11/2014
+  team: Engineering
+  location: New York
+-
+  id: 1014
+  first_name: David
+  last_name: Lewis
+  personal_email: david.adam.lewis@test.com
+  email: dlewis@rocketship.com
+  title: Operations Director
+  manager_email: sdash@rocketship.com
+  start_date: 9/15/2014
+  team: Operations
+  location: San Francisco
+-
+  id: 1015
+  first_name: Divya
+  last_name: Kaur
+  personal_email: djkaurageous@test.com
+  email: dkaur@rocketship.com
+  title: QA Engineering Manager
+  manager_email: cbowman@rocketship.com
+  start_date: 12/7/2014
+  team: Engineering
+  location: New York
+-
+  id: 1016
+  first_name: Dmitry
+  last_name: Litvak
+  personal_email: dimalitvak@hotmail.com
+  email: dlitvak@rocketship.com
+  title: Operations Data Analyst
+  manager_email: dlewis@rocketship.com
+  start_date: 10/5/2014
+  team: Operations
+  location: San Francisco
+-
+  id: 1017
+  first_name: Dominick
+  last_name: Lima
+  personal_email: dominick.lima@test.com
+  email: dlima@rocketship.com
+  title: Client Success Specialist
+  manager_email: dlewis@rocketship.com
+  start_date: 4/25/2016
+  team: Operations
+  location: Hong Kong
+-
+  id: 1018
+  first_name: Grant
+  last_name: Nelson
+  personal_email: gen8ax+employee@test.com
+  email: gnelson@rocketship.com
+  title: Business Operations Associate
+  manager_email: dlewis@rocketship.com
+  start_date: 6/22/2014
+  team: Operations
+  location: Hong Kong
+-
+  id: 1019
+  first_name: James
+  last_name: Karnezis
+  personal_email: james.karnezis@fulbrightmail.org
+  email: jkarnezis@rocketship.com
+  title: Product Manager
+  manager_email: dlewis@rocketship.com
+  start_date: 9/3/2014
+  team: Product
+  location: San Francisco
+-
+  id: 1020
+  first_name: Jameson
+  last_name: Cordeiro
+  personal_email: jaycordeiro92@test.com
+  email: jcordeiro@rocketship.com
+  title: Operations Analyst
+  manager_email: dlewis@rocketship.com
+  start_date: 9/8/2014
+  team: Operations
+  location: London
+-
+  id: 1021
+  first_name: Jereme
+  last_name: Albin
+  personal_email: jereme.albin@test.com
+  email: jalbin@rocketship.com
+  title: Loan Operations Manager
+  manager_email: dlewis@rocketship.com
+  start_date: 10/19/2014
+  team: Operations
+  location: London
+-
+  id: 1022
+  first_name: Jun
+  last_name: Xu
+  personal_email: owenxu@umich.edu
+  email: jxu@rocketship.com
+  title: Software Engineer
+  manager_email: cbowman@rocketship.com
+  start_date: 4/18/2016
+  team: Engineering
+  location: New York
+-
+  id: 1023
+  first_name: Kyle
+  last_name: Easton
+  personal_email: kjkeaston@test.com
+  email: keaston@rocketship.com
+  title: Operations Analyst
+  manager_email: dlewis@rocketship.com
+  start_date: 6/29/2014
+  team: Operations
+  location: San Francisco
+-
+  id: 1024
+  first_name: Kyle
+  last_name: Dougherty
+  personal_email: dougherty.kyle@test.com
+  email: kdougherty@rocketship.com
+  title: Business Development and Sales Manager
+  manager_email: achallis@rocketship.com
+  start_date: 7/13/2014
+  team: Sales
+  location: San Francisco
+-
+  id: 1025
+  first_name: Mark
+  last_name: Huntley
+  personal_email: markhuntley9@test.com
+  email: mhuntley@rocketship.com
+  title: Operations Analyst
+  manager_email: dlewis@rocketship.com
+  start_date: 7/13/2014
+  team: Operations
+  location: London
+-
+  id: 1026
+  first_name: Matthew
+  last_name: Carter
+  personal_email: matt99carter@test.com
+  email: mcarter@rocketship.com
+  title: Managing Editor
+  manager_email: achallis@rocketship.com
+  start_date: 9/21/2014
+  team: Marketing
+  location: Chicago
+-
+  id: 1027
+  first_name: Nichol
+  last_name: Newell
+  personal_email: nicholnewell@test.com
+  email: nnewell@rocketship.com
+  title: Sales Associate
+  manager_email: achallis@rocketship.com
+  start_date: 10/5/2014
+  team: Sales
+  location: San Francisco
+-
+  id: 1028
+  first_name: Paul
+  last_name: Bussenius
+  personal_email: paulbussenius@test.com
+  email: pbussenius@rocketship.com
+  title: Senior Customer Acquisition Manager
+  manager_email: achallis@rocketship.com
+  start_date: 1/4/2016
+  team: Marketing
+  location: Chicago
+-
+  id: 1029
+  first_name: Peter
+  last_name: Hamblett
+  personal_email: pghamble@test.com
+  email: phamblett@rocketship.com
+  title: Operations Analyst
+  manager_email: dlewis@rocketship.com
+  start_date: 6/29/2014
+  team: Operations
+  location: London
+-
+  id: 1030
+  first_name: Ryan
+  last_name: Kaldani
+  personal_email: ryankaldani@test.com
+  email: rkaldani@rocketship.com
+  title: Digital Marketing Strategist
+  manager_email: achallis@rocketship.com
+  start_date: 2/2/2016
+  team: Sales
+  location: San Francisco
+-
+  id: 1031
+  first_name: Samantha
+  last_name: Flickinger
+  personal_email: samanthasueflickinger@test.com
+  email: sflickinger@rocketship.com
+  title: Client Success Specialist
+  manager_email: dlewis@rocketship.com
+  start_date: 11/30/2014
+  team: Operations
+  location: London
+-
+  id: 1032
+  first_name: Sandeep
+  last_name: Chaudhary
+  personal_email: schaudhary86@test.com
+  email: schaudhary@rocketship.com
+  title: Customer Care Manager
+  manager_email: dlewis@rocketship.com
+  start_date: 9/14/2014
+  team: Operations
+  location: London
+-
+  id: 1033
+  first_name: Shao Han
+  last_name: Chen
+  personal_email: shaohan.chen@test.com
+  email: schen@rocketship.com
+  title: UI/UX Designer
+  manager_email: cbowman@rocketship.com
+  start_date: 10/1/2014
+  team: Product
+  location: Hong Kong
+-
+  id: 1034
+  first_name: Soutrik
+  last_name: Pramanik
+  personal_email: jeff.pramanik@test.com
+  email: spramanik@rocketship.com
+  title: Product Manager
+  manager_email: cbowman@rocketship.com
+  start_date: 12/7/2014
+  team: Product
+  location: Hong Kong
+-
+  id: 1035
+  first_name: Spencer
+  last_name: Myers
+  personal_email: spencermyers5@test.com
+  email: smyers@rocketship.com
+  title: Partner Development Representative
+  manager_email: achallis@rocketship.com
+  start_date: 10/12/2014
+  team: Sales
+  location: Chicago
+-
+  id: 1036
+  first_name: Stephen
+  last_name: Dash
+  personal_email: stephenjdash@test.com
+  email: sdash@rocketship.com
+  title: CEO
+  manager_email: None
+  start_date: 9/1/2013
+  team: Sales
+  location: San Francisco
+-
+  id: 1037
+  first_name: Timothy
+  last_name: Galvin
+  personal_email: timothy.j.galvin@test.com
+  email: tgalvin@rocketship.com
+  title: Strategic Partnership Manager
+  manager_email: achallis@rocketship.com
+  start_date: 3/9/2016
+  team: Sales
+  location: San Francisco
+-
+  id: 1038
+  first_name: Tim
+  last_name: Taylor
+  photo: tim
+  personal_email: tim.taylor@test.com
+  email: ttaylor@rocketship.com
+  title: Engineering Manager
+  manager_email: cbowman@rocketship.com
+  start_date: 3/9/2014
+  team: Engineering
+  location: New York
+-
+  id: 1039
+  first_name: Peter
+  last_name: Parker
+  photo: peter
+  role: admin
+  personal_email: peter.parker@test.com
+  email: pparker@rocketship.com
+  title: Operations Manager
+  manager_email: achallis@rocketship.com
+  start_date: 3/9/2014
+  team: Operations
+  location: San Francisco
+-
+  id: 1040
+  first_name: Sarah
+  last_name: Salem
+  photo: sarah
+  role: admin
+  personal_email: sarahsalem@test.com
+  email: ssalem@rocketship.com
+  title: Head of Operations
+  manager_email: sdash@rocketship.com
+  start_date: 3/6/2013
+  team: Operations
+  location: London

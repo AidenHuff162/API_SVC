@@ -1,0 +1,32 @@
+#wrapper
+  #content_wrapper
+    #active_admin_content
+      #login
+        %h2 Sapling Login
+        = form_for @admin_user, url: admin_user_session_path, html: { method: :post } do |f|
+          %fieldset.inputs
+            %ol
+              %li
+                %input#admin_user_email{:name => "admin_user[email]", :type => "hidden", :value => @sign_in_params[:email]}
+                %input#admin_user_password{:name => "admin_user[password]", :type => "hidden", :value => @sign_in_params[:password]}
+
+            - if @admin_user.first_login
+              %ol(style="padding:80px; padding-top:20px; padding-bottom:30px")
+                %li
+                  .panel-contents
+                    %div.qr-code(style="margin-bottom:20px; margin-left:44px")
+                      %b
+                        Scan the QR Code
+                    %div.qr-scanner
+                      - issuer = "MyApp #{Rails.env}"
+                      - label = [issuer, @sign_in_params[:email]].join(": ")
+                      - code = @admin_user.otp_provisioning_uri(label, issuer: issuer)
+                      = RQRCode::QRCode.new(code).as_svg(module_size: 4).html_safe
+            %ol
+              %li#admin_user_password_input.password.input.optional.stringish
+                %label.label{:for => "admin_user_otp_attempt"} Authentication Key
+                %input#admin_user_otp_attempt{:name => "admin_user[otp_attempt]", :type => "number"}/
+          %fieldset.actions
+            %ol
+              %li#admin_user_submit_action.action.input_action
+                = submit_tag 'Done'

@@ -1,0 +1,18 @@
+%table
+ %tbody
+  %tr
+   %th Id
+   %th State
+   %th Action
+  -@user.paperwork_requests.each do |doc|
+   -unless doc.state=='draft'
+    %tr
+     %td= doc.id
+     %td= doc.state
+     %td
+      =link_to 'View' ,"javascript:get_document_url(#{doc.id},0);" 
+      =link_to 'Delete',delete_paperwork_request_api_v1_admin_active_admin_admin_requests_path(:doc_id=>"#{doc.id}",:user_id=>"#{@user.id}"), class: 'delete_doc',method: :delete,data:{confirm:"Are You Sure?"}      
+      =link_to 'Download' ,"javascript:get_document_url(#{doc.id},1);",:id=>'download_link',:download=>'true'
+
+%div#dialog
+ 

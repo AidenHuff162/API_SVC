@@ -1,0 +1,38 @@
+= form_for :company_assets, :url=>{:action=>"create_demo_assets"}, :html => { :multipart => true } do |f|
+  %table
+    %tr
+      %td
+        This will Create Following Assets:
+    %tr
+      %td
+        1) Super User
+
+    %tr
+      %td
+        2) Copy Tasks from selected tenant
+
+    %tr
+      %td
+        2) Copy Email Templates from selected tenant
+
+    %tr
+      %td
+        3) Copy Email Templates from selected tenant
+
+    %tr
+      %td
+        4) Upload Standard employees provided by CS team
+
+
+    %tr
+      %td
+        %label
+          Copy From :
+    %tr
+      %td
+        = f.select :copy_from, Company.order(:name).pluck(:name, :id)
+
+
+    %tr
+      %td
+        = submit_tag 'Click to Initialize'

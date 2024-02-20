@@ -1,0 +1,18 @@
+<div class="modal fade export_loggings_modal" id="export_loggings_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header export_loggings_header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Your export was successful!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body export_loggings_body">
+        <%= "Up to the first 10,000 rows will be exported as a CSV file. The file will be sent to #{current_admin_user.email}. It may take a few minutes to create." %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>

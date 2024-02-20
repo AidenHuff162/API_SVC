@@ -1,0 +1,74 @@
+<div class="header-holder">
+  <h2>ADP LOGGINGS</h2>
+  <form action="<%= clear_all_api_v1_loggings_path %>" method="post">
+    <button type="submit" class="btn">Clear Loggings</button>
+  </form>
+</div>
+
+<table class="table">
+  <thead>
+      <tr>
+        <th>Request#</th>
+        <th>Action</th>
+        <th>Result</th>
+        <th>Time</th>
+      </tr>
+  </thead>
+
+
+  <% @loggings.all.each do |logging| %>
+    <tr>
+      <td><%= logging.id %></td>
+      <td><%= logging.action %></td>
+      <td><%= JSON.pretty_generate(logging.result) %></td>
+      <td><%= logging.created_at %></td>
+    </tr>
+  <% end %>
+</table>
+
+<style type="text/css">
+.header-holder{
+  width: 90%;
+  margin: 0 auto;
+}
+  .header-holder h2{
+    float: left;
+  }
+  .header-holder .btn{
+    background: rgba(0, 188, 212, 0.8);
+    color: #fff;
+    padding: 6px 8px;
+    min-width: 100px;
+    display: inline-block;
+    text-align: center;
+    margin: 25px 0;
+    border-radius: 2px;
+    text-decoration: none;
+    float: right;
+  }
+    h2{
+      font-family: monospace;
+      color: #757070;
+      margin: 25px 0;
+    }
+  .table{
+    border: 1px solid #eee;
+    font-family: monospace;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .table thead{
+    border-bottom: 1px solid #eee;
+    background: rgba(0, 188, 212, 0.8);
+  }
+  .table thead th{
+    padding: 10px;
+    color: #fff;
+    border-bottom: 1px solid #eee !important;
+  }
+  .table tbody td{
+    padding: 10px;
+    color: #757070;
+    border: 1px solid #eee !important;
+  }
+</style>

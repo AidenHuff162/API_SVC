@@ -1,0 +1,18 @@
+- _initials = ""
+- _img_src = ""
+-if @requester.picture.present?
+  -_img_src = @requester.picture
+-else
+  -_initials = @requester_first_name[0].try(:upcase) + ' ' + @requester.last_name[0].try(:upcase)
+- _header_text = @requester_first_name + " " + @requester.last_name
+- _email_title = I18n.t('mailer.send_request_information_notification_to_requested_to.subject')
+- _email_body_html = I18n.t('mailer.send_request_information_notification_to_requested_to.body', name: (@requested_to.preferred_name || @requested_to.first_name), requester_name: @requester.display_name)
+- _footer_plain = ""
+- _footer_linked = ""
+- _footer_link_to = ""
+
+- _body_button_text = I18n.t('mailer.send_request_information_notification_to_requested_to.link_below', first_name: @requester_first_name)
+- _body_button_color = @company.email_color || "#3F1DCB"
+- _body_button_link = 'https://' + @company.app_domain + '/#/requested_information/' + @request_information_id.to_s + '/' + @token
+
+= render "mail_template", locals: {img_src: _img_src,header_text: _header_text, email_title: _email_title, email_body_html: _email_body_html, body_button_text: _body_button_text, body_button_color: _body_button_color, body_button_link: _body_button_link, footer_plain: _footer_plain, footer_linked: _footer_linked, footer_link: _footer_link_to, initials: _initials}

@@ -1,0 +1,73 @@
+en:
+  login:
+    page_title: Login
+    logo: Sapling
+    title: Welcome back
+    email: Email Address
+    password: Password
+    remember_me: Remember Me
+    forgot_password: Forgot Password?
+    welcome: Welcome Back
+    with_email: Sign in with email
+    with_sso: Sign in with SSO
+    terms_of_service: Terms of Service
+    privacy_policy: Privacy Policy
+    log_in: Sign In
+    go_home: Take me to the Sapling home page!
+    or: OR
+    with_adfs: Sign in through KPMG network
+    with_google: Sign in with Google
+    with_one_login: Sign in with One Login
+    with_okta: Sign in with Okta
+    with_shibboleth: Sign in with Shibboleth
+    with_ping_id: Sign in with Ping ID
+    oops: Oops!
+    email_disabled: Email login has been disabled by IT.  Contact someone at your office for your company email address.
+    errors:
+      email_required: Email is required
+      email_must_valid: Email has wrong format
+      password_required: Password is required
+
+  forget:
+    logo: Sapling
+    title: Recover your password
+    email: Email address
+    email_required: Email field is required
+    invalid_email: Email must be a valid e-mail address
+    send_link: SEND RESET LINK
+    goto_login: Go back to login
+    success: Password reset instructions were sent to '%{email}'
+    select_recapthca: Please verify that you are not a robot.
+
+  reset:
+    notification_title: Task Notifications
+    email_notification: Receive emails from Sapling
+    email_notification_tip: Enabled by default in your Sapling account.
+    slack_notification_pt1: Use
+    slack_notification_pt2: to manage tasks
+    slack_notification_tip: Receive and complete task notifications via Slack. If disabled, contact your People Operations department for setup.
+    logo: Sapling
+    title: Reset your password
+    password_placeholder: Password
+    confirm_placeholder: Password (Confirm)
+    aria_update: UPDATE MY PASSWORD
+    reset_password: RESET MY PASSWORD
+    reset_password_message: If the details you entered match our records, you will receive an email containing instructions to reset your password. Please reach out to your People Operations or HR team if you need additional assistance
+    success: Password Updated successfully
+    account_settings: Settings
+    reset_trouble: Having Trouble?
+    click_here: Click here
+    success!: Success!
+    email_message: "Your password has been updated.
+                    We've sent you an email confirming the change."
+    goto_button: GO TO MY PROFILE
+    errors:
+      password_required: Password field is required
+      confirm_required: Password (Confirm) field is required
+      pass_short: Your password must have a minimum of eight characters including one special character.
+      pass_not_match: Passwords do not match
+    create_account: CREATE ACCOUNT
+
+  errors:
+    internal_server_error: Oops. Looks like an error occured. Please retry.
+    logged_out: To keep your data secure, you have been logged out.

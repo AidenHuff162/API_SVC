@@ -1,0 +1,4 @@
+:concurrency: <%= (if ENV['SIDEKIQ_USER_REPORTS_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_USER_REPORTS_CONCURRENCY'].to_i else 2 end) %>
+:pidfile: tmp/pids/sidekiq-user-report.pid
+:queues:
+  - user_report

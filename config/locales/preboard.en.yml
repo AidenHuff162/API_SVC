@@ -1,0 +1,153 @@
+en:
+  preboard:
+    welcome: Welcome to %{company}
+    first_day: "Before your first day: Preboarding"
+    join: Joined
+    next: Next
+    back: Back
+
+    tabs:
+      welcome: Welcome
+      our_story: Our Story
+      people: People
+      wrapup: Your Info
+      about_you: Your Profile
+      logout: Logout
+
+    our_story:
+      title: Let's learn the story of %{company}
+      about: About %{company}
+      history: Our History
+      company_values: Company Values
+      our_values: Our Values
+      next: Next
+
+    people:
+      title: Key people
+      subtitle: Here are the key people you should know for your first day.
+      manager: Your Manager
+      buddy: Your Buddy
+      onboarding_class: Your Onboarding Class
+      default_welcome_about_you: “Welcome to the %{company} team! We look forward to having you onboard.“
+      onboarding_description: Here are some of your peers that recently joined the %{company} team.
+      next: Next
+      team_members:
+        title: Your Team
+        load_more: See more team members
+
+    about_you:
+      profile_photo: Add a profile photo
+      photo_settings_description: Your profile photo settings are set by your Sapling admin. You can always change your photo later. We recommend using a photo with your face in the center.
+      employee_record: Complete your public profile
+      employee_record_description: Your profile info is visible to other team members in Sapling. We suggest you personalize this as much as you can.
+      upload: Upload
+      upload_footer: JPG, PNG, and GIF accepted at at a max of 3mb.
+      mobile_upload: UPLOAD PHOTO
+      upload_picture: Upload your profile photo
+      photo_info: Your profile photo will be visible to other team members on the platform. JPG, JPEG and PNG accepted with 3MB maximum. We recommend that you use a photo that has your face in the center.
+      profile_photo_updated: Profile photo updated
+      profile_photo_required: A Photo is Required
+      invalid_image: Invalid image file
+      title: Now it's time for us to learn a little more about you.
+      description: Your Profile Information will be visible to other team members in the Platform, so we suggest you fill this in with information about your career history and personal interests. All other information completed will be kept private and only accessible by those required.
+        <br/>
+        <br/>
+        Please ensure you complete all sections of your Profile and click Submit at the end. You will also be able to edit this information later in the platform.
+      personal_info: Personal Information
+      profile_info: Profile Information
+      additional_info: Additional Information
+      private_info: Private Information
+      paperwork: Your Paperwork
+      about_you_help_text: Tell us something about yourself!!!What did you do at your last place of employement?Why did you join our team?
+      profile_photo_info: A profile photo is required to complete preboarding
+
+    wrapup:
+      title: Here's what we've covered
+      description: Let's confirm that you're all set for your first day. You can come back and edit this information at any time.
+      welcome: Welcome
+      welcome_description: Learned about your onboarding program.
+      our_story: Our Story
+      our_story_description: Discover our history and values.
+      people: People
+      people_description: Met the key people for your first day.
+      about_you: About You
+      about_you_description: Built your Profile.
+
+    your_info:
+      submit: Submit
+      complete: Complete your information
+      description: Here, you can fill out your personal details. This information is private, and can only be seen by you and your HR admin.
+      documents_title: Review and Sign Your Documents
+      submit_success_message: Your information has been submitted!
+      file_upload_request: 'File Upload Request: '
+      signature_request: 'Signature Request: '
+      personal_document: 'Personal Document: '
+      replace: Replace
+      delete: Delete
+      download: Download
+
+    congrats:
+      congratulations: Congratulations!
+      close_dialog: Close dialog
+      title: You've just completed you Pre-boarding!
+      detail: You've completed everything required before your first day. While you wait for the rest of your onboarding program to begin, we encourage you to complete your profile, or meet your peers.
+      description: You're all set for your first day on %{date}
+        <br/>
+        <br/>
+        The rest of your onboarding program will kick of on your start date, however if you feel like jumping into the Onboarding Platform, you can use the link below.
+        <br/>
+        <br/>
+        Here you'll be able to edit your profile, learn about you peers, and see your Tasks to complete.
+      done: Done
+      all_done: All done!
+      continue: CONTINUE TO PROFILE
+      dismiss: GO TO PROFILE
+      meet: MEET MY TEAM
+
+    begin:
+      preboarding: BEGIN PREBOARDING
+      onboarding: BEGIN ONBOARDING
+      title: A warm welcome from %{first_name}
+
+    warning:
+      close_dialog: Close dialog
+      title: Almost done!
+      field: 'You forgot to fill out the following %{required_fields_length} required field(s):'
+      ok: OK
+
+    landing:
+      welcome:
+        title: "Hi %{name}!"
+        text_first: "Welcome to %{company}'s Onboarding Platform."
+        text_first2: "Welcome to %{company}' Onboarding Platform."
+        welcome_note: "We power our new hire experience with Sapling, which is designed to support great hires like you transition into great team members."
+        understanding_path: Understanding your path to success
+      title: Today we will cover your Pre-boarding
+      portal: The <strong>Pre-boarding Portal</strong> is designed to help you learn about our organization and complete all of the administrative work before your first day.
+      platform: We will be completing your profile and any necessary paperwork, and you’ll be able to review and edit all this information once you start in the <strong>Onboarding Platform</strong>.
+      create_account: GET STARTED
+      onboarding:
+        title: Your Onboarding Plan with %{company}
+      lead_up: In the lead up to your arrival and in your first few weeks, there will be a number of <strong>Tasks</strong> for you and your peers to complete.
+      activities: <strong>Tasks</strong> will include the key things that you should complete to ensure that you're set-up for success in your new role.
+      view_complete: You’ll be able to view and complete your <strong>Tasks</strong> in the <strong>Sapling Platform</strong> which you’ll gain access to after finishing your <strong>Pre-Boarding</strong>.
+      password_required: "Before we get started, we need to set a password that you’ll be able to use to log into Sapling until you have your company email."
+      hire_faq: |
+          If you have any questions before we start your pre-boarding, visit the <a href="https://kallidus.zendesk.com/hc/en-us/articles/360018809998-Sapling-New-Hire-FAQs" target="_blank"> Sapling New Hire FAQs </a>.
+      errors:
+        password_required: Password field is required
+        confirm_required: Password (Confirm) field is required
+        pass_short: Your password must have a minimum of eight characters.
+        pass_not_match: Passwords do not match
+        password_complexity: Your password must have a minimum of eight characters at least one number and one special character.
+      reset_password:
+        min_char: Minimum 8 characters
+        confirm_pass: Confirm password
+
+    orgchart:
+      title: Org Chart
+      reports: reports
+      search: Search
+      directory: Directory
+      error: Oops! Something Went Wrong
+      error_message: We’re having some trouble loading your Org Chart. Contact your Sapling admin.

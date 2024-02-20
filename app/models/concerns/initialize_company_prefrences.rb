@@ -1,0 +1,70 @@
+module InitializeCompanyPrefrences
+  extend ActiveSupport::Concern
+
+  def initialize_company_prefrencess
+    self.prefrences = {
+      :default_fields => [
+        {:id => "ui", :name => "User ID", :api_field_id => "user_id", :section => "personal_info", :position => 0, :isDefault => true, :editable => false, :enabled => true, :field_type => "number", :collect_from => "admin", :can_be_collected => false, :visibility => true, profile_setup: 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "pp", :name => "Profile Photo", :api_field_id => "profile_photo", :section => "personal_info", :position => 1, :isDefault => true, :editable => true, :enabled => true, :field_type => "image", :collect_from => "new_hire", :can_be_collected => false, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "fn", :name => "First Name", :api_field_id => "first_name", :section => "personal_info", :position => 2, :isDefault => true, :editable => false, :enabled => true, :field_type => "short_text", :collect_from => "new_hire", :can_be_collected => false, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "ln", :name => "Last Name", :api_field_id => "last_name", :section => "personal_info", :position => 3, :isDefault => true, :editable => false, :enabled => true, :field_type => "short_text", :collect_from => "new_hire", :can_be_collected => false, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "pn", :name => "Preferred Name", :api_field_id => "preferred_name", :section => "personal_info", :position => 4, :isDefault => true, :editable => true, :enabled => true, :field_type => "short_text", :collect_from => "new_hire", :can_be_collected => false, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "ce", :name => "Company Email", :api_field_id => "company_email", :section => "personal_info", :position => 5, :isDefault => true, :editable => false, :enabled => true, :field_type => "short_text", :collect_from => "admin", :can_be_collected => false, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "pe", :name => "Personal Email", :api_field_id => "personal_email", :section => "personal_info", :position => 6, :isDefault => true, :editable => false, :enabled => true, :field_type => "short_text", :collect_from => "new_hire", :can_be_collected => false, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "sd", :name => "Start Date", :api_field_id => "start_date", :section => "personal_info", :position => 7, :isDefault => true, :editable => false, :enabled => true, :field_type => "date", :collect_from => "admin", :can_be_collected => false, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "ap", :name => "Access Permission", :api_field_id => "access_permission", :section => "personal_info", :position => 8, :isDefault => true, :editable => false, :enabled => true, :field_type => "mcq", :collect_from => "admin", :can_be_collected => false, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "bdy", :name => self.buddy, :api_field_id =>self.buddy.try(:downcase).try(:parameterize).try(:underscore), :section => "personal_info", :position => 9, :isDefault => true, :editable => true, :enabled => true, :field_type => "coworker", :collect_from => "admin", :can_be_collected => true, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+
+        {:id => "abt", :name => "About", :api_field_id => "about", :section => "profile", :position => 0, :isDefault => true, :editable => true, :enabled => true, :field_type => "long_text", :collect_from => "new_hire", :can_be_collected => true, :visibility => true, :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "lin", :name => "Linkedin", :api_field_id => "linkedin", :section => "profile", :position => 1, :isDefault => true, :editable => true, :enabled => true, :field_type => "short_text", :collect_from => "new_hire", :can_be_collected => true, :visibility => true, :profile_setup => 'profile_fields', deletable: true, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "twt", :name => "Twitter", :api_field_id => "twitter", :section => "profile", :position => 2, :isDefault => true, :editable => true, :enabled => true, :field_type => "short_text", :collect_from => "new_hire", :can_be_collected => true, :visibility => true, :profile_setup => 'profile_fields', deletable: true, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "gh", :name => "GitHub", :api_field_id => "github", :section => "profile", :position => 3, :isDefault => true, :editable => true, :enabled => true, :field_type => "short_text", :collect_from => "new_hire", :can_be_collected => true, :visibility => true, :profile_setup => 'profile_fields', deletable: true, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+
+        {:id => "dpt", :name => "Department", :api_field_id => "department", :section => "personal_info", :position => 10, :isDefault => true, :editable => false, :enabled => true, :field_type => "mcq", :collect_from => "admin", :can_be_collected => false, :visibility => true, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "jt", :name => "Job Title", :api_field_id => "job_title", :section => "personal_info", :position => 11, :isDefault => true, :editable => false, :enabled => true, :field_type => "short_text", :collect_from => "admin", :can_be_collected => false, :visibility => true, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "loc", :name => "Location", :api_field_id => "location", :section => "personal_info", :position => 12, :isDefault => true, :editable => false, :enabled => true, :field_type => "mcq", :collect_from => "admin", :can_be_collected => false, :visibility => true, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "man", :name => "Manager", :api_field_id => "manager", :section => "personal_info", :position => 13, :isDefault => true, :editable => false, :enabled => true, :field_type => "coworker", :collect_from => "admin", :can_be_collected => false, :visibility => true, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "st", :name => "Status", :api_field_id => "status", :section => "personal_info", :position => 14, :isDefault => true, :editable => true, :enabled => true, :field_type => "mcq", :collect_from => "admin", :can_be_collected => true, :visibility => true, :is_editable => false, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "td", :name => "Termination Date", :api_field_id => "termination_date", :section => "personal_info", :position => 15, :isDefault => true, :editable => false, :enabled => true, :field_type => "date", :collect_from => "admin", :can_be_collected => false, :visibility => true, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "ltw", :name => "Last Day Worked", :api_field_id => "last_day_worked", :section => "personal_info", :position => 16, :isDefault => true, :editable => false, :enabled => true, :field_type => "date", :collect_from => "admin", :can_be_collected => false, :visibility => true, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "tt", :name => "Termination Type", :api_field_id => "termination_type", :section => "personal_info", :position => 17, :isDefault => true, :editable => false, :enabled => true, :field_type => "mcq", :collect_from => "admin", :can_be_collected => false, :visibility => true, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "efr", :name => "Eligible for Rehire", :api_field_id => "eligible_for_rehire", :section => "personal_info", :position => 18, :isDefault => true, :editable => false, :enabled => true, :field_type => "mcq", :collect_from => "admin", :can_be_collected => false, :visibility => true, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil},
+        {:id => "wp", :name => "Working Pattern", :api_field_id => "working_pattern", :section => "personal_info", :position => 19, :isDefault => true, :editable => true, :enabled => true, :field_type => "mcq", :collect_from => "admin", :can_be_collected => false, :visibility => true, :is_editable => false, :custom_table_property => "", :profile_setup => 'profile_fields', deletable: false, is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil}
+      ]
+    }
+  end
+
+  def add_palocity_id_preference_field
+    preferences = self.prefrences
+    default_fields = preferences['default_fields']
+    
+    return unless default_fields.select { |default_field| default_field['name'] == 'Paylocity ID' }.blank?
+    custom_section_id = fetch_custom_section_to_assign(self, 'private_info')
+    default_fields.push({:id => 'pi', :name => 'Paylocity ID', :api_field_id => 'paylocityid', :section => 'private_info', :isDefault => true, :editable => true, :enabled => true, :field_type => 'short_text', :collect_from => 'admin', :can_be_collected => true, :visibility => true, :profile_setup => 'profile_fields', :position => 19, :deletable => true ,:custom_table_property => '', is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil, custom_section_id: custom_section_id})
+    
+    self.update_column(:prefrences, preferences)
+  end
+
+  def add_trinet_id_preference_field
+    preferences = self.prefrences
+    default_fields = preferences['default_fields']
+    
+    return unless default_fields.select { |default_field| default_field['name'] == 'Trinet ID' }.blank?
+    custom_section_id = fetch_custom_section_to_assign(self, 'private_info')
+    default_fields.push({:id => 'ti', :name => 'Trinet ID', :api_field_id => 'trinetid', :section => 'private_info', :isDefault => true, :editable => true, :enabled => true, :field_type => 'short_text', :collect_from => 'admin', :can_be_collected => true, :visibility => true, :profile_setup => 'profile_fields', :position => 19, :deletable => true ,:custom_table_property => '', is_sensitive_field: false, ats_mapping_section: nil, ats_integration_group: nil, ats_mapping_field_type: nil, ats_mapping_key: nil, custom_section_id: custom_section_id})
+    
+    self.update_column(:prefrences, preferences)
+  end
+
+  def fetch_custom_section_to_assign(company, section)
+    company.custom_sections.find_by(section: section)&.id
+  end
+
+  def remove_trinet_id_preference_field
+    preferences = self.prefrences
+    default_fields = preferences['default_fields']
+    default_fields.delete_if{|obj| obj['name'] == 'Trinet ID'}
+    self.update_column(:prefrences, preferences)
+  end
+end
+

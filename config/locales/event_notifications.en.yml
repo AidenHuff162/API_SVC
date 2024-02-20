@@ -1,0 +1,215 @@
+en:
+  api_notification:
+    invalid_field_id: Invalid Field ID
+    invalid_page_offset: Invalid Page Offset.
+    invalid_limit: Invalid Limit.
+    invalid_user_id: Invalid User ID
+    filters_not_allowed: Filters Not Allowed. Please check the API documentation for more information.
+    configurable_not_allowed: Configurable Not Allowed. Please check the API documentation for more information.
+    invalid_filters: Invalid Filters. Please check the API documentation for more information.
+    invalid_country_name: Invalid Country Name. Please check the API documentation for more information.
+    bad_request: Bad Request
+    invalid_webhook_id: Invalid Webhook ID
+    required_attributes_are_missing: Required attributes are missing. Please check the API documentation for more information.
+    invalid_attributes: Invalid attributes. Please check the API documentation for more information.
+    invalid_attribute_value: Invalid value for %{attribute} attribute. Please check the API documentation for more information.
+    filters_not_allowed_for_event: Filters not allowed for %{event} event. Please check the API documentation for more information.
+    configurable_not_allowed_for_event: Configurable not allowed for %{event} event. Please check the API documentation for more information.
+    created: 'Created'
+    updated: 'Updated'
+    success: 'Success'
+    something_went_wrong: 'Oops! Something went wrong. Please contact Sapling team.'
+
+  email_notifications:
+    resent_invite: "Invite resent to %{email}"
+    personal_email_not_found: "Resend invite failed. Comapny and Personal Email not initialized"
+    resent_invite_failed: "Resend invite failed for %{email}"
+
+  history_notifications:
+    hris_sent: "%{name}'s information has been sent successfully to <b>%{hris}</b>."
+    hris_not_sent: "There was an issue sending %{name}'s information to <b>%{hris}</b>. Please review their profile."
+    custom_table_user_snapshot:
+      bulk_created: '<b>%{name}</b> has updated %{table_name} for %{record_count} records'
+    task:
+      created: 'The Task <b>%{name}</b> has been created and assigned to <b>%{type}</b>.'
+      updated: 'The Task <b>%{name}</b> that is assigned to <b>%{type}</b> has been updated.'
+      deleted: 'The Task <b>%{name}</b> that was assigned to <b>%{type}</b> has been deleted.'
+      completed: 'The Task <b>%{name}</b> assigned to %{assignee_name} has been completed.'
+      incompleted: 'The Task <b>%{name}</b> assigned to %{assignee_name} has been uncompleted.'
+    location:
+      created: 'The <b>%{name}</b> location has been created and has <b>%{users_count}</b> members.'
+      updated: 'The <b>%{name}</b> location has been updated and has <b>%{users_count}</b> members.'
+      deleted: 'The <b>%{name}</b> location has been deleted and has <b>%{users_count}</b> members.'
+    team:
+      created: 'The <b>%{name}</b> department has been created and has <b>%{users_count}</b> members.'
+      updated: 'The <b>%{name}</b> department has been updated and has <b>%{users_count}</b> members.'
+      deleted: 'The <b>%{name}</b> department has been deleted and has <b>%{users_count}</b> members.'
+    workstream:
+      created: 'The <b>%{name}</b> Workflow has been created.'
+      updated: 'The <b>%{name}</b> Workflow has been updated.'
+      deleted: 'The <b>%{name}</b> Workflow has been deleted.'
+    company:
+      setting_updated: "The <b>%{field}</b> has been updated in Sapling's settings"
+      information_updated: "<b>%{name}'s</b> information has been updated."
+    billing_contact:
+      created: 'A new billing contact has been created and has <b>%{users_count}</b> contacts.'
+      updated: 'A billing contact has been updated. There are <b>%{users_count}</b> contacts.'
+    document:
+      created: 'The Document <b>%{document_name}</b> has been created by, <b>%{user_name}</b>.'
+      updated: 'The Document <b>%{document_name}</b> has been updated by, <b>%{user_name}</b>.'
+      deleted: 'The Document <b>%{document_name}</b> has been deleted by, <b>%{user_name}</b>.'
+      completed: 'The Document <b>%{document_name}</b> has been completed by, <b>%{user_name}</b>.'
+      added: 'The Document <b>%{document_name}</b> has been added by, <b>%{user_name}</b>.'
+      finalized: 'The Document <b>%{document_name}</b> has been finalized by, <b>%{user_name}</b>.'
+    custom_field:
+      updated: "%{user_first_name} %{user_last_name} has updated the <b>%{field_name}</b> field on %{employee_first_name} %{employee_last_name}'s Employee Profile"
+      self_updated: "<b>%{user_first_name} %{user_last_name}</b> has updated the <b>%{field_name}</b> field on their Personal Information"
+      created: "The field <b>%{field_name}</b> has been created for Profile in Sapling."
+      record_field_updated: "The field <b>%{field_name}</b> has been updated for Profiles in Sapling."
+      deleted: "The field <b>%{field_name}</b> has been deleted from Profiles in Sapling."
+    profile:
+      own_updated: '%{first_name} %{last_name} has updated the <b>%{field_name}</b> field on their Employee Profile.'
+      others_updated: "%{full_name} has updated the <b>%{field_name}</b> field on %{first_name} %{last_name}'s Employee Profile"
+    user:
+      updated:
+        # personal_information: '%{first_name} %{last_name} has updated their Personal Information.'
+        personal_information: "%{first_name} %{last_name} has updated the <b>%{field_name}</b> field on their personal infomration"
+        manager: 'The Manager for %{first_name} %{last_name} has been updated.'
+        contact_details: '%{first_name} %{last_name} has updated their contact details.'
+        profile: '%{first_name} %{last_name} has updated their Employee Profile.'
+        deleted: '%{full_name} has deleted their Profile Picture'
+        created: '%{full_name} has updated their Profile Picture'
+    admin_user:
+      created: "%{full_name} has created %{first_name} %{last_name}'s Profile."
+      updated:
+        personal_information: "%{first_name} %{last_name}'s personal information has been updated."
+        manager: "%{first_name} %{last_name}'s manager has been updated."
+        contact_details: "%{first_name} %{last_name}'s contact details has been updated."
+        profile: "%{first_name} %{last_name} has been updated."
+        deleted: '%{full_name} deleted the Profile Picture of %{full_name_temp}'
+        created: '%{full_name} updated the Profile Picture of %{full_name_temp}'
+      deleted: '%{first_name} %{last_name} has been deleted.'
+      offboarding: "%{full_name} offboarding has been initiated."
+      offboarded: "%{full_name} offboarding has been completed."
+      onboarding: "%{full_name} has completed onboarding."
+      preboarding: "%{full_name} has completed preboarding."
+    email:
+      termnation_email: Termination Email scheduled for %{full_name}  on %{time}
+      new_activity: "<b>%{tasks_count}</b> employees have been sent Activity Notifications for %{first_name} %{last_name}."
+      new_activity_onboarding: "<b>%{tasks_count}</b> employees have been sent Activity Notifications for %{first_name} %{last_name}’s onboarding."
+      overdue_activity: "<b>%{count}</b> employees have been sent Overdue Activity Notifications."
+      manager_or_buddy_assigned: "%{manager_or_buddy_full_name} has been notified about becoming a <b>%{type}</b> for %{employee_full_name}."
+      offboarding_tasks: "<b>%{tasks_count}</b> employees have been sent Activity Notifications for %{first_name} %{last_name}’s offboarding."
+      invite: "%{full_name} has been sent an Onboarding Invitation."
+      user_invited: "%{full_name} was invited to Sapling."
+      scheduled_invite: "%{full_name}'s Onboarding Invitation has been scheduled for %{time}."
+      welcome: "%{full_name} has been sent an Welcome Email."
+      welcome_email: Welcome Email scheduled for %{full_name} on %{time}
+      scheduled_welcome_canceled: Welcome Email for %{full_name} has been deleted.
+      scheduled_invite_canceled: "%{full_name}'s Onboarding Invitation has been deleted."
+    outcome:
+      completed: "The Outcome <b>%{name}</b> assigned to %{full_name} has been completed."
+      uncompleted: "The Outcome <b>%{name}</b> assigned to %{full_name} has been uncompleted."
+    roadmap:
+      created: "The <b>%{name}</b> Road-Map has been created."
+      updated: "The <b>%{name}</b> Road-Map has been updated."
+      deleted: "The <b>%{name}</b> Road-Map has been deleted."
+    manager_form:
+      sent: "The %{manager_full_name} has been sent the Manager Form for %{employee_full_name}"
+      completed: "%{manager_full_name} has completed the Manager Form for %{employee_full_name}"
+    jira:
+      created: Sapling has created %{task_count} JIRA tickets for %{current_stage} %{full_name}.
+    service_now:
+      created: Sapling has created %{task_count} ServiceNow tickets for %{current_stage} %{full_name}.
+    pto_policy:
+      deleted: "%{full_name} deleted the time off policy - %{policy_name}"
+
+  slack_notifications:
+    jira_issue:
+      created: '*%{company_name}* failed to create task on JIRA for *%{full_name}*.'
+      updated: '*%{company_name}* failed to update task on JIRA for issue *%{issue_id}*.'
+      deleted: '*%{company_name}* failed to delete task on JIRA for issue *%{issue_id}*.'
+    service_now:
+      created: '*%{company_name}* failed to create task on ServiceNow for *%{full_name}*.'
+      updated: '*%{company_name}* failed to update task on ServiceNow for issue *%{issue_id}*.'
+      deleted: '*%{company_name}* failed to delete task on ServiceNow for issue *%{issue_id}*.'
+    task:
+      created: 'The Task *%{name}* has been created and assigned to *%{type}*.'
+      updated: 'The Task *%{name}* that is assigned to *%{type}* has been updated.'
+      deleted: 'The Task *%{name}* that was assigned to *%{type}* has been deleted.'
+      completed: 'The Task *%{name}* assigned to %{assignee_name} has been completed.'
+      incompleted: 'The Task *%{name}* assigned to %{assignee_name} has been uncompleted.'
+    location:
+      created: 'The *%{name}* location has been created and has *%{users_count}* members.'
+      updated: 'The *%{name}* location has been updated and has *%{users_count}* members.'
+      deleted: 'The *%{name}* location has been deleted and has *%{users_count}* members.'
+    team:
+      created: 'The *%{name}* department has been created and has *%{users_count}* members.'
+      updated: 'The *%{name}* department has been updated and has *%{users_count}* members.'
+      deleted: 'The *%{name}* department has been deleted and has *%{users_count}* members.'
+    workstream:
+      created: 'The *%{name}* Workflow has been created.'
+      updated: 'The *%{name}* Workflow has been updated.'
+      deleted: 'The *%{name}* Workflow has been deleted.'
+    company:
+      setting_updated: "*%{name}'s* settings in Sapling have been updated."
+      information_updated: "*%{name}'s* information has been updated."
+    billing_contact:
+      created: 'A new billing contact has been created and has *%{users_count}* contacts.'
+      updated: 'A billing contact has been updated. There are *%{users_count}* contacts.'
+    document:
+      created: 'The Document *%{name}* has been created.'
+      updated: 'The Document *%{name}* has been updated.'
+      deleted: 'The Document *%{name}* has been deleted.'
+      completed: 'The Document *%{name}* has been completed.'
+      added: 'The Document *%{name}* has been added.'
+      finalized: 'The Document *%{name}* has been finalized.'
+    custom_field:
+      updated: "The field *%{field_name}* has been updated for *%{first_name} %{last_name}'s* Profiles in Sapling."
+      created: "The field *%{field_name}* has been created for Profiles in Sapling."
+      record_field_updated: "The field *%{field_name}* has been updated for Profiles in Sapling."
+      deleted: "The field *%{field_name}* has been deleted from Profiles in Sapling."
+    profile:
+      own_updated: '*%{first_name} %{last_name}* has updated their Profile.'
+      others_updated: "*%{full_name}* has updated *%{first_name} %{last_name}'s* Profile"
+    user:
+      updated:
+        personal_information: '*%{first_name} %{last_name}* has updated their Personal Information.'
+        manager: 'The Manager for *%{first_name} %{last_name}* has been updated.'
+        contact_details: '*%{first_name} %{last_name}* has updated their contact details.'
+        profile: '*%{first_name} %{last_name}* has updated their Profile.'
+    admin_user:
+      created: "*%{full_name}* has created *%{first_name} %{last_name}'s* Profile."
+      updated:
+        personal_information: "*%{first_name} %{last_name}'s* personal information has been updated."
+        manager: "*%{first_name} %{last_name}'s* manager has been updated."
+        contact_details: "*%{first_name} %{last_name}'s* contact details has been updated."
+        profile: "*%{first_name} %{last_name}* has been updated."
+      deleted: '*%{first_name} %{last_name}* has been deleted.'
+      offboarding: "*%{full_name}* offboarding has been initiated."
+      offboarded: "*%{full_name}* offboarding has been completed."
+      onboarding: "*%{full_name}* has completed onboarding."
+      preboarding: "*%{full_name}* has completed preboarding."
+    email:
+      new_activity: "*%{tasks_count}* team members have been sent Activity Notifications for *%{first_name} %{last_name}*."
+      new_activity_onboarding: "*%{tasks_count}* team members have been sent Activity Notifications for *%{first_name} %{last_name}’s* onboarding."
+      overdue_activity: "*%{count}* team members have been sent Overdue Activity Notifications."
+      manager_or_buddy_assigned: "*%{manager_or_buddy_full_name}* has been notified about becoming a *%{type}* for *%{employee_full_name}*."
+      offboarding_tasks: "*%{tasks_count}* team members have been sent Activity Notifications for *%{first_name} %{last_name}’s* offboarding."
+      invite: "*%{full_name}* has been sent an Onboarding Invitation."
+      welcome: "*%{full_name}* has been sent an Welcome Email."
+      scheduled_invite: "*%{full_name}'s* Onboarding Invitation has been scheduled for *%{time}*."
+      welcome_email: Welcome Email scheduled for %{full_name}  on %{time}
+      termnation_email: Termination Email scheduled for %{full_name}  on %{time}
+    outcome:
+      completed: "The Outcome *%{name}* assigned to *%{full_name}* has been completed."
+      uncompleted: "The Outcome *%{name}* assigned to *%{full_name}* has been uncompleted."
+    roadmap:
+      created: "The *%{name}* Road-Map has been created."
+      updated: "The *%{name}* Road-Map has been updated."
+      deleted: "The *%{name}* Road-Map has been deleted."
+    manager_form:
+      sent: "The *%{manager_full_name}* has been sent the Manager Form for *%{employee_full_name}*"
+      completed: "*%{manager_full_name}* has completed the Manager Form for *%{employee_full_name}*"
+  gdpr_notification:
+    settings_applied: Applied Settings successfully

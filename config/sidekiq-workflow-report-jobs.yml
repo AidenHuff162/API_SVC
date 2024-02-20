@@ -1,0 +1,6 @@
+:concurrency: <%= (if ENV['SIDEKIQ_WORKFLOW_SCHEDULE_REPORTS_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_WORKFLOW_SCHEDULE_REPORTS_CONCURRENCY'].to_i else 2 end) %>
+:pidfile: tmp/pids/sidekiq-workflow-report.pid
+:queues:
+  - document_report_job
+  - workflow_report_job
+  - time_off_report_job

@@ -1,0 +1,11 @@
+---
+:concurrency: <%= (if ENV['SIDEKIQ_MAILER_CONCURRENCY'].to_i > 0 then ENV['SIDEKIQ_MAILER_CONCURRENCY'].to_i else 8 end) %>
+:pidfile: tmp/pids/sidekiq-mailer.pid
+:queues:
+  - [mailers, 2]
+  - [schedule_email, 3]
+  - duplicate_attachments
+  - send_documents_assignment_email
+  - send_due_documents_email
+  - export_loggings
+  

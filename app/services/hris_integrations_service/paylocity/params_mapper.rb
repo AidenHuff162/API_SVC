@@ -1,0 +1,106 @@
+class HrisIntegrationsService::Paylocity::ParamsMapper
+  
+  def build_v1_parameter_mappings 
+    {
+      firstName: {name: 'first name', is_custom: false, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      lastName: {name: 'last name', is_custom: false, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      userName: {name: 'user name', is_custom: false, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: '' },
+      employeeStatus: {name: 'status', is_custom: false, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      sex: {name: 'gender', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      ssn: {name: 'social security number', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      maritalStatus: {name: 'federal marital status', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      homePhone: {name: 'home phone number', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      address1: {name: 'line 1', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      address2: {name: 'line 2', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      city: {name: 'city', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      state: {name: 'state', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      zip: {name: 'zip', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      hireDate: { name: 'start date', is_custom: false, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: ''}, 
+      personalMobilePhone: { name: 'mobile phone number', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      workEmailAddress: { name: 'email', is_custom: false, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''}, 
+      personalEmailAddress: { name: 'personal email', is_custom: false, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''}, 
+      taxForm: {name: 'tax form', is_custom: true, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: ''},
+      baseRate: {name: 'baserate', is_custom: true, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: ''},
+      salary: { name: 'salary', is_custom: true, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: ''},
+      payFrequency: { name: 'pay frequency', is_custom: true, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: ''},
+      payType: { name: 'pay type', is_custom: true, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: ''},
+      suiState: { name: 'tax state', is_custom: true, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: ''},
+      companyNumber: { name: 'company number', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      employeeId: { name: 'paylocity id', is_custom: false, exclude_in_create: true, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      nickname: { name: 'preferred name', is_custom: false, exclude_in_create: true, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      employmentType: {name: 'employee type', is_custom: false, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: ''},
+      jobTitle: { name: 'title', is_custom: false, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'departmentPosition', parent_hash: 'departmentPosition'}, 
+      supervisorEmployeeId: { name: 'manager id', is_custom: false, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'departmentPosition', parent_hash: 'departmentPosition'}, 
+      birthDate: { name: 'date of birth', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: '', parent_hash: ''}, 
+      middleName: { name: 'middle name', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: '', parent_hash: ''}, 
+      updatePayFrequency: { name: 'pay frequency', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'primaryPayRate', parent_hash: 'primaryPayRate'},
+      updatePayType: { name: 'pay type', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'primaryPayRate', parent_hash: 'primaryPayRate'},
+      updateBaseRate: {name: 'baserate', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'primaryPayRate', parent_hash: 'primaryPayRate'},
+      updateSalary: { name: 'salary', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'primaryPayRate', parent_hash: 'primaryPayRate'},
+      update_primary_rate: { name: 'primary rate effective data', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'primaryPayRate', parent_hash: 'primaryPayRate'},
+      update_department_position: { name: 'department position effective data', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'departmentPosition', parent_hash: 'departmentPosition'},
+      costCenter1: {name: '', is_custom: true, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: '' },
+      costCenter2: {name: '', is_custom: true, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: '' },
+      costCenter3: {name: '', is_custom: true, exclude_in_create: false, exclude_in_update: true, parent_hash_path: '', parent_hash: '' },
+      update_costCenter1: {name: '', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'departmentPosition', parent_hash: 'departmentPosition' },
+      update_costCenter2: {name: '', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'departmentPosition', parent_hash: 'departmentPosition' },
+      update_costCenter3: {name: '', is_custom: true, exclude_in_create: true, exclude_in_update: false, parent_hash_path: 'departmentPosition', parent_hash: 'departmentPosition' }
+    }
+  end
+
+  def build_v2_parameter_mappings
+    {
+      firstName: {name: 'first name', is_custom: false, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      lastName: {name: 'last name', is_custom: false, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      primaryPayRate: {name: 'primary pay rate', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      status: {name: 'hire date status', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      homeAddress: {name: 'home address', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      workAddress: { name: 'email', is_custom: false, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''}, 
+      gender: {name: 'gender', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: '' },
+      ssn: {name: 'social security number', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      maritalStatus: {name: 'federal marital status', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      taxForm: {name: 'tax form', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      suiState: { name: 'tax state', is_custom: true, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''},
+      departmentPosition: { name: 'department position', is_custom: false, exclude_in_create: false, exclude_in_update: false, parent_hash_path: '', parent_hash: ''}
+    }
+  end
+
+  def build_sapling_parameter_mappings
+    {
+      firstName: {name: 'first name', is_custom: false, parent_hash_path: ''},
+      lastName: {name: 'last name', is_custom: false, parent_hash_path: ''},
+      nickname: { name: 'preferred name', is_custom: false, parent_hash_path: ''},
+      personalEmailAddress: { name: 'personal email', is_custom: false, parent_hash_path: ''}, 
+      workEmailAddress: { name: 'email', is_custom: false, parent_hash_path: ''}, 
+      hireDate: { name: 'start date', is_custom: false, parent_hash_path: ''}, 
+      employeeStatus: {name: 'user state', is_custom: false, parent_hash_path: 'employeeStatus|employeeStatusCode'},
+      terminationDate: {name: 'termination date', is_custom: false, parent_hash_path: ''},
+      jobTitle: { name: 'title', is_custom: false, parent_hash_path: 'departmentPosition|jobTitle'}, 
+      employeeId: { name: 'paylocity id', is_custom: false, parent_hash_path: ''}, 
+      supervisorEmployeeId: {name: 'manager id', is_custom: false, parent_hash_path: ''},
+      gender: {name: 'Gender', is_custom: true, parent_hash_path: '' },
+      ssn: {name: 'Social Security Number', is_custom: true, parent_hash_path: ''},
+      maritalStatus: {name: 'Federal Marital Status', is_custom: true, parent_hash_path: ''},
+      employmentType: {name: 'Employment Status', is_custom: true, parent_hash_path: ''},
+      homePhone: {name: 'Home Phone Number', is_custom: true, parent_hash_path: ''},
+      personalMobilePhone: { name: 'Mobile Phone Number', is_custom: true, parent_hash_path: ''},
+      address1: {name: 'Line 1', is_custom: true, parent_hash_path: '', sub_custom_field: true },
+      address2: {name: 'Line 2', is_custom: true, parent_hash_path: '', sub_custom_field: true },
+      city: {name: 'City', is_custom: true, parent_hash_path: '', sub_custom_field: true },
+      state: {name: 'State', is_custom: true, parent_hash_path: '', sub_custom_field: true },
+      postalCode: {name: 'Zip', is_custom: true, parent_hash_path: '', sub_custom_field: true },
+      country: {name: 'Country', is_custom: true, parent_hash_path: '', sub_custom_field: true },
+      birthDate: { name: 'Date of Birth', is_custom: true, parent_hash_path: ''}, 
+      ethnicity: { name: 'Ethnicity', is_custom: true, parent_hash_path: ''}, 
+      middleName: { name: 'Middle Name', is_custom: true, parent_hash_path: ''}, 
+      baseRate: {name: 'BaseRate', is_custom: true, parent_hash_path: 'primaryPayRate|baseRate'},
+      baseRate2: {name: 'Base Rate', is_custom: true, parent_hash_path: 'primaryPayRate|baseRate'},
+      salary: { name: 'Salary', is_custom: true, parent_hash_path: 'primaryPayRate|salary'},
+      payType: { name: 'Pay Type', is_custom: true, parent_hash_path: 'primaryPayRate|payType'},
+      payFrequency: { name: 'Pay Frequency', is_custom: true, parent_hash_path: 'primaryPayRate|payFrequency'},
+      costCenter1: {name: 'costCenter1', is_custom: true, parent_hash_path: 'departmentPosition|costCenter1'},
+      costCenter2: {name: 'costCenter2', is_custom: true, parent_hash_path: 'departmentPosition|costCenter2'},
+      costCenter3: {name: 'costCenter3', is_custom: true, parent_hash_path: 'departmentPosition|costCenter3'}
+    }
+  end
+end

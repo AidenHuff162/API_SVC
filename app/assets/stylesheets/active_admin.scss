@@ -1,0 +1,1133 @@
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+// $am-theme-primary: #00689f;
+@import "active_material";
+@import 'quill/snow';
+
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
+.cke_chrome {
+  width: 79.5% !important;
+  overflow: hidden;
+}
+.ql-editor {
+  color: #424b56 !important;
+  font-weight: 500 !important;
+  border: 1px solid #c9d0d6;
+  border-radius: 3px;
+  font-size: 0.95em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  outline: none;
+  padding: 8px 10px 7px;
+  margin-left: 20.5%;
+  margin-bottom: 12px;
+  height: 250px;
+  background: white;
+  width: calc(80% - 16px);
+  h1, h2, h3, h4, h5, h6, p{
+    line-height: 1.5 !important;
+  }
+}
+.ql-toolbar.ql-snow {
+  width: calc(80% - 16px);
+  margin-left: 20.5%;
+  background: white;
+  border: 1px solid #c9d0d6;
+  border-bottom: none;
+}
+.ql-container.ql-snow {
+  border: none;
+}
+.ql-formats button {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.status_tag.status {
+  &.classname,
+  &.failed {
+     background-color: #5E6469
+  }
+}
+.status_tag.status.succeed {
+  background-color: #009688
+}
+.columns .column {
+    float: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold !important;
+}
+.panel>div {
+    padding: 3px 15px 15px 15px;
+}
+.index_content {
+  .index_table td,
+  .panel_contents table td{
+        word-break: normal;
+  }
+}
+.with_sidebar{
+  overflow: scroll;
+  #sidebar{
+    min-width: 320px;
+    .filter_form_field.filter_select {
+      width:100%;
+      select {
+        flex-basis: 100%;
+        max-width: 262px;
+      }
+    }
+  }
+}
+.active_admin{
+  .header{
+    background-color: #3F1DCB !important;
+  }
+}
+#index_table_api_calls {
+  .col-api_request{
+    max-width: 400px;
+    word-break: break-word;
+  }
+  .col-created_at {
+    max-width: 100px
+  }
+}
+
+.has_nested {
+  ul {
+    margin-top: 0.5rem;
+  }
+}
+
+.edit_two_factor {
+  #active_admin_content {
+    max-width: 1000px;
+    margin: 0 auto;
+    .edit_admin_user {
+      .fieldset {
+        display: inline-block;
+        width: 68%;
+        margin-bottom: 30px;
+        &.actions {
+          float: right;
+          width: auto;
+          li {
+            list-style-type: none;
+          }
+        }
+      }
+    }
+    panel {
+      h3 {
+        margin-bottom: 30px;
+      }
+      .panel-contents {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+        .qr-code,
+        .qr-scanner {
+          margin-bottom: 15px;
+        }
+        .otp-refresh {
+          display: block;
+          max-width: 230px;
+          margin: 0 auto;
+          overflow: hidden;
+          .otp-content {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 12px 15px;
+            background-color: #fff;
+            cursor: text;
+            width: 80%;
+            float: left;
+            vertical-align: top;
+          }
+          button {
+            width: 44px;
+            cursor: pointer;
+            float: left;
+            background-color: #009688;
+            border: 0;
+            img {
+              margin-top: 4px;
+            }
+            &:hover {
+              background-color: #00D2B7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.jsoneditor .field,
+.jsoneditor .value,
+.jsoneditor .readonly {
+  border: 1px solid transparent;
+  min-height: 16px;
+  min-width: 32px;
+  padding: 2px;
+  margin: 1px;
+  word-wrap: break-word;
+  float: left;
+}
+
+/* adjust margin of p elements inside editable divs, needed for Opera, IE */
+
+.jsoneditor .field p,
+.jsoneditor .value p {
+  margin: 0;
+}
+
+.jsoneditor .value {
+  word-break: break-word;
+}
+
+.jsoneditor .readonly {
+  min-width: 16px;
+  color: gray;
+}
+
+.jsoneditor .empty {
+  border-color: lightgray;
+  border-style: dashed;
+  border-radius: 2px;
+}
+
+.jsoneditor .field.empty {
+  background-image: image-url("img/jsoneditor-icons.png");
+  background-position: 0 -144px;
+}
+
+.jsoneditor .value.empty {
+  background-image: image-url("img/jsoneditor-icons.png");
+  background-position: -48px -144px;
+}
+
+.jsoneditor .value.url {
+  color: green;
+  text-decoration: underline;
+}
+
+.jsoneditor a.value.url:hover,
+.jsoneditor a.value.url:focus {
+  color: red;
+}
+
+.jsoneditor .separator {
+  padding: 3px 0;
+  vertical-align: top;
+  color: gray;
+}
+
+.jsoneditor .field[contenteditable=true]:focus,
+.jsoneditor .field[contenteditable=true]:hover,
+.jsoneditor .value[contenteditable=true]:focus,
+.jsoneditor .value[contenteditable=true]:hover,
+.jsoneditor .field.highlight,
+.jsoneditor .value.highlight {
+  background-color: #FFFFAB;
+  border: 1px solid yellow;
+  border-radius: 2px;
+}
+
+.jsoneditor .field.highlight-active,
+.jsoneditor .field.highlight-active:focus,
+.jsoneditor .field.highlight-active:hover,
+.jsoneditor .value.highlight-active,
+.jsoneditor .value.highlight-active:focus,
+.jsoneditor .value.highlight-active:hover {
+  background-color: #ffee00;
+  border: 1px solid #ffc700;
+  border-radius: 2px;
+}
+
+.jsoneditor div.tree button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  background: transparent image-url("img/jsoneditor-icons.png");
+}
+
+.jsoneditor div.tree button.collapsed {
+  background-position: 0 -48px;
+}
+
+.jsoneditor div.tree button.expanded {
+  background-position: 0 -72px;
+}
+
+.jsoneditor div.tree button.contextmenu {
+  background-position: -48px -72px;
+}
+
+.jsoneditor div.tree button.contextmenu:hover,
+.jsoneditor div.tree button.contextmenu:focus,
+.jsoneditor div.tree button.contextmenu.selected {
+  background-position: -48px -48px;
+}
+
+.jsoneditor div.tree *:focus {
+  outline: none;
+}
+
+.jsoneditor div.tree button:focus {
+  /* TODO: nice outline for buttons with focus
+  outline: #97B0F8 solid 2px;
+  box-shadow: 0 0 8px #97B0F8;
+  */
+  background-color: #f5f5f5;
+  outline: #e5e5e5 solid 1px;
+}
+
+.jsoneditor div.tree button.invisible {
+  visibility: hidden;
+  background: none;
+}
+
+.jsoneditor {
+  color: #1A1A1A;
+  border: 1px solid #97B0F8;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  padding: 0;
+  line-height: 100%;
+}
+
+.jsoneditor div.tree table.tree {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.jsoneditor div.outer {
+  width: 100%;
+  height: 100%;
+  margin: -35px 0 0 0;
+  padding: 35px 0 0 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.jsoneditor div.tree {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: auto;
+}
+
+.jsoneditor textarea.text {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  background-color: white;
+  resize: none;
+}
+
+.jsoneditor tr.highlight {
+  background-color: #FFFFAB;
+}
+
+.jsoneditor div.tree button.dragarea {
+  background: image-url("img/jsoneditor-icons.png") -72px -72px;
+  cursor: move;
+}
+
+.jsoneditor div.tree button.dragarea:hover,
+.jsoneditor div.tree button.dragarea:focus {
+  background-position: -72px -48px;
+}
+
+.jsoneditor tr,
+.jsoneditor th,
+.jsoneditor td {
+  padding: 0;
+  margin: 0;
+}
+
+.jsoneditor td {
+  vertical-align: top;
+}
+
+.jsoneditor td.tree {
+  vertical-align: top;
+}
+
+.jsoneditor .field,
+.jsoneditor .value,
+.jsoneditor td,
+.jsoneditor th,
+.jsoneditor textarea {
+  font-family: droid sans mono, monospace, courier new, courier, sans-serif;
+  font-size: 10pt;
+  color: #1A1A1A;
+}
+/* ContextMenu - main menu */
+
+.jsoneditor-contextmenu {
+  position: absolute;
+  z-index: 99999;
+}
+
+.jsoneditor-contextmenu ul {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 124px;
+  background: white;
+  border: 1px solid #d3d3d3;
+  box-shadow: 2px 2px 12px rgba(128, 128, 128, 0.3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jsoneditor-contextmenu ul li button {
+  padding: 0;
+  margin: 0;
+  width: 124px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  color: #4d4d4d;
+  background: transparent;
+  line-height: 26px;
+  text-align: left;
+}
+
+/* Fix button padding in firefox */
+
+.jsoneditor-contextmenu ul li button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.jsoneditor-contextmenu ul li button:hover,
+.jsoneditor-contextmenu ul li button:focus {
+  color: #1a1a1a;
+  background-color: #f5f5f5;
+  outline: none;
+}
+
+.jsoneditor-contextmenu ul li button.default {
+  width: 92px;
+}
+
+.jsoneditor-contextmenu ul li button.expand {
+  float: right;
+  width: 32px;
+  height: 24px;
+  border-left: 1px solid #e5e5e5;
+}
+
+.jsoneditor-contextmenu div.icon {
+  float: left;
+  width: 24px;
+  height: 24px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-image: image-url("img/jsoneditor-icons.png");
+}
+
+.jsoneditor-contextmenu ul li button div.expand {
+  float: right;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0 4px 0 0;
+  background: image-url("img/jsoneditor-icons.png") 0 -72px;
+  opacity: 0.4;
+}
+
+.jsoneditor-contextmenu ul li button:hover div.expand,
+.jsoneditor-contextmenu ul li button:focus div.expand,
+.jsoneditor-contextmenu ul li.selected div.expand,
+.jsoneditor-contextmenu ul li button.expand:hover div.expand,
+.jsoneditor-contextmenu ul li button.expand:focus div.expand {
+  opacity: 1;
+}
+
+.jsoneditor-contextmenu .separator {
+  height: 0;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+.jsoneditor-contextmenu button.remove > .icon {
+  background-position: -24px -24px;
+}
+
+.jsoneditor-contextmenu button.remove:hover > .icon,
+.jsoneditor-contextmenu button.remove:focus > .icon {
+  background-position: -24px 0;
+}
+
+.jsoneditor-contextmenu button.append > .icon {
+  background-position: 0 -24px;
+}
+
+.jsoneditor-contextmenu button.append:hover > .icon,
+.jsoneditor-contextmenu button.append:focus > .icon {
+  background-position: 0 0;
+}
+
+.jsoneditor-contextmenu button.insert > .icon {
+  background-position: 0 -24px;
+}
+
+.jsoneditor-contextmenu button.insert:hover > .icon,
+.jsoneditor-contextmenu button.insert:focus > .icon {
+  background-position: 0 0;
+}
+
+.jsoneditor-contextmenu button.duplicate > .icon {
+  background-position: -48px -24px;
+}
+
+.jsoneditor-contextmenu button.duplicate:hover > .icon,
+.jsoneditor-contextmenu button.duplicate:focus > .icon {
+  background-position: -48px 0;
+}
+
+.jsoneditor-contextmenu button.sort-asc > .icon {
+  background-position: -168px -24px;
+}
+
+.jsoneditor-contextmenu button.sort-asc:hover > .icon,
+.jsoneditor-contextmenu button.sort-asc:focus > .icon {
+  background-position: -168px 0;
+}
+
+.jsoneditor-contextmenu button.sort-desc > .icon {
+  background-position: -192px -24px;
+}
+
+.jsoneditor-contextmenu button.sort-desc:hover > .icon,
+.jsoneditor-contextmenu button.sort-desc:focus > .icon {
+  background-position: -192px 0;
+}
+
+/* ContextMenu - sub menu */
+
+.jsoneditor-contextmenu ul li .selected {
+  background-color: #D5DDF6;
+}
+
+.jsoneditor-contextmenu ul li {
+  overflow: hidden;
+}
+
+.jsoneditor-contextmenu ul li ul {
+  display: none;
+  position: relative;
+  left: -10px;
+  top: 0;
+  border: none;
+  box-shadow: inset 0 0 10px rgba(128, 128, 128, 0.5);
+  padding: 0 10px;
+  /* TODO: transition is not supported on IE8-9 */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+
+
+.jsoneditor-contextmenu ul li ul li button {
+  padding-left: 24px;
+}
+
+.jsoneditor-contextmenu ul li ul li button:hover,
+.jsoneditor-contextmenu ul li ul li button:focus {
+  background-color: #f5f5f5;
+}
+
+.jsoneditor-contextmenu button.type-string > .icon {
+  background-position: -144px -24px;
+}
+
+.jsoneditor-contextmenu button.type-string:hover > .icon,
+.jsoneditor-contextmenu button.type-string:focus > .icon,
+.jsoneditor-contextmenu button.type-string.selected > .icon {
+  background-position: -144px 0;
+}
+
+.jsoneditor-contextmenu button.type-auto > .icon {
+  background-position: -120px -24px;
+}
+
+.jsoneditor-contextmenu button.type-auto:hover > .icon,
+.jsoneditor-contextmenu button.type-auto:focus > .icon,
+.jsoneditor-contextmenu button.type-auto.selected > .icon {
+  background-position: -120px 0;
+}
+
+.jsoneditor-contextmenu button.type-object > .icon {
+  background-position: -72px -24px;
+}
+
+.jsoneditor-contextmenu button.type-object:hover > .icon,
+.jsoneditor-contextmenu button.type-object:focus > .icon,
+.jsoneditor-contextmenu button.type-object.selected > .icon {
+  background-position: -72px 0;
+}
+
+.jsoneditor-contextmenu button.type-array > .icon {
+  background-position: -96px -24px;
+}
+
+.jsoneditor-contextmenu button.type-array:hover > .icon,
+.jsoneditor-contextmenu button.type-array:focus > .icon,
+.jsoneditor-contextmenu button.type-array.selected > .icon {
+  background-position: -96px 0;
+}
+
+.jsoneditor-contextmenu button.type-modes > .icon {
+  background-image: none;
+  width: 6px;
+}
+.jsoneditor .menu {
+  width: 100%;
+  height: 35px;
+  padding: 2px;
+  margin: 0;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #1A1A1A;
+  background-color: #D5DDF6;
+  border-bottom: 1px solid #97B0F8;
+}
+
+.jsoneditor .menu button {
+  width: 26px;
+  height: 26px;
+  margin: 2px;
+  padding: 0;
+  border-radius: 2px;
+  border: 1px solid #aec0f8;
+  background: #e3eaf6 image-url("img/jsoneditor-icons.png");
+  color: #4D4D4D;
+  opacity: 0.8;
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  float: left;
+}
+
+.jsoneditor .menu button:hover {
+  background-color: #f0f2f5;
+}
+
+.jsoneditor .menu button:active {
+  background-color: #ffffff;
+}
+
+.jsoneditor .menu button:disabled {
+  background-color: #e3eaf6;
+}
+
+.jsoneditor .menu button.collapse-all {
+  background-position: 0 -96px;
+}
+
+.jsoneditor .menu button.expand-all {
+  background-position: 0 -120px;
+}
+
+.jsoneditor .menu button.undo {
+  background-position: -24px -96px;
+}
+
+.jsoneditor .menu button.undo:disabled {
+  background-position: -24px -120px;
+}
+
+.jsoneditor .menu button.redo {
+  background-position: -48px -96px;
+}
+
+.jsoneditor .menu button.redo:disabled {
+  background-position: -48px -120px;
+}
+
+.jsoneditor .menu button.compact {
+  background-position: -72px -96px;
+}
+
+.jsoneditor .menu button.format {
+  background-position: -72px -120px;
+}
+
+.jsoneditor .menu button.modes {
+  background-image: none;
+  width: auto;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.jsoneditor .menu button.separator {
+  margin-left: 10px;
+}
+
+.jsoneditor .menu a {
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  color: #97B0F8;
+  vertical-align: middle;
+}
+
+.jsoneditor .menu a:hover {
+  color: red;
+}
+
+.jsoneditor .menu a.poweredBy {
+  font-size: 8pt;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+}
+
+/* TODO: css for button:disabled is not supported by IE8 */
+.jsoneditor .search input,
+.jsoneditor .search .results {
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  color: #1A1A1A;
+}
+
+.jsoneditor .search {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+
+.jsoneditor .search .frame {
+  border: 1px solid #97B0F8;
+  background-color: white;
+  padding: 0 2px;
+  margin: 0;
+}
+
+.jsoneditor .search .frame table {
+  border-collapse: collapse;
+}
+
+.jsoneditor .search input {
+  width: 120px;
+  border: none;
+  outline: none;
+  margin: 1px;
+}
+
+.jsoneditor .search .results {
+  color: #4d4d4d;
+  padding-right: 5px;
+  line-height: 24px;
+}
+
+.jsoneditor .search button {
+  width: 16px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: image-url("img/jsoneditor-icons.png");
+  vertical-align: top;
+}
+
+.jsoneditor .search button:hover {
+  background-color: transparent;
+}
+
+.jsoneditor .search button.refresh {
+  width: 18px;
+  background-position: -99px -73px;
+}
+
+.jsoneditor .search button.next {
+  cursor: pointer;
+  background-position: -124px -73px;
+}
+
+.jsoneditor .search button.next:hover {
+  background-position: -124px -49px;
+}
+
+.jsoneditor .search button.previous {
+  cursor: pointer;
+  background-position: -148px -73px;
+  margin-right: 2px;
+}
+
+.jsoneditor .search button.previous:hover {
+  background-position: -148px -49px;
+}
+
+.show_dialog{
+  overflow: hidden;
+}
+
+.dialog_size{
+  width: 680px;
+  height: 500px
+}
+
+.resize_dialog_title{
+  height: 35px;
+}
+
+.set_height_dialog{
+  height:90vh!important;
+}
+
+.set_heading_size{
+  margin-top:30%;
+  text-align:center;
+}
+
+.show_password_head_one {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: -15px;
+  background: #00000061;
+  margin-left: 3%;
+  margin-top: 10px;
+
+}
+.show_password_text_one {
+  margin-left: 4%;
+  margin-top: 10px;
+  color: #00000061;
+}
+
+.show_password_head_two {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: -15px;
+  background: #00000061;
+  margin-left: 19%;
+
+}
+.show_password_text_two {
+  margin-left: 20%;
+  color: #00000061;
+
+}
+.show_password_head_three {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: -15px;
+  background: #00000061;
+  margin-left: 3%;
+  margin-top: 10px;
+}
+.show_password_text_three {
+  margin-left: 4%;
+  margin-top: 10px;
+  color: #00000061;
+}
+
+.show_password_head_four {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: -15px;
+  background: #00000061;
+  margin-left: 19%;
+}
+.show_password_text_four {
+  margin-left: 20%;
+  color: #00000061;
+}
+.show_password_head_five {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: -15px;
+  background: #00000061;
+  margin-left: 3%;
+  margin-top: 10px;
+}
+.show_password_text_five {
+  margin-left: 4%;
+  margin-top: 10px;
+  color: #00000061;
+}
+
+.show_password_head_six {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: -15px;
+  background: #00000061;
+  margin-left: 19%;
+}
+.show_password_text_six {
+  margin-left: 20%;
+  color: #00000061;
+}
+.input-labels{
+  font-size: 0.8125rem;
+  color: rgba(0, 0, 0, 0.54);
+  display: block;
+  line-height: 16px;
+  font: 400 0.75rem/16px "RobotoDraft", sans-serif;
+  margin-bottom: 8px;
+  position: relative;
+  transition: 0.28s all;
+  width: 100%;
+  padding-left: 16px;
+}
+#integration_inventory_api_identifier_input{
+  width: 50%;
+  display: inline-block;
+}
+#enable_api_name{
+  display: inline;
+  color: #009688;
+  text-decoration: none;
+  padding: 0px;
+}
+#titlebar_right .action_item a {
+  color: #009688;
+}
+.radio {
+  position: relative;
+  height: 14px;
+  width: 34px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.32);
+  margin: 8px 0;
+}
+
+.radio input {
+  opacity: 0;
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  z-index: 2;
+  margin: 0
+}
+
+.radio input:nth-child(2):checked {
+  z-index: 1;
+}
+
+.toggle__pointer {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 15px;
+
+  -webkit-transition: left .15s ease-out;
+  transition: left .15s ease-out;
+}
+
+.radio input:nth-child(2):checked+.toggle__pointer {
+  left: 14px;
+  background-color: rgb(63,29,203);
+}
+
+.sapling-body-1 {
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  align-items: center !important;
+  letter-spacing: 0.3px !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.radio-button {
+  display: flex;
+  margin: 0px;
+  padding: 4px 16px;
+  label {
+    margin-left: 10px;
+    margin-top: 3px;
+    max-width: fit-content;
+  }
+  img{
+    margin-top: 4px;
+    margin-left: 5px;
+  }
+}
+
+.select {
+  .select-tag {
+    border: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.32) !important;
+    width: 200px !important;
+    height: 25px !important;
+    background-color: white !important;
+  }
+}
+
+.line-break {
+  border-bottom: 1px solid #000000;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 35px;
+}
+
+.sub-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.14px;
+  color: rgba(0, 0, 0, 0.54);
+  margin-left: 16px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 280px;
+  background: #54515E;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 2px;
+  top: 75%;
+  left: 50%;
+  margin-left: -60px;
+ 
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .notification-email {
+  width: 470px;
+}
+
+.tooltip .notifications-enabled {
+  width: 345px;
+}
+.tooltip .mapping-key {
+  width: 420px;
+}
+.tooltip .adp {
+  width: 365px;
+}
+.tooltip .workday {
+  width: 385px;
+} 
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.label-with-icon {
+  width: fit-content;
+  display: flex;
+  .tooltip {
+    margin-left: 5px;
+  }
+  label {
+    font-size: 0.8125rem;
+    color: rgba(0, 0, 0, 0.54);
+    display: block;
+    line-height: 16px;
+    font: 400 0.75rem/16px "RobotoDraft", sans-serif;
+    margin-bottom: 8px;
+    position: relative;
+    transition: 0.28s all;
+  }
+}
+.input > label, .input > input, .input > select {
+  font-family: sans-serif !important; 
+}
+
+.table-papertrail-logs {
+  table-layout: fixed;
+
+  > tbody > tr > td {
+    word-break: break-word;
+  }
+}
+.company-plan{
+  flex-direction: column;
+  div{
+    margin-bottom: 12px;
+    display: flex;
+    input {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.parsley-errors-list{
+  list-style: none;
+  padding: 5px 0 0 5px;
+  color: red;
+}
+
+.export_loggings_modal {
+  top: 30%
+ }
+
+.export_loggings_header {
+  font-size: 26px;
+  font-family: roboto;
+  line-height: 32px;
+ }
+
+.export_loggings_body {
+  font-family: roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.30px;
+  text-align: left;
+ }

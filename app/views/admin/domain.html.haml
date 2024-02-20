@@ -1,0 +1,17 @@
+= form_for :company_domain, url: {action: :remove_company}, html: { multipart: true } do |f|
+  %table
+    %tr
+      %td
+        - if flag
+          Entered domain does not match the tenant you are removing. Try again.
+
+    %tr
+      %td
+        %label
+          Enter domain to delete
+      %td
+        = f.text_field :domain
+
+    %tr
+      %td
+        = submit_tag 'Done'
